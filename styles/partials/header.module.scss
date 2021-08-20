@@ -1,5 +1,11 @@
 .header {
-	h1 {
-		color: red;
+	header {
+		background-color: white;
 	}
+}
+
+.bar {
+	margin: 0.5rem 0;
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,7 +1,12 @@
 import React from 'react'
 
+import { Container } from '@material-ui/core'
 import cx from 'classNames'
 
 export default function Layout({ className, children }) {
-	return <div className={cx('block-layout', className)}>{children}</div>
+	return (
+		<Container maxWidth='md' className={cx('block-layout', className)}>
+			{children}
+		</Container>
+	)
 }
