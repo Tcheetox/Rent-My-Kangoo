@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import { Jumbo } from '../components/blocks'
+import { Jumbo, Carousel, Contact } from '../components/blocks'
 import { Availability } from '../components/iframes/'
 
 // TODO: add robots.txt
@@ -13,6 +13,8 @@ export default function Home() {
 			<Header />
 			<Jumbo />
 			<Availability />
+			<Carousel />
+			<Contact />
 			<Footer />
 		</main>
 	)

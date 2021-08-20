@@ -1,0 +1,8 @@
+export { default as front } from './front.jpg'
+export { default as frontL } from './frontL.jpg'
+export { default as inside } from './inside.jpg'
+export { default as left } from './left.jpg'
+export { default as rear } from './rear.jpg'
+export { default as rearR } from './rearR.jpg'
+export { default as right } from './right.jpg'
+export { default as rightO } from './rightO.jpg'

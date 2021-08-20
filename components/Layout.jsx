@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Container } from '@material-ui/core'
-import cx from 'classNames'
+import cx from 'classnames'
 
 export default function Layout({ className, children }) {
 	return (
