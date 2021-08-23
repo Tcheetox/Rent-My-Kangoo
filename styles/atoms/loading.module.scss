@@ -1,6 +1,11 @@
-.loading {
+.absoluteLoading {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+.relativeLoading {
+	position: relative;
+	margin: auto;
+	width: max-content;
 }

@@ -4,8 +4,8 @@ import GoogleMapReact from 'google-map-react'
 import styles from '../../styles/blocks/map.module.scss'
 
 const center = {
-	lat: 59.95,
-	lng: 30.33,
+	lat: 46.2002,
+	lng: 6.128,
 }
 
 const MapMaker = () => <div className={styles.mapMarker}>MyKangoo</div>
@@ -18,11 +18,11 @@ export default function Map() {
 
 	return (
 		// Important! Always set the container height explicitly
-		<div className={styles.map} style={{ height: '100vh' }}>
+		<div className={styles.map} style={{ height: '400px' }}>
 			<GoogleMapReact
 				bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GMAP_KEY }}
 				defaultCenter={center}
-				defaultZoom={12}
+				defaultZoom={15}
 				options={mapOptions}>
 				<MapMaker lat={center.lat} lng={center.lng} />
 			</GoogleMapReact>

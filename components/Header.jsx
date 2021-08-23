@@ -8,7 +8,7 @@ export default function Header() {
 	return (
 		<div className={styles.header}>
 			<AppBar position='static'>
-				<Container maxWidth='md'>
+				<Container maxWidth='lg'>
 					<Toolbar className={styles.bar}>
 						<a href='#how'>How it works?</a>
 						<a href='#rent'>Rent me</a>

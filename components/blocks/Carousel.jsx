@@ -8,7 +8,7 @@ import { front, frontL, inside, left, rear, rearR, right, rightO } from '../../m
 // https://www.npmjs.com/package/react-material-ui-carousel
 
 export default function Carousel() {
-	const pictures = [front, frontL, inside, left, rear, rearR, right, rightO]
+	const pictures = [front, frontL, left, rear, rearR, right, rightO]
 
 	return (
 		<MuiCarousel className={styles.carousel} interval={5000} animation='fade' navButtonsAlwaysVisible={true} stopAutoPlayOnHover={false}>

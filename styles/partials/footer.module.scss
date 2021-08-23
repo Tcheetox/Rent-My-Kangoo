@@ -1,0 +1,15 @@
+.footer {
+	min-height: 300px;
+	color: white;
+	background-color: $charcoal;
+	ul {
+		padding-left: 0;
+	}
+	li {
+		list-style: none;
+	}
+}
+
+.footerContainer {
+	padding: 2rem 0;
+}

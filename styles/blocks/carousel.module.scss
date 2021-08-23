@@ -1,2 +1,12 @@
 .carousel {
+	div {
+		max-height: 500px;
+	}
+	img {
+		object-fit: cover;
+		// object-position: center;
+	}
+
+	align-items: center;
+	margin: 2rem 0;
 }

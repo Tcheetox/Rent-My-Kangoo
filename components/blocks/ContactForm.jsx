@@ -3,8 +3,12 @@ import React, { useState } from 'react'
 import { TextField, Button } from '@material-ui/core/'
 import styles from '../../styles/blocks/contact.module.scss'
 import { capitalize } from '../../utils'
+import useSendContact from '../hooks/useSendContact'
+import CircularLoading from '../CircularLoading'
+import SuccessIcon from '@material-ui/icons/CheckCircleOutline'
 
 export default function ContactForm() {
+	const { sendForm, loading, error, success } = useSendContact()
 	const [data, setData] = useState({ email: '', name: '', message: '' })
 	const [errors, setErrors] = useState({ email: null, name: null, message: null })
 
@@ -29,7 +33,7 @@ export default function ContactForm() {
 
 	const handleSubmit = f => {
 		f.preventDefault()
-		if (isFormValid()) console.log('SUBMIT FORM')
+		if (isFormValid()) sendForm(data)
 	}
 
 	const handleChange = e => {
@@ -37,46 +41,74 @@ export default function ContactForm() {
 		setErrors({ ...errors, [e.target.name]: null })
 	}
 
-	return (
-		<form className={styles.contactForm} autoComplete='off' onSubmit={handleSubmit}>
-			<div className='truc' id='truc'>
-				COUCOU
+	const _success = true
+
+	if (error)
+		return (
+			<div className={styles.contactError}>
+				<h3 className='error'>An unexpected error has occured, please try again later...</h3>
 			</div>
-			<TextField
-				id='Email'
-				label='Email'
-				variant='filled'
-				name='email'
-				value={data.email}
-				onChange={handleChange}
-				error={errors.email ? true : false}
-				helperText={errors.email}
-			/>
-			<TextField
-				id='Name'
-				label='Full name'
-				variant='filled'
-				name='name'
-				value={data.name}
-				onChange={handleChange}
-				error={errors.name ? true : false}
-				helperText={errors.name}
-			/>
-			<TextField
-				id='Message'
-				label='Message'
-				multiline
-				rows={4}
-				variant='filled'
-				name='message'
-				value={data.message}
-				onChange={handleChange}
-				error={errors.message ? true : false}
-				helperText={errors.message}
-			/>
-			<Button variant='contained' color='primary' type='submit'>
-				Send
-			</Button>
-		</form>
-	)
+		)
+	else if (loading)
+		return (
+			<div>
+				<CircularLoading className={styles.contactLoading} absolute={false} />
+				<Button className={styles.contactFormButton} variant='contained' color='primary' type='submit' disabled>
+					Sending...
+				</Button>
+			</div>
+		)
+	else if (_success)
+		return (
+			<div>
+				<SuccessIcon />
+				<CircularLoading className={styles.contactLoading} absolute={false} />
+				<Button className={styles.contactFormButton} variant='contained' color='secondary' type='submit' disabled>
+					Sent!
+				</Button>
+			</div>
+		)
+	else
+		return (
+			<form className={styles.contactForm} autoComplete='off' onSubmit={handleSubmit}>
+				<TextField
+					className={styles.contactFormField}
+					id='Email'
+					label='Email'
+					variant='filled'
+					name='email'
+					value={data.email}
+					onChange={handleChange}
+					error={errors.email ? true : false}
+					helperText={errors.email}
+				/>
+				<TextField
+					className={styles.contactFormField}
+					id='Name'
+					label='Full name'
+					variant='filled'
+					name='name'
+					value={data.name}
+					onChange={handleChange}
+					error={errors.name ? true : false}
+					helperText={errors.name}
+				/>
+				<TextField
+					className={styles.contactFormField}
+					id='Message'
+					label='Message'
+					multiline
+					rows={4}
+					variant='filled'
+					name='message'
+					value={data.message}
+					onChange={handleChange}
+					error={errors.message ? true : false}
+					helperText={errors.message}
+				/>
+				<Button className={styles.contactFormButton} variant='contained' color='primary' type='submit'>
+					Send
+				</Button>
+			</form>
+		)
 }
