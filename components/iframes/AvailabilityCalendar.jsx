@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import CircularLoading from '../CircularLoading'
 import styles from '../../styles/blocks/iframes.module.scss'
 
-export default function Availability() {
+export default function AvailabilityCalendar() {
 	const [url, setUrl] = useState('')
 	const [visible, setVisible] = useState(false)
 
