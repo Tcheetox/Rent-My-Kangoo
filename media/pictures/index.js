@@ -6,5 +6,3 @@ export { default as rear } from './rear.jpg'
 export { default as rearR } from './rearR.jpg'
 export { default as right } from './right.jpg'
 export { default as rightO } from './rightO.jpg'
-
-export { default as frontBlurred } from './frontBlurred.jpg'
