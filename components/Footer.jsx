@@ -1,8 +1,10 @@
 import React from 'react'
 
 import styles from '../styles/partials/footer.module.scss'
-import Logo from '../media/Logo'
+import invertedLogo from '../media/logo3-nobginv.png'
+import Image from 'next/image'
 import { Container, Grid } from '@material-ui/core'
+import MailOutlineIcon from '@material-ui/icons/MailOutline'
 
 export default function Footer() {
 	return (
@@ -10,10 +12,15 @@ export default function Footer() {
 			<Container maxWidth='lg' className={styles.footerContainer}>
 				<Grid container spacing={2}>
 					<Grid item sm={3}>
-						<Logo />
+						<div className={styles.logoContainer}>
+							<a href='#'>
+								<Image alt='Logo' src={invertedLogo} />
+							</a>
+							Rent my Kangoo
+						</div>
 					</Grid>
 					<Grid item sm={3}>
-						<h2>2EM</h2>
+						<h3>2EM</h3>
 						<ul>
 							<li>
 								<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
@@ -23,7 +30,7 @@ export default function Footer() {
 						</ul>
 					</Grid>
 					<Grid item sm={3}>
-						<h2>Links</h2>
+						<h3>Links</h3>
 						<ul>
 							<li>
 								<a href='https://www.2em.ch/aide-locataire' target='_blank' rel='noreferrer'>
@@ -48,20 +55,22 @@ export default function Footer() {
 						</ul>
 					</Grid>
 					<Grid item sm={3}>
-						<h2>Contact</h2>
+						<h3>Contact</h3>
 						<ul>
-							<li></li>
+							<li className={styles.contact}>
+								<MailOutlineIcon /> <a href='mailto:kangoo@thekecha.com'>Kangoo@thekecha.com</a>
+							</li>
 						</ul>
 					</Grid>
 				</Grid>
 				<hr />
-				<h5>
+				<h4>
 					© 2021 Copyright{' '}
 					<a href='https://thekecha.com/krenier' target='_blank' rel='noreferrer'>
 						TheKecha
 					</a>
 					. All rights reserved.
-				</h5>
+				</h4>
 			</Container>
 		</footer>
 	)

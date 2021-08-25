@@ -17,6 +17,8 @@ h2 {
 	color: $meadow;
 	width: max-content;
 	position: relative;
+	margin: 0 0 2rem 0;
+	padding-top: 2rem;
 }
 h2:after {
 	@include underline-after;
@@ -24,4 +26,14 @@ h2:after {
 p {
 	font-size: 1rem;
 	line-height: 1.8rem;
+}
+
+a {
+	width: max-content;
+	text-decoration: unset;
+	color: $meadow;
+	transition-duration: 200ms;
+	&:hover {
+		color: $zomp;
+	}
 }

@@ -1,15 +1,61 @@
 .footer {
-	min-height: 300px;
 	color: white;
 	background-color: $charcoal;
+
 	ul {
 		padding-left: 0;
+		margin-left: -0.5rem;
 	}
 	li {
 		list-style: none;
+		font-size: 1rem;
+	}
+
+	// Copyright
+	h4 {
+		text-align: center;
+		margin-top: 1.5rem;
+		margin-bottom: -0.3rem;
+	}
+
+	hr {
+		margin-top: 1.3rem;
+		color: lighten($charcoal, 3%);
+	}
+
+	// Link headers
+	h3 {
+		text-transform: uppercase;
+		position: relative;
+		width: max-content;
+		font-size: 1.2rem;
+	}
+	h3:after {
+		@import '../mixins/underline';
+		@include underline-after;
+		height: 1px;
 	}
 }
 
 .footerContainer {
 	padding: 2rem 0;
+}
+
+.contact {
+	display: flex;
+	svg {
+		margin-right: 0.3rem;
+	}
+}
+
+.logoContainer {
+	img {
+		width: 120px;
+	}
+	margin-top: 0.6rem;
+	width: max-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.2rem;
 }
