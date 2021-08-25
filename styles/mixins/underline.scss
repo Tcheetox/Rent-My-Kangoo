@@ -1,0 +1,9 @@
+@mixin underline-after {
+	content: '';
+	height: 2px;
+	width: 70%;
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	background-color: $meadow;
+}

@@ -7,7 +7,7 @@ import useSendContact from '../hooks/useSendContact'
 import CircularLoading from '../CircularLoading'
 import SuccessIcon from '@material-ui/icons/CheckCircleOutline'
 
-export default function ContactForm() {
+export default function Contact() {
 	const { sendForm, loading, error, success } = useSendContact()
 	const [data, setData] = useState({ email: '', name: '', message: '' })
 	const [errors, setErrors] = useState({ email: null, name: null, message: null })
@@ -41,26 +41,24 @@ export default function ContactForm() {
 		setErrors({ ...errors, [e.target.name]: null })
 	}
 
-	const _success = true
-
 	if (error)
 		return (
-			<div className={styles.contactError}>
+			<div id='Contact' className={styles.contactError}>
 				<h3 className='error'>An unexpected error has occured, please try again later...</h3>
 			</div>
 		)
 	else if (loading)
 		return (
-			<div>
+			<div id='Contact'>
 				<CircularLoading className={styles.contactLoading} absolute={false} />
 				<Button className={styles.contactFormButton} variant='contained' color='primary' type='submit' disabled>
 					Sending...
 				</Button>
 			</div>
 		)
-	else if (_success)
+	else if (success)
 		return (
-			<div>
+			<div id='Contact'>
 				<SuccessIcon />
 				<CircularLoading className={styles.contactLoading} absolute={false} />
 				<Button className={styles.contactFormButton} variant='contained' color='secondary' type='submit' disabled>
@@ -70,12 +68,12 @@ export default function ContactForm() {
 		)
 	else
 		return (
-			<form className={styles.contactForm} autoComplete='off' onSubmit={handleSubmit}>
+			<form id='Contact' className={styles.contactForm} autoComplete='off' onSubmit={handleSubmit}>
 				<TextField
 					className={styles.contactFormField}
 					id='Email'
 					label='Email'
-					variant='filled'
+					variant='outlined'
 					name='email'
 					value={data.email}
 					onChange={handleChange}
@@ -86,7 +84,7 @@ export default function ContactForm() {
 					className={styles.contactFormField}
 					id='Name'
 					label='Full name'
-					variant='filled'
+					variant='outlined'
 					name='name'
 					value={data.name}
 					onChange={handleChange}
@@ -99,7 +97,7 @@ export default function ContactForm() {
 					label='Message'
 					multiline
 					rows={4}
-					variant='filled'
+					variant='outlined'
 					name='message'
 					value={data.message}
 					onChange={handleChange}

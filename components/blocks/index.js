@@ -1,6 +1,7 @@
 export { default as Jumbo } from './Jumbo'
 export { default as Carousel } from './Carousel'
 export { default as Contact } from './Contact'
-export { default as ContactForm } from './ContactForm'
 export { default as Calendar } from './Calendar'
 export { default as Map } from './Map'
+export { default as Information } from './Information'
+export { default as Process } from './Process'

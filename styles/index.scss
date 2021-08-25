@@ -1,9 +1,27 @@
 @import './forms';
 @import './overrides';
+@import './process';
+@import '../mixins/underline';
 
+html {
+	scroll-behavior: smooth;
+}
 .error {
 	color: red;
 }
 * {
 	font-family: 'Open Sans', sans-serif;
+}
+h2 {
+	font-size: 42px;
+	color: $meadow;
+	width: max-content;
+	position: relative;
+}
+h2:after {
+	@include underline-after;
+}
+p {
+	font-size: 1rem;
+	line-height: 1.8rem;
 }

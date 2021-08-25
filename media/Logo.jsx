@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logo from './logo-no-border.png'
+import logo from './logo3-nobg.png'
 import Image from 'next/image'
 import styles from '../styles/blocks/logo.module.scss'
 

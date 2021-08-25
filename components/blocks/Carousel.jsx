@@ -34,6 +34,11 @@ export default function Carousel() {
 				style: {
 					color: 'white',
 				},
+			}}
+			navButtonsWrapperProps={{
+				style: {
+					margin: 'auto 3rem',
+				},
 			}}>
 			{pictures.map((picture, k) => (
 				<Image key={k} src={picture} alt='Picture' placeholder='blur' priority />

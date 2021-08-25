@@ -1,21 +1,18 @@
 import React from 'react'
 
 import Layout from '../Layout'
-import { Map, ContactForm } from './'
+import ContactForm from '../forms/ContactForm'
 import styles from '../../styles/blocks/contact.module.scss'
-import { Grid, Paper } from '@material-ui/core/'
 
 export default function Contact() {
 	return (
-		<Layout className={styles.jumbo}>
-			<Grid container spacing={2}>
-				<Grid item sm={6}>
-					<Map />
-				</Grid>
-				<Grid item sm={6}>
-					<ContactForm />
-				</Grid>
-			</Grid>
+		<Layout className={styles.contact}>
+			<h2 id='Contact'>Contact us</h2>
+			<p className={styles.contactMessage}>
+				Should you have any questions or just want to know more about the rental process, please feel free to contact us. <br /> We usually
+				replies in less than <strong>48 hours</strong>!
+			</p>
+			<ContactForm />
 		</Layout>
 	)
 }
