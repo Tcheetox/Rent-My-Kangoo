@@ -35,7 +35,7 @@ a {
 	width: max-content;
 	text-decoration: unset;
 	color: $meadow;
-	transition-duration: 200ms;
+	transition-duration: $defaultTransitionDuration;
 	&:hover {
 		color: $zomp;
 	}

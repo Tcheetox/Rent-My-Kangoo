@@ -12,6 +12,22 @@
 	}
 }
 
+// Contact form text inputs and validation
+.MuiFormControl-root {
+	margin: 0.5rem 0 !important;
+}
+.MuiFormHelperText-contained {
+	margin-bottom: -0.5rem !important;
+	text-align: right !important;
+}
+
+// Tooltip on MapMarker
 .MuiTooltip-tooltip {
 	font-size: 0.8rem !important;
+}
+
+// Circular Loading
+.MuiCircularProgress-root {
+	height: 50px !important;
+	width: 50px !important;
 }

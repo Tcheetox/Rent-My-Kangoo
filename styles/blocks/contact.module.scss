@@ -8,12 +8,13 @@ $form-max-width: 600px;
 	h2::after {
 		left: 15%;
 	}
-	div {
-		margin: 0.2rem;
-	}
-	margin-bottom: 5rem;
 }
-.contactMessage {
+
+.field {
+	width: 100%;
+}
+
+.message {
 	text-align: center;
 	svg {
 		position: relative;
@@ -22,27 +23,41 @@ $form-max-width: 600px;
 	}
 }
 
-.contactLoading {
-	padding: 3rem 0;
-}
-
-.contactError {
-	width: max-content;
-	margin: auto;
-}
-
-.contactForm {
+.form {
+	min-height: 390px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 	max-width: $form-max-width;
+	position: relative;
 }
 
-.contactFormButton {
-	width: calc(100% - 0.4rem);
-	margin: 0.5rem 0 0.5rem auto !important;
+.hidden {
+	visibility: hidden;
+	position: relative;
 }
 
-.contactFormField {
-	width: 100%;
+.loading {
+	top: 35% !important;
+}
+
+.submit {
+	margin-top: 0.5rem !important;
+}
+
+@import '../mixins/centering';
+
+.success {
+	@include absolute-center;
+	top: 35%;
+	height: 50px !important;
+	width: 50px !important;
+}
+
+.error {
+	@include absolute-center;
+	top: 35%;
+	width: max-content;
+	margin: auto;
+	color: $sienna;
 }

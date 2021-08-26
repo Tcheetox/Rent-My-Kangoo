@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { TextField, Button } from '@material-ui/core/'
 import styles from '../../styles/blocks/contact.module.scss'
 import { capitalize } from '../../utils'
+import cx from 'classnames'
 import useSendContact from '../hooks/useSendContact'
 import CircularLoading from '../CircularLoading'
 import SuccessIcon from '@material-ui/icons/CheckCircleOutline'
@@ -41,36 +42,31 @@ export default function Contact() {
 		setErrors({ ...errors, [e.target.name]: null })
 	}
 
-	if (error)
-		return (
-			<div id='Contact' className={styles.contactError}>
-				<h3 className='error'>An unexpected error has occured, please try again later...</h3>
-			</div>
-		)
-	else if (loading)
-		return (
-			<div id='Contact'>
-				<CircularLoading className={styles.contactLoading} absolute={false} />
-				<Button className={styles.contactFormButton} variant='contained' color='primary' type='submit' disabled>
-					Sending...
+	const FormStateRepresentation = () => {
+		if (loading)
+			return (
+				<>
+					<CircularLoading className={styles.loading} />
+					<Button className={styles.submit} variant='contained' color='primary' type='submit' disabled>
+						Sending...
+					</Button>
+				</>
+			)
+		else if (success) return <SuccessIcon className={styles.success} color='primary' />
+		else if (error) return <h3 className={styles.error}>An unexpected error has occured, please try again later.</h3>
+		else
+			return (
+				<Button className={styles.submit} variant='contained' color='primary' type='submit'>
+					Send
 				</Button>
-			</div>
-		)
-	else if (success)
-		return (
-			<div id='Contact'>
-				<SuccessIcon />
-				<CircularLoading className={styles.contactLoading} absolute={false} />
-				<Button className={styles.contactFormButton} variant='contained' color='secondary' type='submit' disabled>
-					Sent!
-				</Button>
-			</div>
-		)
-	else
-		return (
-			<form id='Contact' className={styles.contactForm} autoComplete='off' onSubmit={handleSubmit}>
+			)
+	}
+
+	return (
+		<form id='Contact' className={styles.form} autoComplete='off' onSubmit={handleSubmit}>
+			<div className={loading || success || error ? styles.hidden : null}>
 				<TextField
-					className={styles.contactFormField}
+					className={styles.field}
 					id='Email'
 					label='Email'
 					variant='outlined'
@@ -81,7 +77,7 @@ export default function Contact() {
 					helperText={errors.email}
 				/>
 				<TextField
-					className={styles.contactFormField}
+					className={styles.field}
 					id='Name'
 					label='Full name'
 					variant='outlined'
@@ -92,7 +88,7 @@ export default function Contact() {
 					helperText={errors.name}
 				/>
 				<TextField
-					className={styles.contactFormField}
+					className={styles.field}
 					id='Message'
 					label='Message'
 					multiline
@@ -104,9 +100,8 @@ export default function Contact() {
 					error={errors.message ? true : false}
 					helperText={errors.message}
 				/>
-				<Button className={styles.contactFormButton} variant='contained' color='primary' type='submit'>
-					Send
-				</Button>
-			</form>
-		)
+			</div>
+			<FormStateRepresentation />
+		</form>
+	)
 }
