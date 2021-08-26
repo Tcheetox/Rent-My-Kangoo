@@ -34,7 +34,7 @@ export default function Process() {
 				from={{
 					direction: DIRECTION.LEFT,
 					node: () => document.getElementById('STEP1'),
-					translation: [-2, 0.5],
+					translation: [-3, 0.5],
 				}}
 				to={{
 					direction: DIRECTION.RIGHT,
@@ -58,14 +58,14 @@ export default function Process() {
 			<Arrow
 				className='arrow'
 				from={{
-					direction: DIRECTION.LEFT,
+					direction: DIRECTION.RIGHT,
 					node: () => document.getElementById('STEP2'),
-					translation: [0, 0.5],
+					translation: [0, 0.1],
 				}}
 				to={{
 					direction: DIRECTION.LEFT,
 					node: () => document.getElementById('STEP3'),
-					translation: [-2, -0.5],
+					translation: [-1.5, -0.5],
 				}}
 			/>
 			<Grid className={styles.row}>
