@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import { Jumbo, Information, Carousel, Contact, Calendar, Map } from '../components/blocks'
+import { Jumbo, Information, Carousel, Contact, RentMe, Map } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
 // TODO: add robots.txt
@@ -15,7 +15,7 @@ export default function Home({ availabilityDates }) {
 			<Header />
 			<Jumbo />
 			<Information />
-			<Calendar availabilityDates={availabilityDates} />
+			<RentMe availabilityDates={availabilityDates} />
 			<Carousel />
 			<Contact />
 			<Map />

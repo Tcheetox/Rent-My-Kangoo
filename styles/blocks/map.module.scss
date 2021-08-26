@@ -1,10 +1,13 @@
 .map {
 	width: '100%';
-	border-radius: 4px;
-	div {
-		border-radius: 4px;
-	}
 }
 
 .mapMarker {
+	svg {
+		fill: $meadow;
+		top: 100%;
+		height: auto;
+		width: 3rem;
+		transform: translate(-50%, -100%);
+	}
 }

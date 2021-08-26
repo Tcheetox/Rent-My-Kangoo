@@ -1,12 +1,26 @@
 .carousel {
 	div {
-		max-height: 500px;
+		//max-height: 500px;
 	}
 	img {
-		object-fit: cover;
+		//object-fit: cover;
 		// object-position: center;
+
+		// background-attachment: fixed;
+		// background-position: center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
 	}
 
 	align-items: center;
 	margin: 2rem 0;
+}
+
+.parallax {
+	height: 500px;
+	// max-height: 500px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

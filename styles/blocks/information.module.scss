@@ -1,5 +1,54 @@
+.headline {
+	text-align: right;
+}
+
 .information {
 	h2 {
 		margin-left: auto;
+	}
+
+	svg {
+		width: 4rem;
+		height: auto;
+		border: 2px solid $meadow;
+		border-radius: 100%;
+		padding: 0.5rem;
+		transition: all 200ms;
+		background-color: white;
+		z-index: 9;
+		&:hover {
+			transform: scale(1.15);
+			fill: $zomp;
+		}
+	}
+}
+
+.iconWrapper {
+	width: max-content;
+}
+.row {
+	margin: 2rem 0;
+	display: flex;
+	div {
+		display: flex;
+		align-items: center;
+	}
+}
+
+$centerMargin: 4.5rem;
+.right {
+	margin: 1rem $centerMargin;
+	margin-left: auto;
+	text-align: right;
+	p {
+		margin-right: -1.5rem;
+	}
+}
+.left {
+	margin: 1rem $centerMargin;
+	margin-right: auto;
+	text-align: left;
+	p {
+		margin-left: -1.5rem;
 	}
 }

@@ -15,6 +15,11 @@ $form-max-width: 600px;
 }
 .contactMessage {
 	text-align: center;
+	svg {
+		position: relative;
+		top: 5px;
+		left: 1px;
+	}
 }
 
 .contactLoading {

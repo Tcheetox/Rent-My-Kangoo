@@ -2,13 +2,21 @@ import React from 'react'
 
 import GoogleMapReact from 'google-map-react'
 import styles from '../../styles/blocks/map.module.scss'
+import MapMarker from '@material-ui/icons/Room'
+import { Tooltip } from '@material-ui/core'
 
 const center = {
 	lat: 46.2002,
 	lng: 6.128,
 }
 
-const MapMaker = () => <div className={styles.mapMarker}>MyKangoo</div>
+const MapMaker = () => (
+	<div className={styles.mapMarker}>
+		<Tooltip title='Quai des Arénières, 1205 Geneva - Switzerland' placement='top' arrow>
+			<MapMarker />
+		</Tooltip>
+	</div>
+)
 
 export default function Map() {
 	const mapOptions = {

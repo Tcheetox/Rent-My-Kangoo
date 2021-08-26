@@ -16,17 +16,17 @@ export default function Jumbo() {
 				<h1>Rent my Kangoo</h1>
 				<p>
 					Planning a move? Or do you simply need a utility vehicle? <br />
-					We easily rent you our vehicle via the{' '}
+					We easily rent you our vehicle via{' '}
 					<a className={styles.link} href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 						<strong>2EM</strong>
 					</a>{' '}
 					platform.
 				</p>
 				<div className={styles.ctas}>
-					<Button variant='contained' color='primary'>
+					<Button variant='contained' color='primary' onClick={() => (window.location.href = '#Rent')}>
 						Rent me
 					</Button>
-					<Button variant='contained' color='secondary'>
+					<Button variant='contained' color='secondary' onClick={() => (window.location.href = '#How')}>
 						Learn more
 					</Button>
 				</div>

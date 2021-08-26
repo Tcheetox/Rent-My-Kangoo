@@ -11,11 +11,13 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "arrows-svg": "^1.5.4",
     "classnames": "^2.3.1",
     "google-map-react": "^2.1.10",
     "next": "11.1.0",
     "nodemailer": "^6.6.3",
     "react": "17.0.2",
+    "react-arrows": "^1.2.0",
     "react-dom": "17.0.2",
     "react-material-ui-carousel": "^2.3.1",
     "react-modern-calendar-datepicker": "^3.1.6",
