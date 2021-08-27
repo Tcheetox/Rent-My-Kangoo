@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Grid } from '@material-ui/core'
-import useArrow from '../hooks/useArrow'
-import styles from '../../styles/blocks/information.module.scss'
+import useArrow from '../../hooks/useArrow'
+import styles from '../../../styles/blocks/information.module.scss'
 
 import ConnectIcon from '@material-ui/icons/HowToReg'
 import LockIcon from '@material-ui/icons/EnhancedEncryption'

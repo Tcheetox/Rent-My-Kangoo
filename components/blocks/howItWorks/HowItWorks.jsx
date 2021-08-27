@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from '../Layout'
-import styles from '../../styles/blocks/information.module.scss'
-import { Process } from './'
+import Layout from '../../Layout'
+import styles from '../../../styles/blocks/information.module.scss'
+import Process from './Process'
 
-export default function Information() {
+export default function HowItWorks() {
 	return (
 		<Layout className={styles.information}>
 			<h2 id='How'>How it works?</h2>

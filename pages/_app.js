@@ -4,6 +4,8 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './_theme'
+import 'react-date-range/dist/styles.css' // Calendar
+import 'react-date-range/dist/theme/default.css' // theme css file
 import '../styles/index.scss'
 
 export default function MyApp(props) {
