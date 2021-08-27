@@ -1,53 +1,41 @@
 import React, { useState } from 'react'
 
-// https://github.com/Kiarash-Z/react-modern-calendar-datepicker
-import 'react-modern-calendar-datepicker/lib/DatePicker.css'
-import { Calendar as ModernCalendar, utils } from 'react-modern-calendar-datepicker'
-
 // https://www.npmjs.com/package/react-date-range
+import { Paper } from '@material-ui/core'
 import { DateRangePicker } from 'react-date-range'
 import styles from '../../styles/blocks/calendar.module.scss'
+import { enUS, frCH } from 'date-fns/locale'
+import { add, endOfMonth } from 'date-fns'
+
+// TODO: prevent calendar to swap month when starting in month+1
 
 export default function Calendar({ availabilityDates: unavailable }) {
-	const [selectedDayRange, setSelectedDayRange] = useState({ from: null, to: null })
-
-	const selectionRange = {
+	const [dateRange, setDateRange] = useState({
 		startDate: new Date(),
 		endDate: new Date(),
 		key: 'selection',
-	}
-	// TODO: check locale?
+	})
 
-	// TODO: add min and max dates
-	// TODO: add disabledDates
 	return (
-		<div className={styles.calendar}>
-			<ModernCalendar
-				value={selectedDayRange}
-				onChange={setSelectedDayRange}
-				disabledDays={unavailable}
-				minimumDate={utils().getToday()}
-				shouldHighlightWeekends
-			/>
+		<Paper className={styles.calendar}>
 			<DateRangePicker
-				ranges={[selectionRange]}
-				onChange={e => console.log(e)}
+				ranges={[dateRange]}
+				onChange={e => setDateRange(e.selection)}
+				disabledDates={unavailable.map(d => new Date(d.year, d.month - 1, d.day, 0, 0, 0))}
 				months={2}
 				showMonthAndYearPickers={false}
 				direction='horizontal'
+				minDate={new Date()}
+				maxDate={endOfMonth(add(new Date(), { years: 1 }))}
 				showDateDisplay={false}
 				showPreview={true}
-				dragSelectionEnabled={true}
+				dragSelectionEnabled={false}
 				weekStartsOn={1}
+				monthDisplayFormat='MMMM yyyy'
+				rangeColors={['#42c2a4']} // $meadow
+				showSelectionPreview={false}
+				locale={enUS}
 			/>
-			{/* <ModernCalendar /> */}
-			{/* <ModernCalendar
-				value={selectedDayRange}
-				onChange={setSelectedDayRange}
-				disabledDays={unavailable}
-				minimumDate={utils().getToday()}
-				shouldHighlightWeekends
-			/> */}
-		</div>
+		</Paper>
 	)
 }

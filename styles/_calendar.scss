@@ -1,0 +1,76 @@
+.rdrDefinedRangesWrapper,
+.rdrMonthAndYearPickers {
+	display: none;
+}
+
+.rdrDay,
+.rdrWeekDay,
+.rdrMonthName {
+	font-size: 0.9rem;
+}
+.rdrMonthName {
+	color: black;
+	font-weight: 400;
+	text-align: center;
+	font-size: 1rem;
+}
+.rdrDayDisabled {
+	background-color: inherit;
+	span {
+		color: #d5dce0 !important;
+	}
+}
+.rdrDayWeekend span {
+	color: red;
+}
+.rdrMonthAndYearWrapper {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
+}
+.rdrCalendarWrapper {
+	position: relative;
+	padding-top: 0.7rem;
+}
+.rdrDayToday span {
+	font-weight: 600 !important;
+}
+
+// Buttons
+.rdrNextPrevButton {
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: $defaultTransitionDuration;
+}
+.rdrNextPrevButton:hover {
+	background-color: rgba(0, 0, 0, 0.55);
+}
+.rdrNextButton i {
+	border-color: transparent transparent transparent white;
+}
+.rdrPprevButton i {
+	border-color: transparent white transparent transparent;
+}
+
+// Hover border styling fix
+.rdrDayStartPreview.rdrDayEndPreview {
+	top: 4px;
+	bottom: 4px;
+	left: 1px;
+	right: 1px;
+}
+.rdrDayStartPreview:not(.rdrDayEndPreview) {
+	top: 4px;
+	bottom: 4px;
+	left: 1px;
+}
+.rdrDayInPreview {
+	top: 4px;
+	bottom: 4px;
+}
+.rdrDayEndPreview:not(.rdrDayStartPreview) {
+	top: 4px;
+	bottom: 4px;
+	right: 1px;
+}

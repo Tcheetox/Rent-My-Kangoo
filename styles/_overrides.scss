@@ -5,7 +5,7 @@
 
 .MuiButton-root,
 .MuiButtonBase-root {
-	border-radius: 10px !important;
+	border-radius: $defaultBorderRadius !important;
 	text-transform: unset !important;
 	span {
 		font-size: 22px;
@@ -32,7 +32,8 @@
 	width: 50px !important;
 }
 
-// Calendar
-.rdrDefinedRangesWrapper {
-	display: none;
+// Paper
+.MuiPaper-rounded {
+	border-radius: $defaultBorderRadius !important;
+	box-shadow: $defaultBoxShadow !important;
 }
