@@ -1,0 +1,7 @@
+@mixin tilt-on-hover {
+	transition: all $defaultTransitionDuration ease-in-out !important;
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1) !important;
+	}
+}

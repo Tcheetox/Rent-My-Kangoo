@@ -31,7 +31,6 @@
 		font-size: 1.2rem;
 	}
 	h3:after {
-		@import '../mixins/underline';
 		@include underline-after;
 		height: 1px;
 	}

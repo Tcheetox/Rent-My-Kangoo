@@ -3,6 +3,7 @@ import React from 'react'
 import Feedback from './Feedback'
 import styles from '../../../styles/blocks/reviews.module.scss'
 import reviewsInput from './reviews.json'
+import Layout from '../../Layout'
 
 export default function Reviews() {
 	return (

@@ -45,8 +45,6 @@ $form-max-width: 600px;
 	margin-top: 0.5rem !important;
 }
 
-@import '../mixins/centering';
-
 .success {
 	@include absolute-center;
 	top: 35%;

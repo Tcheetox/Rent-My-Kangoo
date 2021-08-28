@@ -1,5 +1,4 @@
 .absoluteLoading {
-	@import '../mixins/centering';
 	@include absolute-center;
 }
 .relativeLoading {

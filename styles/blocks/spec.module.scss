@@ -71,11 +71,8 @@
 	font-size: 1rem;
 	line-height: 1.8rem;
 	margin: 0.5rem;
-	transition: all $defaultTransitionDuration ease-in-out !important;
-}
-.paper:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1) !important;
+
+	@include tilt-on-hover;
 }
 
 .option {
