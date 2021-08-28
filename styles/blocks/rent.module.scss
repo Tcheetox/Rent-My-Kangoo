@@ -4,3 +4,21 @@
 		margin-right: auto;
 	}
 }
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+.booking {
+	width: max-content;
+	height: max-content;
+	// margin-top: auto;
+	// margin-bottom: auto;
+	text-align: center;
+	width: 390px;
+
+	h3 {
+		line-height: 2.2rem;
+		font-size: 22px;
+		font-weight: 400;
+	}
+}

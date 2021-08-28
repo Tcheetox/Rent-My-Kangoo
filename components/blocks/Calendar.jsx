@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // https://www.npmjs.com/package/react-date-range
 import { Paper } from '@material-ui/core'
@@ -9,13 +9,7 @@ import { add, endOfMonth } from 'date-fns'
 
 // TODO: prevent calendar to swap month when starting in month+1
 
-export default function Calendar({ availabilityDates: unavailable }) {
-	const [dateRange, setDateRange] = useState({
-		startDate: new Date(),
-		endDate: new Date(),
-		key: 'selection',
-	})
-
+export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
 	return (
 		<Paper className={styles.calendar}>
 			<DateRangePicker
