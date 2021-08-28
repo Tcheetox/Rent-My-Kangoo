@@ -12,7 +12,15 @@ const center = {
 
 const MapMaker = () => (
 	<div className={styles.mapMarker}>
-		<Tooltip title='Quai des Arénières, 1205 Geneva - Switzerland' placement='top' arrow>
+		<Tooltip
+			title={
+				<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
+					Quai des Arénières, 1205 Geneva - Switzerland
+				</a>
+			}
+			placement='top'
+			arrow
+			interactive>
 			<MapMarker />
 		</Tooltip>
 	</div>
