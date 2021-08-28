@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rentmykangoo.ch
+
+# Sitemaps
+Sitemap: https://rentmykangoo.ch/sitemap.xml

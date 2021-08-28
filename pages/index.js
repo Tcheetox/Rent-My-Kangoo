@@ -4,9 +4,11 @@ import Footer from '../components/Footer'
 import { Jumbo, HowItWorks, Carousel, Contact, RentMe, Map, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
-// TODO: add robots.txt
+// Sitemap generator: https://www.npmjs.com/package/next-sitemap
+
 // TODO: metadata (+ favicon)
 // TODO: harmonize border-radius
+// TODO: limit API key map $$$
 
 export const getStaticProps = async () => ({ props: { availabilityDates: await getCarAvailability() } })
 
