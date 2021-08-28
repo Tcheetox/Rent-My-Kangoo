@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Simone",
+        "date":"23.08.2021",
+        "message":"Cette utilitaire m'a rendu un grand service, facile à conduire, avec de la place pour le transport, et des propriétaires sympathiques et disponibles.",
+        "picture":"https://www.2em.ch/images/autos_avatar/avatar_34615.2021.08.09.21.31.47.0_53394400.jpg",
+        "profile":"https://www.2em.ch/utilisateur/simone-34615"
+    },
+    {
+        "name":"Marc L.",
+        "date":"04.07.2021",
+        "message":"Super. Kevin et son épouse ont été très arrangeants et la location s'est très bien déroulée. Remise et dépose du véhicule en plein centre de Genève, facile et efficace!",
+        "picture":"https://www.2em.ch/images/autos_avatar/avatar_27174.2020.10.12.16.33.29.0_91252400.jpg",
+        "profile":"https://www.2em.ch/utilisateur/marc-27174"
+    },
+    {
+        "name":"Patrick Z.",
+        "date":"17.05.2021",
+        "message":"Accueil chaleureux et très bonne disponibilité ; ou comment rendre les choses simples et faciles entre un loueur et son locataire. Je n'hésiterai pas à utiliser le véhicule de Kevin si l'occasion venait à se représenter.",
+        "picture":"https://www.2em.ch/images/autos_avatar/avatar_31478.2021.05.11.11.07.12.0_45964300.jpg",
+        "profile":"https://www.2em.ch/utilisateur/patrick-31478"
+    }
+]

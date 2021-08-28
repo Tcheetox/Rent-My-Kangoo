@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default function Feedback({}) {
-	;<h2>FEEBACK I</h2>
+import { Paper } from '@material-ui/core'
+
+export default function Feedback({ review: { name, date, message, profile, picture } }) {
+	return <Paper>{message}</Paper>
 }
