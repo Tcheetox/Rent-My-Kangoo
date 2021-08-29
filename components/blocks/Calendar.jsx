@@ -6,6 +6,7 @@ import { DateRangePicker } from 'react-date-range'
 import styles from '../../styles/blocks/calendar.module.scss'
 import { enUS, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
+import theme from '../../pages/_theme'
 
 // TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
 
@@ -26,7 +27,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 				dragSelectionEnabled={false}
 				weekStartsOn={1}
 				monthDisplayFormat='MMMM yyyy'
-				rangeColors={['#42c2a4']} // TODO: $meadow
+				rangeColors={[theme.palette.primary.main]}
 				showSelectionPreview={false}
 				locale={enUS}
 			/>
