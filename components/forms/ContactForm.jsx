@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { TextField, Button } from '@material-ui/core/'
 import styles from '../../styles/blocks/contact.module.scss'
-import { capitalize } from '../../utils'
+import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
 import CircularLoading from '../CircularLoading'
 import SuccessIcon from '@material-ui/icons/CheckCircleOutline'

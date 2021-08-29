@@ -6,10 +6,13 @@ import theme from './_theme'
 export default class MyDocument extends Document {
 	render() {
 		return (
-			<Html lang='en'>
+			<Html>
 				<Head>
 					<meta name='theme-color' content={theme.palette.primary.main} />
 					<link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap' rel='stylesheet' />
+					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/fr`} hreflang='fr' />
+					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/en`} hreflang='en' />
+					<link rel='alternate' href={process.env.NEXT_PUBLIC_SITE_URL} hreflang='x-default' />
 				</Head>
 				<body>
 					<Main />
