@@ -7,7 +7,7 @@ import styles from '../styles/blocks/logo.module.scss'
 export default function Logo() {
 	return (
 		<div className={styles.logo}>
-			<Image src={logo} alt='logo' />
+			<Image src={logo} alt='logo' priority />
 		</div>
 	)
 }

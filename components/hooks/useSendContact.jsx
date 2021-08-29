@@ -16,7 +16,6 @@ export default function useSendContact() {
 			body: JSON.stringify(data),
 		})
 			.then(res => {
-				console.log('Response received')
 				if (res.status === 200) setSuccess(true)
 			})
 			.catch(err => {

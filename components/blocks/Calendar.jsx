@@ -7,16 +7,12 @@ import styles from '../../styles/blocks/calendar.module.scss'
 import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../pages/_theme'
+import { useRouter } from 'next/router'
 
 // TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
 
-import { useRouter } from 'next/router'
-
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
-	const router = useRouter()
-	const { locale } = router
-
-	console.log(locale)
+	const { locale } = useRouter()
 
 	return (
 		<Paper className={styles.calendar}>
@@ -36,7 +32,8 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 				monthDisplayFormat='MMMM yyyy'
 				rangeColors={[theme.palette.primary.main]}
 				showSelectionPreview={false}
-				locale={enGB}
+				locale={locale.includes('en') ? enGB : frCH}
+				weekdayDisplayFormat='EEEEEE'
 			/>
 		</Paper>
 	)
