@@ -1,19 +1,20 @@
 import React from 'react'
 
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next'
 import styles from '../../styles/blocks/jumbo.module.scss'
 import Layout from '../Layout'
+import { Button } from '@material-ui/core'
 import bgImage from '../../media/bg00.jpg'
 
-import { Button } from '@material-ui/core'
-
 export default function Jumbo() {
+	const { t } = useTranslation()
 	return (
 		<Layout className={styles.jumbo}>
 			<Image alt='Car' src={bgImage} layout='fill' objectFit='cover' quality={100} priority />
 
 			<div className={styles.presentation}>
-				<h1>Rent my Kangoo</h1>
+				<h1>{t('site_title')}</h1>
 				<p>
 					Planning a move? Or do you simply need a utility vehicle? <br />
 					We easily rent you our vehicle via{' '}

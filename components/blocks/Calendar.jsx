@@ -4,13 +4,20 @@ import React from 'react'
 import { Paper } from '@material-ui/core'
 import { DateRangePicker } from 'react-date-range'
 import styles from '../../styles/blocks/calendar.module.scss'
-import { enUS, frCH } from 'date-fns/locale'
+import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../pages/_theme'
 
 // TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
 
+import { useRouter } from 'next/router'
+
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
+	const router = useRouter()
+	const { locale } = router
+
+	console.log(locale)
+
 	return (
 		<Paper className={styles.calendar}>
 			<DateRangePicker
@@ -29,7 +36,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 				monthDisplayFormat='MMMM yyyy'
 				rangeColors={[theme.palette.primary.main]}
 				showSelectionPreview={false}
-				locale={enUS}
+				locale={enGB}
 			/>
 		</Paper>
 	)

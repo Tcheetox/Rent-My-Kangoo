@@ -1,6 +1,7 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
 import { Jumbo, HowItWorks, Carousel, Contact, RentMe, Map, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
@@ -10,7 +11,9 @@ import { getCarAvailability } from '../lib/availability'
 // TODO: harmonize border-radius
 // TODO: limit API key map $$$
 
-export const getStaticProps = async () => ({ props: { availabilityDates: await getCarAvailability() } })
+export const getStaticProps = async ({ locale }) => ({
+	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() },
+})
 
 export default function Home({ availabilityDates }) {
 	return (
