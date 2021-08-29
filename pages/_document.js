@@ -21,10 +21,10 @@ export default class MyDocument extends Document {
 }
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with server-side generation (SSG).
+// It's compatible with server-side generation (SSG).
 MyDocument.getInitialProps = async ctx => {
 	// Resolution order
-	//
+	// ---------------
 	// On the server:
 	// 1. app.getInitialProps
 	// 2. page.getInitialProps

@@ -7,7 +7,7 @@ import styles from '../../styles/blocks/calendar.module.scss'
 import { enUS, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 
-// TODO: prevent calendar to swap month when starting in month+1
+// TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
 
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
 	return (
@@ -26,7 +26,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 				dragSelectionEnabled={false}
 				weekStartsOn={1}
 				monthDisplayFormat='MMMM yyyy'
-				rangeColors={['#42c2a4']} // $meadow
+				rangeColors={['#42c2a4']} // TODO: $meadow
 				showSelectionPreview={false}
 				locale={enUS}
 			/>

@@ -21,7 +21,7 @@ export default async function (req, res) {
 				},
 				secure: true,
 				tls: {
-					rejectUnauthorized: false, // do not fail on invalid certs
+					rejectUnauthorized: false, // Do not fail on invalid certs
 				},
 			})
 			.sendMail(mail)
