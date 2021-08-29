@@ -37,3 +37,18 @@
 	border-radius: $defaultBorderRadius !important;
 	box-shadow: $defaultBoxShadow !important;
 }
+
+// Language dropdown
+#language-select {
+	padding: 0;
+	display: flex;
+}
+#language-select:focus {
+	background-color: inherit;
+}
+.Mui-focused::after {
+	display: none;
+}
+.MuiPopover-paper {
+	margin-left: -16px;
+}

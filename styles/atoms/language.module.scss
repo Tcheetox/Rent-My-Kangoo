@@ -1,0 +1,21 @@
+.language {
+	img {
+	}
+}
+.language::after {
+	display: none;
+}
+.select {
+	label {
+		display: none;
+	}
+}
+.select::before {
+	display: none;
+}
+.item {
+	label {
+		margin-left: 0.5rem;
+		cursor: pointer;
+	}
+}
