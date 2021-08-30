@@ -41,6 +41,8 @@
 #language-select {
 	padding: 0;
 	display: flex;
+	align-items: center;
+	min-width: 62px;
 }
 #language-select:focus {
 	background-color: inherit;

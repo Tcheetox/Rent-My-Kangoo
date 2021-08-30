@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { FormControl, Select, MenuItem } from '@material-ui/core'
 import { useRouter } from 'next/router'
@@ -8,11 +8,11 @@ import chSVG from '../../media/flags/ch.png'
 import gbSVG from '../../media/flags/gb.png'
 
 export default function LanguageSelect() {
+	const [open, setOpen] = useState(false)
 	const router = useRouter()
 
-	//const [locale, setLocale] = useState('enUS')
 	return (
-		<FormControl id='language-form' className={styles.language}>
+		<FormControl id='language-form' className={styles.language} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
 			<Select
 				className={styles.select}
 				id='language-select'
@@ -22,14 +22,18 @@ export default function LanguageSelect() {
 				MenuProps={{
 					disableScrollLock: true,
 				}}
+				open={open}
+				onClose={() => setOpen(false)}
 				autoWidth>
-				<MenuItem value={'fr'} className={styles.item}>
+				<MenuItem value={'fr'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
 					<Image src={chSVG} width={32} height={24} />
 					<label>Français</label>
+					<span>FR</span>
 				</MenuItem>
-				<MenuItem value={'en'} className={styles.item}>
+				<MenuItem value={'en'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
 					<Image src={gbSVG} width={32} height={24} />
 					<label>English</label>
+					<span>EN</span>
 				</MenuItem>
 			</Select>
 		</FormControl>

@@ -16,8 +16,12 @@ export default function Header() {
 						<Logo />
 					</a>
 					<a href='#caracteristics'>Caracteristics</a>
-					<a href='#contact'>Contact</a>
-					<LanguageSelect />
+					<div className={styles.right}>
+						<a href='#contact' className={styles.contact}>
+							Contact
+						</a>
+						<LanguageSelect />
+					</div>
 				</Toolbar>
 			</Container>
 		</AppBar>
