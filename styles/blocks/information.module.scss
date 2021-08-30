@@ -62,3 +62,13 @@ $centerMargin: 4.5rem;
 .key {
 	color: orange;
 }
+.documents {
+	margin: 0.3rem 0;
+	span {
+		font-weight: 600;
+	}
+	ul {
+		margin: 0.1rem 0;
+		padding-left: 1rem;
+	}
+}

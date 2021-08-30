@@ -38,6 +38,12 @@
 .rdrDayToday span {
 	font-weight: 600 !important;
 }
+.rdrDayPassive {
+	visibility: hidden;
+}
+.rdrDayToday .rdrDayNumber span::after {
+	background: $meadow;
+}
 
 // Buttons
 .rdrNextPrevButton {

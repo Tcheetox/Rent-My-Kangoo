@@ -1,10 +1,6 @@
 const { i18n } = require('./next-i18next.config')
 const path = require('path')
 
-// TODO: check next locale cookie?!
-// TODO: check SEO hreflang
-//https://developers.google.com/search/docs/advanced/crawling/managing-multi-regional-sites#using-locale-specific-urls
-
 module.exports = {
 	reactStrictMode: false,
 	sassOptions: {

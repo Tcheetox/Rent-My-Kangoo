@@ -15,6 +15,7 @@ export default function Jumbo() {
 
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
+				<h2>Renault Kangoo 2012</h2>
 				<p>
 					Planning a move? Or do you simply need a utility vehicle? <br />
 					We easily rent you our vehicle via{' '}

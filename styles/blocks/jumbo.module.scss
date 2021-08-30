@@ -1,5 +1,18 @@
 .jumbo {
 	min-height: 100vh;
+	h2 {
+		all: unset;
+		color: darkgray;
+		font-size: 22px;
+		position: relative;
+		top: -2rem;
+	}
+	h2::after {
+		all: unset;
+	}
+	p {
+		margin-top: 0;
+	}
 }
 .background {
 	box-shadow: inset 0px 0px 0 2000px rgba(255, 255, 255, 0);

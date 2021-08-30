@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid } from '@material-ui/core'
+import { Grid, Tooltip } from '@material-ui/core'
 import useArrow from '../../hooks/useArrow'
 import styles from '../../../styles/blocks/information.module.scss'
 import cx from 'classnames'
@@ -18,6 +18,17 @@ export default function Process() {
 		Arrow,
 		settings: { DIRECTION },
 	} = useArrow()
+
+	const Documents = () => (
+		<div className={styles.documents}>
+			<span>Bring with you:</span>
+			<ul>
+				<li>Driving license</li>
+				<li>ID card</li>
+				<li>Proof of domicile</li>
+			</ul>
+		</div>
+	)
 
 	return (
 		<div className={styles.process}>
@@ -86,7 +97,11 @@ export default function Process() {
 				</Grid>
 				<Grid item sm={6} className={styles.left}>
 					<p>
-						It's almost done! Prepare the necessary documents and meet us{' '}
+						It's almost done! Prepare the{' '}
+						<Tooltip title={<Documents />} placement='top' arrow>
+							<strong>necessary documents</strong>
+						</Tooltip>{' '}
+						and meet us{' '}
 						<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
 							Quai des Arénières, 1205 Genève
 						</a>{' '}
