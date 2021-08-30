@@ -21,6 +21,7 @@
 		&:hover {
 			transform: scale(1.1);
 			fill: $zomp;
+			fill: $success;
 		}
 	}
 }
@@ -57,4 +58,7 @@ $centerMargin: 4.5rem;
 }
 .lock {
 	margin-left: 7rem;
+}
+.key {
+	color: orange;
 }

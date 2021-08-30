@@ -13,7 +13,7 @@ const theme = createTheme({
 			dark: '#D6D6D6',
 		},
 		error: {
-			main: '#E76F51',
+			main: '#F33829',
 		},
 		// success, warning, info
 		background: {

@@ -91,7 +91,7 @@ export default function Process() {
 							Quai des Arénières, 1205 Genève
 						</a>{' '}
 						at the time and day of your reservation. We'll quickly review the documents together and give you the keys{' '}
-						<KeyIcon className={styles.miniIcon} /> of the Kangoo. Enjoy your trip!
+						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. Enjoy your trip!
 					</p>
 				</Grid>
 			</Grid>

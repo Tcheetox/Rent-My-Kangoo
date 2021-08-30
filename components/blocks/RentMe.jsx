@@ -49,7 +49,13 @@ export default function RentMe({ availabilityDates }) {
 						}>
 						Book
 					</Button>
-					<p>The reservation and payment will be made on 2EM</p>
+					<p>
+						The reservation and payment will be made on{' '}
+						<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
+							2EM
+						</a>
+						.
+					</p>
 				</div>
 			</div>
 		</Layout>

@@ -23,6 +23,14 @@ export default function Footer() {
 						<h3>2EM</h3>
 						<ul>
 							<li>
+								<a
+									href='https://www.2em.ch/a-propos-de-la-location-de-vehicules-de-particulier-a-particulier'
+									target='_blank'
+									rel='noreferrer'>
+									About
+								</a>
+							</li>
+							<li>
 								<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 									Kangoo
 								</a>
