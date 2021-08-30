@@ -5,7 +5,7 @@ import styles from '../../styles/blocks/contact.module.scss'
 import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
 import CircularLoading from '../CircularLoading'
-import SuccessIcon from '@material-ui/icons/CheckCircleOutline'
+import SuccessIcon from '@material-ui/icons/Check'
 
 export default function Contact() {
 	const { sendForm, loading, error, success } = useSendContact()
@@ -51,7 +51,13 @@ export default function Contact() {
 					</Button>
 				</>
 			)
-		else if (success) return <SuccessIcon className={styles.success} color='primary' />
+		else if (success)
+			return (
+				<div className={styles.success}>
+					<SuccessIcon color='primary' />
+					<p>Message sent!</p>
+				</div>
+			)
 		else if (error) return <h3 className={styles.error}>An unexpected error has occured, please try again later.</h3>
 		else
 			return (

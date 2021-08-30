@@ -16,7 +16,7 @@ export default function useSendContact() {
 			body: JSON.stringify(data),
 		})
 			.then(res => {
-				if (res.status === 200) setSuccess(true)
+				if (res.status === 201) setSuccess(true)
 			})
 			.catch(err => {
 				console.error(err)
