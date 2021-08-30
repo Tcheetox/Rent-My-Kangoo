@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core'
 import styles from '../../styles/blocks/rent.module.scss'
 import Layout from '../Layout'
 import { format } from 'date-fns'
+import ReactGA from 'react-ga'
 
 export default function RentMe({ availabilityDates }) {
 	const [dateRange, setDateRange] = useState({
@@ -38,7 +39,7 @@ export default function RentMe({ availabilityDates }) {
 					<Button
 						variant='contained'
 						color='primary'
-						onClick={() =>
+						onClick={() => {
 							window.open(
 								`https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428?date_debut=${format(
 									dateRange.startDate,
@@ -46,7 +47,13 @@ export default function RentMe({ availabilityDates }) {
 								)}&date_fin=${format(dateRange.endDate, 'dd/MM/yyyy')}#location`,
 								'_blank'
 							)
-						}>
+							// GA tracking
+							ReactGA.event({
+								category: 'Button click',
+								label: '2EM',
+								action: 'Book through 2EM',
+							})
+						}}>
 						Book
 					</Button>
 					<p>

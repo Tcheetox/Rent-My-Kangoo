@@ -5,6 +5,7 @@ import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from './_theme'
+import ReactGA from 'react-ga'
 import 'react-date-range/dist/styles.css' // Calendar
 import 'react-date-range/dist/theme/default.css' // Theme css file
 import '../styles/index.scss'
@@ -18,6 +19,9 @@ const MyApp = props => {
 		if (jssStyles) {
 			jssStyles.parentElement.removeChild(jssStyles)
 		}
+		// Initialize GA
+		ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false })
+		if (location) ReactGA.pageview(location.pathname)
 	}, [])
 
 	return (
