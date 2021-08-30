@@ -25,13 +25,16 @@
 	}
 
 	// Link headers
-	h3 {
+	label {
 		text-transform: uppercase;
 		position: relative;
 		width: max-content;
 		font-size: 1.2rem;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		display: inline-block;
 	}
-	h3:after {
+	label:after {
 		@include underline-after;
 		height: 1px;
 	}

@@ -20,7 +20,7 @@ export default function Footer() {
 						</div>
 					</Grid>
 					<Grid item sm={3}>
-						<h3>2EM</h3>
+						<label>2EM</label>
 						<ul>
 							<li>
 								<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
@@ -43,7 +43,7 @@ export default function Footer() {
 						</ul>
 					</Grid>
 					<Grid item sm={3}>
-						<h3>Links</h3>
+						<label>Links</label>
 						<ul>
 							<li>
 								<a href='https://www.2em.ch/aide-locataire' target='_blank' rel='noreferrer'>
@@ -68,7 +68,7 @@ export default function Footer() {
 						</ul>
 					</Grid>
 					<Grid item sm={3}>
-						<h3>Contact</h3>
+						<label>Contact</label>
 						<ul>
 							<li className={styles.contact}>
 								<MailOutlineIcon /> <a href='mailto:kangoo@thekecha.com'>Kangoo@thekecha.com</a>

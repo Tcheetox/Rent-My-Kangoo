@@ -7,7 +7,6 @@ import { getCarAvailability } from '../lib/availability'
 
 // Sitemap generator: https://www.npmjs.com/package/next-sitemap
 
-// TODO: + favicon
 // TODO: limit API key map $$$
 // TODO: try in production the change of languages if its being remembered
 
