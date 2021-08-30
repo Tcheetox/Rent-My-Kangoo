@@ -10,13 +10,13 @@ export default function Header() {
 		<AppBar position='relative' className={styles.header} color='transparent'>
 			<Container maxWidth='lg'>
 				<Toolbar className={styles.bar}>
-					<a href='#How'>How it works?</a>
-					<a href='#Rent'>Rent me</a>
+					<a href='#how'>How it works?</a>
+					<a href='#rent'>Rent me</a>
 					<a href='#'>
 						<Logo />
 					</a>
-					<a href='#Caracteristics'>Caracteristics</a>
-					<a href='#Contact'>Contact</a>
+					<a href='#caracteristics'>Caracteristics</a>
+					<a href='#contact'>Contact</a>
 					<LanguageSelect />
 				</Toolbar>
 			</Container>

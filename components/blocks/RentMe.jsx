@@ -30,7 +30,7 @@ export default function RentMe({ availabilityDates }) {
 
 	return (
 		<Layout className={styles.rent}>
-			<h2 id='Rent'>Rent me</h2>
+			<h2 id='rent'>Rent me</h2>
 			<div className={styles.wrapper}>
 				<Calendar availabilityDates={availabilityDates} dateRange={dateRange} setDateRange={setDateRange} />
 				<div className={styles.booking}>

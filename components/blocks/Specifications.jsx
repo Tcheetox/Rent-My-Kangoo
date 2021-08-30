@@ -16,7 +16,7 @@ export default function Specifications() {
 	return (
 		<div className={styles.bg}>
 			<Layout className={styles.spec}>
-				<h2 id='Caracteristics'>Caracteristics</h2>
+				<h2 id='caracteristics'>Caracteristics</h2>
 				<div className={styles.wrapper}>
 					<Paper className={cx(styles.paper, styles.techspecWrapper)}>
 						<h3>Technical specifications</h3>

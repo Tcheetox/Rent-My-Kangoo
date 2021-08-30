@@ -7,7 +7,7 @@ import Process from './Process'
 export default function HowItWorks() {
 	return (
 		<Layout className={styles.information}>
-			<h2 id='How'>How it works?</h2>
+			<h2 id='how'>How it works?</h2>
 			<p className={styles.headline}>
 				We rent our car through <strong>2EM</strong> - a platform that promotes car sharing between individuals in Switzerland.
 			</p>

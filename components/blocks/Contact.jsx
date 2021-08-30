@@ -8,7 +8,7 @@ import TimerIcon from '@material-ui/icons/Timer'
 export default function Contact() {
 	return (
 		<Layout className={styles.contact}>
-			<h2 id='Contact'>Contact us</h2>
+			<h2 id='contact'>Contact us</h2>
 			<p className={styles.message}>
 				Should you have any questions or just want to know more about the rental process, please feel free to contact us. <br /> We usually
 				reply in less than <strong>24 hours</strong>!<TimerIcon />

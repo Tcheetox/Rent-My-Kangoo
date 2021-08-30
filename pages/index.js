@@ -7,13 +7,13 @@ import { getCarAvailability } from '../lib/availability'
 
 // Sitemap generator: https://www.npmjs.com/package/next-sitemap
 
-// TODO: metadata (+ favicon)
-// TODO: harmonize border-radius
+// TODO: + favicon
 // TODO: limit API key map $$$
 // TODO: try in production the change of languages if its being remembered
 
 export const getStaticProps = async ({ locale }) => ({
 	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() },
+	revalidate: 10, // Next.js will attempt to re-generate the page when a request comes in - and at most once every 10 seconds
 })
 
 export default function Home({ availabilityDates }) {

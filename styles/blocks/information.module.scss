@@ -6,7 +6,9 @@
 	h2 {
 		margin-left: auto;
 	}
+}
 
+.icon {
 	svg {
 		width: 4rem;
 		height: auto;
@@ -23,11 +25,8 @@
 	}
 }
 
-.iconWrapper {
-	width: max-content;
-}
 .row {
-	margin: 2rem 0;
+	margin: 3rem 0;
 	display: flex;
 	div {
 		display: flex;
@@ -51,4 +50,11 @@ $centerMargin: 4.5rem;
 	p {
 		margin-left: -1.5rem;
 	}
+}
+.miniIcon {
+	position: relative;
+	top: 5px;
+}
+.lock {
+	margin-left: 7rem;
 }

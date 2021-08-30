@@ -62,7 +62,7 @@ export default function Contact() {
 	}
 
 	return (
-		<form id='Contact' className={styles.form} autoComplete='off' onSubmit={handleSubmit}>
+		<form id='contact' className={styles.form} autoComplete='off' onSubmit={handleSubmit}>
 			<div className={loading || success || error ? styles.hidden : null}>
 				<TextField
 					className={styles.field}
