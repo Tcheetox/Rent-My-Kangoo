@@ -34,7 +34,7 @@ export default function Map() {
 
 	return (
 		// Important! Always set the container height explicitly
-		<div className={styles.map} style={{ height: '500px' }}>
+		<div id='map' className={styles.map} style={{ height: '500px' }}>
 			<GoogleMapReact
 				bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GMAP_KEY }}
 				defaultCenter={center}

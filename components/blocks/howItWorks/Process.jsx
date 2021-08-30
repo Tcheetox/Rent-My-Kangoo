@@ -35,7 +35,7 @@ export default function Process() {
 			<Grid className={styles.row}>
 				<Grid item sm={6} className={styles.icon}>
 					<div id='STEP1' className={styles.right}>
-						<ConnectIcon />
+						<ConnectIcon className={styles.connectIcon} />
 					</div>
 				</Grid>
 				<Grid item sm={6} className={styles.left}>
@@ -72,7 +72,7 @@ export default function Process() {
 				</Grid>
 				<Grid item sm={6} className={styles.icon}>
 					<div id='STEP2' className={cx(styles.left, styles.lock)}>
-						<LockIcon />
+						<LockIcon className={styles.lockIcon} />
 					</div>
 				</Grid>
 			</Grid>
@@ -92,21 +92,21 @@ export default function Process() {
 			<Grid className={styles.row}>
 				<Grid item sm={6} className={styles.icon}>
 					<div id='STEP3' className={styles.right}>
-						<CarIcon />
+						<CarIcon className={styles.carIcon} />
 					</div>
 				</Grid>
 				<Grid item sm={6} className={styles.left}>
 					<p>
 						It's almost done! Prepare the{' '}
 						<Tooltip title={<Documents />} placement='top' arrow>
-							<strong>necessary documents</strong>
+							<strong className={styles.hoverable}>necessary documents</strong>
 						</Tooltip>{' '}
 						and meet us{' '}
 						<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
 							Quai des Arénières, 1205 Genève
 						</a>{' '}
 						at the time and day of your reservation. We'll quickly review the documents together and give you the keys{' '}
-						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. Enjoy your trip!
+						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. <strong>Enjoy your trip!</strong>
 					</p>
 				</Grid>
 			</Grid>

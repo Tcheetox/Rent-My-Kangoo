@@ -23,6 +23,11 @@ export default function Footer() {
 						<h3>2EM</h3>
 						<ul>
 							<li>
+								<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
+									Kangoo
+								</a>
+							</li>
+							<li>
 								<a
 									href='https://www.2em.ch/a-propos-de-la-location-de-vehicules-de-particulier-a-particulier'
 									target='_blank'
@@ -31,8 +36,8 @@ export default function Footer() {
 								</a>
 							</li>
 							<li>
-								<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
-									Kangoo
+								<a href='https://www.2em.ch/politique-de-confidentialite' target='_blank' rel='noreferrer'>
+									Privacy
 								</a>
 							</li>
 						</ul>
@@ -72,13 +77,13 @@ export default function Footer() {
 					</Grid>
 				</Grid>
 				<hr />
-				<h4>
+				<p>
 					© 2021 Copyright{' '}
 					<a href='https://thekecha.com/krenier' target='_blank' rel='noreferrer'>
 						TheKecha
 					</a>
 					. All rights reserved.
-				</h4>
+				</p>
 			</Container>
 		</footer>
 	)

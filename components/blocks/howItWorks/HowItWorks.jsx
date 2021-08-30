@@ -8,9 +8,9 @@ export default function HowItWorks() {
 	return (
 		<Layout className={styles.information}>
 			<h2 id='how'>How it works?</h2>
-			<p className={styles.headline}>
+			<h3 className={styles.headline}>
 				We rent our car through <strong>2EM</strong> - a platform that promotes car sharing between individuals in Switzerland.
-			</p>
+			</h3>
 			<Process />
 		</Layout>
 	)

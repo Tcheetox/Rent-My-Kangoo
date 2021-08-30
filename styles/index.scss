@@ -22,6 +22,7 @@ h2 {
 	position: relative;
 	margin: 0 0 2rem 0;
 	padding-top: 2rem;
+	text-shadow: 1px 1px 1px rgba(1, 195, 141, 0.5);
 }
 h2:after {
 	@include underline-after;

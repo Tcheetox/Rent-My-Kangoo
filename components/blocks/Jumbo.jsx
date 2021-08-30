@@ -6,6 +6,7 @@ import styles from '../../styles/blocks/jumbo.module.scss'
 import Layout from '../Layout'
 import { Button } from '@material-ui/core'
 import bgImage from '../../media/bg00.jpg'
+import PickUpIcon from '@material-ui/icons/Room'
 
 export default function Jumbo() {
 	const { t } = useTranslation()
@@ -15,7 +16,9 @@ export default function Jumbo() {
 
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
-				<h2>Renault Kangoo 2012</h2>
+				<h2>
+					Renault Kangoo 2012 - <PickUpIcon /> <a href='#map'>Geneva</a>
+				</h2>
 				<p>
 					Planning a move? Or do you simply need a utility vehicle? <br />
 					We easily rent you our vehicle via{' '}
