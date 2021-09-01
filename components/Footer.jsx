@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from '../styles/partials/footer.module.scss'
-import invertedLogo from '../media/logo3-nobginv.png'
+import invertedLogo from '../media/logo-nobginv.png'
 import Image from 'next/image'
 import { Container, Grid } from '@material-ui/core'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'

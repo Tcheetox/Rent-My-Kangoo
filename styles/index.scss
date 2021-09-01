@@ -1,4 +1,3 @@
-@import './forms';
 @import './overrides';
 @import './process';
 @import './calendar';
@@ -9,12 +8,15 @@ html {
 body {
 	overflow-x: hidden;
 }
+
 .error {
 	color: $ryb;
 }
+
 * {
 	font-family: 'Open Sans', sans-serif;
 }
+
 h2 {
 	font-size: 42px;
 	color: $meadow;
@@ -27,6 +29,7 @@ h2 {
 h2:after {
 	@include underline-after;
 }
+
 p {
 	font-size: 1rem;
 	line-height: 1.8rem;

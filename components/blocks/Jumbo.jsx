@@ -5,19 +5,20 @@ import { useTranslation } from 'next-i18next'
 import styles from '../../styles/blocks/jumbo.module.scss'
 import Layout from '../Layout'
 import { Button } from '@material-ui/core'
-import bgImage from '../../media/bg00.jpg'
+
+import bg from '../../media/jumbo-bg.jpg'
 import PickUpIcon from '@material-ui/icons/Room'
 
 export default function Jumbo() {
 	const { t } = useTranslation()
 	return (
 		<Layout className={styles.jumbo}>
-			<Image alt='Car' src={bgImage} layout='fill' objectFit='cover' quality={100} priority />
+			<Image alt='Car' src={bg} layout='fill' objectFit='cover' quality={100} priority />
 
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
 				<h2>
-					Renault Kangoo 2012 - <PickUpIcon /> <a href='#map'>Geneva</a>
+					Renault Kangoo —<PickUpIcon /> <a href='#map'>Geneva</a>
 				</h2>
 				<p>
 					Planning a move? Or do you simply need a utility vehicle? <br />

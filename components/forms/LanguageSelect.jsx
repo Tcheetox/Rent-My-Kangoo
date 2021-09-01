@@ -26,12 +26,12 @@ export default function LanguageSelect() {
 				onClose={() => setOpen(false)}
 				autoWidth>
 				<MenuItem value={'fr'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
-					<Image src={chSVG} width={32} height={24} />
+					<Image alt='Swiss flag' src={chSVG} width={32} height={24} />
 					<label>Français</label>
 					<span>FR</span>
 				</MenuItem>
 				<MenuItem value={'en'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
-					<Image src={gbSVG} width={32} height={24} />
+					<Image alt='UK flag' src={gbSVG} width={32} height={24} />
 					<label>English</label>
 					<span>EN</span>
 				</MenuItem>

@@ -4,17 +4,21 @@ import Layout from '../Layout'
 import { Paper } from '@material-ui/core'
 import styles from '../../styles/blocks/spec.module.scss'
 import cx from 'classnames'
+import Image from 'next/image'
 
+import bg from '../../media/spec-bg.png'
 import FuelIcon from '@material-ui/icons/LocalGasStation'
 import PeopleIcon from '@material-ui/icons/People'
-
 import UsbIcon from '@material-ui/icons/Usb'
 import BluetoothIcon from '@material-ui/icons/Bluetooth'
 import SnowIcon from '@material-ui/icons/AcUnit'
 
 export default function Specifications() {
 	return (
-		<div className={styles.bg}>
+		<div className={styles.wrapper}>
+			<div className={styles.bgWrapper}>
+				<Image alt='Charts' src={bg} objectFit='cover' layout='fill' />
+			</div>
 			<Layout className={styles.spec}>
 				<h2 id='caracteristics'>Caracteristics</h2>
 				<div className={styles.wrapper}>
@@ -59,6 +63,14 @@ export default function Specifications() {
 								<SnowIcon className={styles.option} />
 								Snow chains
 							</li>
+						</ul>
+					</Paper>
+					<Paper className={cx(styles.paper, styles.advantagesWrapper)}>
+						<h3>Advantages</h3>
+						<ul>
+							<li>The vehicle can be driven in neighboring countries</li>
+							<li>2EM-Bâloise insurance: civil liability, collision and breakdown </li>
+							<li>Second drivers can be insured free of charge</li>
 						</ul>
 					</Paper>
 					<Paper className={cx(styles.paper, styles.advantagesWrapper)}>

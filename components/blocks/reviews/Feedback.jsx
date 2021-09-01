@@ -10,7 +10,7 @@ export default function Feedback({ review: { name, message, profile, picture } }
 		<Paper className={styles.feedback}>
 			<div className={styles.pictureWrapper}>
 				<a href={profile} target='_blank' rel='noreferrer'>
-					<Image alt='profile' src={picture} width={50} height={50} layout='responsive' />
+					<Image alt='Profile' src={picture} width={50} height={50} layout='responsive' />
 				</a>
 			</div>
 			<div className={styles.content}>

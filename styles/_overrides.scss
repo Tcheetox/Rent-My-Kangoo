@@ -11,6 +11,11 @@
 	}
 }
 
+// Form errors
+.MuiFormHelperText-root.Mui-error {
+	margin-top: 0;
+}
+
 // Contact form text inputs and validation
 .MuiFormControl-root {
 	margin: 0.5rem 0 !important;

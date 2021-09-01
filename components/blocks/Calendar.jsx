@@ -3,7 +3,6 @@ import React from 'react'
 // https://www.npmjs.com/package/react-date-range
 import { Paper } from '@material-ui/core'
 import { DateRangePicker } from 'react-date-range'
-import styles from '../../styles/blocks/calendar.module.scss'
 import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../pages/_theme'
@@ -15,7 +14,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 	const { locale } = useRouter()
 
 	return (
-		<Paper className={styles.calendar}>
+		<Paper>
 			<DateRangePicker
 				ranges={[dateRange]}
 				onChange={e => setDateRange(e.selection)}
