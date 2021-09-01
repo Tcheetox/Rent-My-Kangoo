@@ -51,7 +51,7 @@
 	flex-basis: 39%;
 	li {
 		list-style: disclosure-closed;
-		margin-bottom: 0.3rem;
+		margin-bottom: 0.1rem;
 	}
 	ul {
 		padding-left: 1rem;
@@ -86,4 +86,11 @@
 	color: $meadow;
 	height: 30px !important;
 	width: auto !important;
+}
+
+.detailsWrapper {
+	li {
+		list-style: none;
+		margin-bottom: 0.1rem;
+	}
 }

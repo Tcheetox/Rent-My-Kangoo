@@ -37,9 +37,8 @@ export default function Process() {
 					<div id='STEP1' className={styles.icon}>
 						<ConnectIcon className={styles.connectIcon} />
 					</div>
-
 					<p>
-						Prior to booking the car, we suggest you to check the <a href='#rent'>availability</a>{' '}
+						Prior to booking the car, we suggest you to check the <a href='#availability'>availability</a>{' '}
 						<CalendarIcon className={styles.miniIcon} /> below, or to go directly on{' '}
 						<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 							2EM

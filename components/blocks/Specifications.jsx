@@ -73,12 +73,18 @@ export default function Specifications() {
 							<li>Second drivers can be insured free of charge</li>
 						</ul>
 					</Paper>
-					<Paper className={cx(styles.paper, styles.advantagesWrapper)}>
-						<h3>Advantages</h3>
+					<Paper className={cx(styles.paper, styles.detailsWrapper)}>
+						<h3>Power & Dimensions</h3>
 						<ul>
-							<li>The vehicle can be driven in neighboring countries</li>
-							<li>2EM-Bâloise insurance: civil liability, collision and breakdown </li>
-							<li>Second drivers can be insured free of charge</li>
+							<li>
+								Power <strong>55</strong>kW - <strong>1461</strong>cm³
+							</li>
+							<li>
+								Useful load <strong>524</strong>kg
+							</li>
+							<li>
+								Dimensions L<strong>165</strong> W<strong>110</strong> H<strong>85</strong>
+							</li>
 						</ul>
 					</Paper>
 				</div>

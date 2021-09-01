@@ -20,6 +20,9 @@ const theme = createTheme({
 			default: '#fff',
 		},
 	},
+	typography: {
+		fontFamily: ['"Open Sans", sans-serif'],
+	},
 })
 
 export default theme
