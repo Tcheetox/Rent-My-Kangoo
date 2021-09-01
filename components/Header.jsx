@@ -11,15 +11,13 @@ export default function Header() {
 			<Container maxWidth='lg'>
 				<Toolbar className={styles.bar}>
 					<a href='#how'>How it works?</a>
-					<a href='#rent'>Rent me</a>
+					<a href='#availability'>Availability</a>
 					<a href='#'>
 						<Logo />
 					</a>
 					<a href='#caracteristics'>Caracteristics</a>
 					<div className={styles.right}>
-						<a href='#contact' className={styles.contact}>
-							Contact
-						</a>
+						<a href='#contact'>Contact</a>
 						<LanguageSelect />
 					</div>
 				</Toolbar>

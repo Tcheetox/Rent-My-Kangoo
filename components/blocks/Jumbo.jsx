@@ -29,7 +29,7 @@ export default function Jumbo() {
 					platform.
 				</p>
 				<div className={styles.ctas}>
-					<Button variant='contained' color='primary' onClick={() => (window.location.href = '#rent')}>
+					<Button variant='contained' color='primary' onClick={() => (window.location.href = '#availability')}>
 						Rent me
 					</Button>
 					<Button variant='contained' color='secondary' onClick={() => (window.location.href = '#how')}>

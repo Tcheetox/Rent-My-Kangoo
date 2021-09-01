@@ -26,12 +26,12 @@ export default function RentMe({ availabilityDates }) {
 					from <strong>{formattedDate(dateRange.startDate)}</strong> to <strong>{formattedDate(dateRange.endDate)}</strong>
 				</span>
 			)
-		return <h3>Book the Kangoo {range}</h3>
+		return <h3>Rent the Kangoo {range}</h3>
 	}
 
 	return (
 		<Layout className={styles.rent}>
-			<h2 id='rent'>Rent me</h2>
+			<h2 id='availability'>Availability</h2>
 			<div className={styles.wrapper}>
 				<Calendar availabilityDates={availabilityDates} dateRange={dateRange} setDateRange={setDateRange} />
 				<div className={styles.booking}>
@@ -51,10 +51,10 @@ export default function RentMe({ availabilityDates }) {
 							ReactGA.event({
 								category: 'Button click',
 								label: '2EM',
-								action: 'Book through 2EM',
+								action: 'Rent through 2EM',
 							})
 						}}>
-						Book
+						Rent me
 					</Button>
 					<p>
 						The reservation and payment will be made on{' '}

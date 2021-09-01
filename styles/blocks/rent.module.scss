@@ -1,20 +1,17 @@
 .rent {
-	h2 {
-		margin-left: auto;
-		margin-right: auto;
-	}
 	margin-top: 2rem;
 	margin-bottom: 6rem;
 }
 .wrapper {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 .booking {
 	width: max-content;
 	height: max-content;
 	text-align: center;
 	width: 390px;
+	margin: 0 3rem;
 
 	h3 {
 		line-height: 2.2rem;

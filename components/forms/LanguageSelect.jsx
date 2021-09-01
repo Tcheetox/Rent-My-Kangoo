@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 import { FormControl, Select, MenuItem } from '@material-ui/core'
 import { useRouter } from 'next/router'
