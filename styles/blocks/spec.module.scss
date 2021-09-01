@@ -31,6 +31,8 @@
 }
 .techspecWrapper {
 	flex-basis: 31%;
+	min-width: 345px;
+
 	svg {
 		position: relative;
 		top: 5px;
@@ -38,6 +40,7 @@
 	}
 }
 .accessoriesWrapper {
+	min-width: 210px;
 	flex-basis: 20%;
 	li {
 		margin-bottom: 0.8rem;
@@ -49,6 +52,7 @@
 }
 .advantagesWrapper {
 	flex-basis: 39%;
+	min-width: 415px;
 	li {
 		list-style: disclosure-closed;
 		margin-bottom: 0.1rem;
@@ -74,6 +78,7 @@
 
 .paper {
 	width: max-content;
+	height: max-content;
 	padding: 1rem 2rem;
 	font-size: 1rem;
 	line-height: 1.8rem;
@@ -92,5 +97,18 @@
 	li {
 		list-style: none;
 		margin-bottom: 0.1rem;
+	}
+}
+
+@include maxWidth($centeringWidthTreshold) {
+	.spec h2 {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include maxWidth(1082px) {
+	.wrapper {
+		justify-content: space-around;
 	}
 }

@@ -22,7 +22,7 @@
 	margin: 0.5rem;
 }
 
-@include maxWidth(1134px) {
+@include maxWidth($centeringWidthTreshold) {
 	.wrapper {
 		justify-content: center;
 	}
