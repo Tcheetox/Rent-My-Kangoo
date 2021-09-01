@@ -35,23 +35,26 @@
 	}
 }
 
-$centerMargin: 4.5rem;
-.right {
-	margin: 1.5rem $centerMargin;
+$stepMaxWidth: 650px;
+$borderMargin: 6%;
+.step1,
+.step3 {
+	max-width: $stepMaxWidth;
 	margin-left: auto;
-	text-align: right;
+	margin-right: $borderMargin;
 	p {
-		margin-right: -1.5rem;
+		margin-left: 2.5rem;
 	}
 }
-.left {
-	margin: 1.5rem $centerMargin;
+.step2 {
+	max-width: $stepMaxWidth;
 	margin-right: auto;
-	text-align: left;
+	margin-left: $borderMargin;
 	p {
-		margin-left: -1.5rem;
+		margin-right: 2.5rem;
 	}
 }
+
 .miniIcon {
 	position: relative;
 	top: 5px;

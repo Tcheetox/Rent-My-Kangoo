@@ -33,12 +33,11 @@ export default function Process() {
 	return (
 		<div className={styles.process}>
 			<Grid className={styles.row}>
-				<Grid item sm={6} className={styles.icon}>
-					<div id='STEP1' className={styles.right}>
+				<div className={styles.step1}>
+					<div id='STEP1' className={styles.icon}>
 						<ConnectIcon className={styles.connectIcon} />
 					</div>
-				</Grid>
-				<Grid item sm={6} className={styles.left}>
+
 					<p>
 						Prior to booking the car, we suggest you to check the <a href='#rent'>availability</a>{' '}
 						<CalendarIcon className={styles.miniIcon} /> below, or to go directly on{' '}
@@ -47,7 +46,7 @@ export default function Process() {
 						</a>{' '}
 						platform. Then, you can connect to your 2EM account or create it if necessary.
 					</p>
-				</Grid>
+				</div>
 			</Grid>
 			<Arrow
 				className='arrow'
@@ -59,43 +58,39 @@ export default function Process() {
 				to={{
 					direction: DIRECTION.RIGHT,
 					node: () => document.getElementById('STEP2'),
-					translation: [1.5, -0.5],
+					translation: [2, -0.6],
 				}}
 			/>
 			<Grid className={styles.row}>
-				<Grid item sm={6} className={styles.right}>
+				<div className={styles.step2}>
 					<p>
 						Once you proceed to the reservation through the system, we will get notified and promptly approve{' '}
 						<ApproveIcon className={styles.miniIcon} /> your request. You'll then have the opportunity to pay{' '}
 						<PayIcon className={styles.miniIcon} /> for your rental directly on the platform.
 					</p>
-				</Grid>
-				<Grid item sm={6} className={styles.icon}>
-					<div id='STEP2' className={cx(styles.left, styles.lock)}>
+					<div id='STEP2' className={styles.icon}>
 						<LockIcon className={styles.lockIcon} />
 					</div>
-				</Grid>
+				</div>
 			</Grid>
 			<Arrow
 				className='arrow'
 				from={{
 					direction: DIRECTION.RIGHT,
 					node: () => document.getElementById('STEP2'),
-					translation: [0, 0.1],
+					translation: [0, 0],
 				}}
 				to={{
 					direction: DIRECTION.LEFT,
 					node: () => document.getElementById('STEP3'),
-					translation: [-0.5, -0.3],
+					translation: [-1, -0.3],
 				}}
 			/>
 			<Grid className={styles.row}>
-				<Grid item sm={6} className={styles.icon}>
-					<div id='STEP3' className={styles.right}>
+				<div className={styles.step3}>
+					<div id='STEP3' className={styles.icon}>
 						<CarIcon className={styles.carIcon} />
 					</div>
-				</Grid>
-				<Grid item sm={6} className={styles.left}>
 					<p>
 						It's almost done! Prepare the{' '}
 						<Tooltip title={<Documents />} placement='top' arrow>
@@ -108,7 +103,7 @@ export default function Process() {
 						at the time and day of your reservation. We'll quickly review the documents together and give you the keys{' '}
 						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. <strong>Enjoy your trip!</strong>
 					</p>
-				</Grid>
+				</div>
 			</Grid>
 		</div>
 	)

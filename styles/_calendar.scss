@@ -44,6 +44,10 @@
 .rdrDayToday .rdrDayNumber span::after {
 	background: $meadow;
 }
+.rdrDayToday.rdrDayDisabled span span {
+	color: gray !important;
+	font-weight: 400 !important;
+}
 
 // Buttons
 .rdrNextPrevButton {

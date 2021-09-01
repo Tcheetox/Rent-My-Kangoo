@@ -3,11 +3,13 @@
 	right: -1.5rem;
 	padding-left: 1rem !important;
 	border-left: 1px solid lightgray !important;
+	height: 32px;
 }
 .language::after {
 	display: none;
 }
 .select {
+	margin: auto;
 	label {
 		display: none;
 	}
