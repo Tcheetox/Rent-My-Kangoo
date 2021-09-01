@@ -7,19 +7,22 @@ import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../pages/_theme'
 import { useRouter } from 'next/router'
+import useWindowWidth from '../hooks/useWindowWidth'
+import styles from '../../styles/blocks/rent.module.scss'
 
 // TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
 
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
 	const { locale } = useRouter()
+	const { smaller } = useWindowWidth(710)
 
 	return (
-		<Paper>
+		<Paper className={styles.calendar}>
 			<DateRangePicker
 				ranges={[dateRange]}
 				onChange={e => setDateRange(e.selection)}
 				disabledDates={unavailable.map(d => new Date(d.year, d.month - 1, d.day, 0, 0, 0))}
-				months={2}
+				months={smaller ? 1 : 2}
 				showMonthAndYearPickers={false}
 				direction='horizontal'
 				minDate={new Date()}

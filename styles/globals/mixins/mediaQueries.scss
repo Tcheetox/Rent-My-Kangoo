@@ -8,3 +8,8 @@
 		@content;
 	}
 }
+@mixin maxWidth($maxWidth) {
+	@media (max-width: $maxWidth) {
+		@content;
+	}
+}

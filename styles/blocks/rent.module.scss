@@ -5,17 +5,32 @@
 .wrapper {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .booking {
 	width: max-content;
 	height: max-content;
 	text-align: center;
 	width: 390px;
-	margin: 0 3rem;
-
 	h3 {
 		line-height: 2.2rem;
 		font-size: 22px;
 		font-weight: 400;
+	}
+}
+.calendar {
+	margin: 0.5rem;
+}
+
+@include maxWidth(1134px) {
+	.wrapper {
+		justify-content: center;
+	}
+	.rent {
+		margin-bottom: 5rem;
+		h2 {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
