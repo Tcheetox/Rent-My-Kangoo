@@ -5,6 +5,7 @@
 	ul {
 		padding-left: 0;
 		margin-left: -0.5rem;
+		width: max-content;
 	}
 	li {
 		list-style: none;
@@ -61,4 +62,22 @@
 	flex-direction: column;
 	align-items: center;
 	font-size: 1.2rem;
+}
+
+@include sm {
+	.block div {
+		width: max-content;
+		margin-left: auto;
+		margin-right: 30%;
+	}
+	.contactBlock {
+		text-align: right;
+	}
+}
+@include xs {
+	.block div {
+		width: max-content;
+		margin: auto;
+		text-align: center;
+	}
 }

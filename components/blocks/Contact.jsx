@@ -11,7 +11,10 @@ export default function Contact() {
 			<h2 id='contact'>Contact us</h2>
 			<p className={styles.message}>
 				Should you have any questions or just want to know more about the rental process, please feel free to contact us. <br /> We usually
-				reply in less than <strong>24 hours</strong>!<TimerIcon />
+				reply in less than{' '}
+				<strong className={styles.timing}>
+					24 hours! <TimerIcon />
+				</strong>
 			</p>
 			<ContactForm />
 		</Layout>
