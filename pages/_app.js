@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from './_theme'
+import theme from '../styles/theme'
 import ReactGA from 'react-ga'
 import 'react-date-range/dist/styles.css' // Calendar
 import 'react-date-range/dist/theme/default.css' // Theme css file

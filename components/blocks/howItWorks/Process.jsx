@@ -67,7 +67,7 @@ export default function Process() {
 				<div className={styles.step2}>
 					<p>
 						Once you proceed to the reservation through the system, we will get notified and promptly approve{' '}
-						<ApproveIcon className={styles.miniIcon} /> your request. You'll then have the opportunity to pay{' '}
+						<ApproveIcon className={styles.miniIcon} /> your request. You&apos;ll then have the opportunity to pay{' '}
 						<PayIcon className={styles.miniIcon} /> for your rental directly on the platform.
 					</p>
 					<div id='STEP2' className={styles.icon}>
@@ -94,7 +94,7 @@ export default function Process() {
 						<CarIcon className={styles.carIcon} />
 					</div>
 					<p>
-						It's almost done! Prepare the{' '}
+						It&apos;s almost done! Prepare the{' '}
 						<Tooltip title={<Documents />} placement='top' arrow>
 							<strong className={styles.hoverable}>necessary documents</strong>
 						</Tooltip>{' '}
@@ -102,7 +102,7 @@ export default function Process() {
 						<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
 							Quai des Arénières, 1205 Genève
 						</a>{' '}
-						at the time and day of your reservation. We'll quickly review the documents together and give you the keys{' '}
+						at the time and day of your reservation. We&apos;ll quickly review the documents together and give you the keys{' '}
 						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. <strong>Enjoy your trip!</strong>
 					</p>
 				</div>

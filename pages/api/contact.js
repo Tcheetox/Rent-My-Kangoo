@@ -1,4 +1,4 @@
-export default async function (req, res) {
+export default async function sendMail(req, res) {
 	let nodemailer = require('nodemailer')
 	// Define mail
 	const mail = {

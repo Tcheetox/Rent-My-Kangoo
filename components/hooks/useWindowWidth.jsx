@@ -12,7 +12,7 @@ export default function useWindowWidth(treshold = null) {
 		onWindowResize()
 		window && window.addEventListener('resize', onWindowResize)
 		return () => window && window.removeEventListener('resize', onWindowResize)
-	}, [])
+	}, [treshold])
 
 	return { smaller: isSmaller }
 }

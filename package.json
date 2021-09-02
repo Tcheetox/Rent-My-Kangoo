@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js && node next-sitemap-postcreation.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,6 +26,7 @@
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
     "react-material-ui-carousel": "^2.3.1",
+    "replace-in-file": "^6.2.0",
     "sass": "^1.38.0"
   },
   "devDependencies": {
