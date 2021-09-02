@@ -2,11 +2,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Jumbo, HowItWorks, Carousel, Contact, RentMe, Map, Specifications, Reviews } from '../components/blocks'
+import { Jumbo, HowItWorks, Carousel, Contact, Map, RentMe, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
-// Sitemap generator: https://www.npmjs.com/package/next-sitemap
+// TODO: lazy loading of: calendar (react-date-calendar + date-fns), google map
 
+// TODO: clear !important flags in scss...
 // TODO: limit API key map $$$
 // TODO: try in production the change of languages if its being remembered
 // TODO: README

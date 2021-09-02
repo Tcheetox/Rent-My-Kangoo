@@ -12,6 +12,7 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@next/bundle-analyzer": "^11.1.2",
     "arrows-svg": "^1.5.4",
     "classnames": "^2.3.1",
     "date-fns": "^2.23.0",

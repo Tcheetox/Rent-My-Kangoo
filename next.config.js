@@ -1,7 +1,12 @@
 const { i18n } = require('./next-i18next.config')
 const path = require('path')
 
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+})
+
+// Analyze bundle with ANALYZE=true npm run build
+module.exports = withBundleAnalyzer({
 	reactStrictMode: false,
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles', 'globals')],
@@ -11,4 +16,4 @@ module.exports = {
 		domains: ['www.2em.ch'],
 	},
 	i18n,
-}
+})
