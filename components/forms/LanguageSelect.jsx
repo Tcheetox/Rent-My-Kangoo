@@ -13,7 +13,7 @@ export default function LanguageSelect() {
 
 	// TODO: scroll top when changing language
 	return (
-		<FormControl id='language-form' className={styles.language} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+		<FormControl id='language-form' className={styles.language}>
 			<Select
 				className={styles.select}
 				id='language-select'
@@ -25,13 +25,14 @@ export default function LanguageSelect() {
 				}}
 				open={open}
 				onClose={() => setOpen(false)}
+				onOpen={() => setOpen(true)}
 				autoWidth>
-				<MenuItem value={'fr'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
+				<MenuItem value={'fr'} className={styles.item}>
 					<Image alt='Swiss flag' src={chSVG} width={32} height={24} />
 					<label>Français</label>
 					<span>FR</span>
 				</MenuItem>
-				<MenuItem value={'en'} className={styles.item} onMouseLeave={() => setOpen(false)} onMouseEnter={() => setOpen(true)}>
+				<MenuItem value={'en'} className={styles.item}>
 					<Image alt='UK flag' src={gbSVG} width={32} height={24} />
 					<label>English</label>
 					<span>EN</span>
