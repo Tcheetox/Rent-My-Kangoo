@@ -2,8 +2,9 @@ import React from 'react'
 
 import { Grid, Tooltip } from '@material-ui/core'
 import useArrow from '../../hooks/useArrow'
-import styles from '../../../styles/blocks/information.module.scss'
+import styles from '../../../styles/blocks/how.module.scss'
 import cx from 'classnames'
+import useWindowWidth from '../../hooks/useWindowWidth'
 
 import ConnectIcon from '@material-ui/icons/HowToReg'
 import LockIcon from '@material-ui/icons/EnhancedEncryption'
@@ -14,6 +15,8 @@ import PayIcon from '@material-ui/icons/Payment'
 import ApproveIcon from '@material-ui/icons/ThumbUpAlt'
 
 export default function Process() {
+	const { smaller } = useWindowWidth(1118)
+
 	const {
 		Arrow,
 		settings: { DIRECTION },
@@ -50,14 +53,14 @@ export default function Process() {
 			<Arrow
 				className='arrow'
 				from={{
-					direction: DIRECTION.LEFT,
+					direction: smaller ? DIRECTION.BOTTOM : DIRECTION.LEFT,
 					node: () => document.getElementById('STEP1'),
-					translation: [-3, 0.5],
+					translation: smaller ? [0, 0.8] : [-3, 0.5],
 				}}
 				to={{
-					direction: DIRECTION.RIGHT,
+					direction: smaller ? DIRECTION.TOP : DIRECTION.RIGHT,
 					node: () => document.getElementById('STEP2'),
-					translation: [2, -0.6],
+					translation: smaller ? [0, -0.8] : [2, -0.6],
 				}}
 			/>
 			<Grid className={styles.row}>
@@ -75,14 +78,14 @@ export default function Process() {
 			<Arrow
 				className='arrow'
 				from={{
-					direction: DIRECTION.RIGHT,
+					direction: smaller ? DIRECTION.BOTTOM : DIRECTION.RIGHT,
 					node: () => document.getElementById('STEP2'),
-					translation: [0, 0],
+					translation: smaller ? [0, 0.8] : [0, 0],
 				}}
 				to={{
-					direction: DIRECTION.LEFT,
+					direction: smaller ? DIRECTION.TOP : DIRECTION.LEFT,
 					node: () => document.getElementById('STEP3'),
-					translation: [-1, -0.3],
+					translation: smaller ? [0, -0.8] : [-1, -0.3],
 				}}
 			/>
 			<Grid className={styles.row}>

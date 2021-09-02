@@ -4,9 +4,7 @@ import Layout from '../Layout'
 import { Paper } from '@material-ui/core'
 import styles from '../../styles/blocks/spec.module.scss'
 import cx from 'classnames'
-import Image from 'next/image'
 
-import bg from '../../media/spec-bg.png'
 import FuelIcon from '@material-ui/icons/LocalGasStation'
 import PeopleIcon from '@material-ui/icons/People'
 import UsbIcon from '@material-ui/icons/Usb'
@@ -16,9 +14,7 @@ import SnowIcon from '@material-ui/icons/AcUnit'
 export default function Specifications() {
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.bgWrapper}>
-				<Image alt='Charts' src={bg} objectFit='cover' layout='fill' />
-			</div>
+			<div className={styles.bgWrapper} />
 			<Layout className={styles.spec}>
 				<h2 id='caracteristics'>Caracteristics</h2>
 				<div className={styles.wrapper}>

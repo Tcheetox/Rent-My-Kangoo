@@ -1,6 +1,15 @@
 .wrapper {
 	position: relative;
 }
+.bgWrapper {
+	position: absolute;
+	background-image: url('/pictures/spec-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
 .bgWrapper::after {
 	content: '';
 	position: absolute;
@@ -29,9 +38,11 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+$minWidthBase: 332px;
 .techspecWrapper {
 	flex-basis: 31%;
-	min-width: 345px;
+	min-width: $minWidthBase;
 
 	svg {
 		position: relative;
@@ -40,7 +51,7 @@
 	}
 }
 .accessoriesWrapper {
-	min-width: 210px;
+	min-width: 272px;
 	flex-basis: 20%;
 	li {
 		margin-bottom: 0.8rem;
@@ -52,7 +63,7 @@
 }
 .advantagesWrapper {
 	flex-basis: 39%;
-	min-width: 415px;
+	min-width: $minWidthBase;
 	li {
 		list-style: disclosure-closed;
 		margin-bottom: 0.1rem;
@@ -69,6 +80,11 @@
 	margin-bottom: 0.5rem;
 	margin-right: 1.5rem;
 }
+.group:nth-child(2),
+.group:nth-child(4) {
+	margin-right: 0;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: row;
@@ -107,8 +123,24 @@
 	}
 }
 
-@include maxWidth(1082px) {
+@include maxWidth(1131px) {
 	.wrapper {
 		justify-content: space-around;
+	}
+}
+
+@include maxWidth(701px) {
+	.techspecWrapper,
+	.detailsWrapper,
+	.advantagesWrapper,
+	.accessoriesWrapper {
+		flex-basis: 75%;
+		min-width: $minWidthBase;
+	}
+	.techspec {
+		justify-content: space-around;
+		div {
+			margin-right: 0;
+		}
 	}
 }

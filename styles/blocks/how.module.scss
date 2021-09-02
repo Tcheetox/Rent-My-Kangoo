@@ -1,4 +1,4 @@
-.information {
+.how {
 	padding-top: 0;
 	padding-bottom: 4rem;
 }
@@ -150,5 +150,31 @@ $animationStartsAfter: 1.5s;
 	}
 	100% {
 		transform: scale(1);
+	}
+}
+
+// Mobile stuff
+@include maxWidth($centeringWidthTreshold) {
+	.how h2,
+	.how h3 {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+@include maxWidth(810px) {
+	.step1,
+	.step3 {
+		margin-right: auto;
+		p {
+			margin-left: 1rem;
+		}
+	}
+	.step2 {
+		margin-left: auto;
+		p {
+			margin-right: 1rem;
+		}
 	}
 }
