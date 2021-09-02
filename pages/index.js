@@ -10,7 +10,6 @@ import { getCarAvailability } from '../lib/availability'
 // TODO: limit API key map $$$
 // TODO: try in production the change of languages if its being remembered
 // TODO: README
-// TODO: mobile css
 
 export const getStaticProps = async ({ locale }) => ({
 	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() },

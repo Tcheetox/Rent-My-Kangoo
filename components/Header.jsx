@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../styles/partials/header.module.scss'
 import Logo from '../media/Logo'
 import LanguageSelect from './forms/LanguageSelect'
+import MobileMenu from './forms/MobileMenu'
 import { AppBar, Toolbar, Container } from '@material-ui/core'
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
 					<a href='#caracteristics'>Caracteristics</a>
 					<div className={styles.right}>
 						<a href='#contact'>Contact</a>
+						<MobileMenu />
 						<LanguageSelect />
 					</div>
 				</Toolbar>

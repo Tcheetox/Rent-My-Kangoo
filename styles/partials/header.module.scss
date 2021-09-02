@@ -18,7 +18,7 @@
 }
 
 // Mobile adjustments: this treshold triggers the header mobile mode
-@include maxWidth(820px) {
+@include maxWidth($mobileHeaderTreshold) {
 	.header a:not(.logo) {
 		display: none;
 	}

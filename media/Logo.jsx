@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from './logo-nobg.png'
 import Image from 'next/image'
-import styles from '../styles/blocks/logo.module.scss'
+import styles from '../styles/atoms/logo.module.scss'
 
 export default function Logo() {
 	return (

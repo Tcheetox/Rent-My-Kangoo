@@ -11,6 +11,7 @@ export default function LanguageSelect() {
 	const [open, setOpen] = useState(false)
 	const router = useRouter()
 
+	// TODO: scroll top when changing language
 	return (
 		<FormControl id='language-form' className={styles.language} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
 			<Select
