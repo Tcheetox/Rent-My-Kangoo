@@ -62,3 +62,34 @@
 	text-decoration: unset;
 	color: inherit;
 }
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('/pictures/jumbo-bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+@include maxWidth($centeringWidthTreshold) {
+	.presentation {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.bg::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.35);
+	}
+}
+@include xs {
+	.presentation {
+		margin-top: -2.5rem;
+	}
+}

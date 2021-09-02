@@ -16,3 +16,13 @@
 	display: flex;
 	align-items: center;
 }
+
+// Mobile adjustments: this treshold triggers the header mobile mode
+@include maxWidth(820px) {
+	.header a:not(.logo) {
+		display: none;
+	}
+	.bar {
+		justify-content: space-between;
+	}
+}

@@ -29,3 +29,11 @@
 		display: none;
 	}
 }
+
+@include maxWidth($centeringWidthTreshold) {
+	.language {
+		position: relative !important;
+		right: unset !important;
+		margin-left: 1rem !important;
+	}
+}

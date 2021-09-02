@@ -12,7 +12,7 @@ export default function Header() {
 				<Toolbar className={styles.bar}>
 					<a href='#how'>How it works?</a>
 					<a href='#availability'>Availability</a>
-					<a href='#'>
+					<a className={styles.logo} href='#'>
 						<Logo />
 					</a>
 					<a href='#caracteristics'>Caracteristics</a>
