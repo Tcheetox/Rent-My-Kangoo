@@ -4,16 +4,20 @@ import Layout from '../Layout'
 import ContactForm from '../forms/ContactForm'
 import styles from '../../styles/blocks/contact.module.scss'
 import TimerIcon from '@material-ui/icons/Timer'
+import { useTranslation } from 'next-i18next'
 
 export default function Contact() {
+	const { t } = useTranslation()
+
 	return (
 		<Layout className={styles.contact}>
-			<h2 id='contact'>Contact us</h2>
+			<h2 id='contact'>{t('contact-us')}</h2>
 			<p className={styles.message}>
-				Should you have any questions or just want to know more about the rental process, please feel free to contact us. <br /> We usually
-				reply in less than{' '}
+				{t('contact.p-question')}.
+				<br />
+				{t('contact.p-reply')}
 				<strong className={styles.timing}>
-					24 hours! <TimerIcon />
+					24 {t('hours')}! <TimerIcon />
 				</strong>
 			</p>
 			<ContactForm />

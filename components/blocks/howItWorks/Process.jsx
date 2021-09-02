@@ -5,6 +5,7 @@ import useArrow from '../../hooks/useArrow'
 import styles from '../../../styles/blocks/how.module.scss'
 import cx from 'classnames'
 import useWindowWidth from '../../hooks/useWindowWidth'
+import { useTranslation } from 'next-i18next'
 
 import ConnectIcon from '@material-ui/icons/HowToReg'
 import LockIcon from '@material-ui/icons/EnhancedEncryption'
@@ -13,8 +14,10 @@ import KeyIcon from '@material-ui/icons/VpnKey'
 import CalendarIcon from '@material-ui/icons/EventAvailable'
 import PayIcon from '@material-ui/icons/Payment'
 import ApproveIcon from '@material-ui/icons/ThumbUpAlt'
+import VanIcon from '@material-ui/icons/AirportShuttle'
 
 export default function Process() {
+	const { t } = useTranslation()
 	const { smaller } = useWindowWidth(1118)
 
 	const {
@@ -28,7 +31,7 @@ export default function Process() {
 			<ul>
 				<li>Driving license</li>
 				<li>ID card</li>
-				<li>Proof of domicile</li>
+				<li>Proof of address</li>
 			</ul>
 		</div>
 	)
@@ -41,12 +44,12 @@ export default function Process() {
 						<ConnectIcon className={styles.connectIcon} />
 					</div>
 					<p>
-						Prior to booking the car, we suggest you to check the <a href='#availability'>availability</a>{' '}
-						<CalendarIcon className={styles.miniIcon} /> below, or to go directly on{' '}
+						{t('process.step1.p-prio')} <a href='#availability'>{t('availability').toLowerCase()}</a>{' '}
+						<CalendarIcon className={styles.miniIcon} />, {t('process.step1.p-or')}
 						<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 							2EM
 						</a>{' '}
-						platform. Then, you can connect to your 2EM account or create it if necessary.
+						{t('process.step1.p-then')}
 					</p>
 				</div>
 			</Grid>
@@ -66,9 +69,9 @@ export default function Process() {
 			<Grid className={styles.row}>
 				<div className={styles.step2}>
 					<p>
-						Once you proceed to the reservation through the system, we will get notified and promptly approve{' '}
-						<ApproveIcon className={styles.miniIcon} /> your request. You&apos;ll then have the opportunity to pay{' '}
-						<PayIcon className={styles.miniIcon} /> for your rental directly on the platform.
+						{t('process.step2.p-once')} <strong>{t('process.step2.p-system')}</strong>, {t('process.step2.p-notify')}
+						<ApproveIcon className={styles.miniIcon} /> {t('process.step2.p-request')} <PayIcon className={styles.miniIcon} />{' '}
+						{t('process.step2.p-rental')}.
 					</p>
 					<div id='STEP2' className={styles.icon}>
 						<LockIcon className={styles.lockIcon} />
@@ -94,16 +97,16 @@ export default function Process() {
 						<CarIcon className={styles.carIcon} />
 					</div>
 					<p>
-						It&apos;s almost done! Prepare the{' '}
+						{t('process.step3.p-ready')}! <VanIcon className={styles.miniIcon} /> {t('process.step3.p-prepare')}
 						<Tooltip title={<Documents />} placement='top' arrow>
-							<strong className={styles.hoverable}>necessary documents</strong>
+							<strong className={styles.hoverable}>{t('process.step3.p-documents')}</strong>
 						</Tooltip>{' '}
-						and meet us{' '}
+						{t('process.step3.p-meet')}
 						<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
-							Quai des Arénières, 1205 Genève
+							Quai des Arénières, 1205 {t('geneva')}
 						</a>{' '}
-						at the time and day of your reservation. We&apos;ll quickly review the documents together and give you the keys{' '}
-						<KeyIcon className={cx(styles.miniIcon, styles.key)} /> of the Kangoo. <strong>Enjoy your trip!</strong>
+						{t('process.step3.p-time')} <KeyIcon className={cx(styles.miniIcon, styles.key)} /> {t('process.step3.p-kangoo')}.
+						<strong>{t('process.step3.p-enjoy')}!</strong>
 					</p>
 				</div>
 			</Grid>

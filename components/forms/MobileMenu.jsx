@@ -57,8 +57,8 @@ export default function MobileMenu() {
 							<ClickAwayListener onClickAway={handleClick}>
 								<MenuList autoFocusItem={open} id='mobile-menu-list' onKeyDown={handleListKeyDown}>
 									<MenuItem onClick={e => handleClick(e, '#how')}>How it works?</MenuItem>
-									<MenuItem onClick={e => handleClick(e, '#availability')}>Availability</MenuItem>
 									<MenuItem onClick={e => handleClick(e, '#caracteristics')}>Caracteristics</MenuItem>
+									<MenuItem onClick={e => handleClick(e, '#availability')}>Availability</MenuItem>
 									<MenuItem onClick={e => handleClick(e, '#contact')}>Contact</MenuItem>
 								</MenuList>
 							</ClickAwayListener>

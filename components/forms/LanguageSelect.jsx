@@ -12,7 +12,7 @@ export default function LanguageSelect() {
 	const router = useRouter()
 
 	const setCookie = locale => {
-		document.cookie = `NEXT_LOCALE=${locale}; expires=Fri, 31 Dec 9999 23:59:59 GMT`
+		document.cookie = `NEXT_LOCALE=${locale}; Secure; expires=Fri, 31 Dec 9999 23:59:59 GMT`
 	}
 
 	return (

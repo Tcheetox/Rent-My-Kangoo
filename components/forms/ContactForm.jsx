@@ -5,9 +5,11 @@ import styles from '../../styles/blocks/contact.module.scss'
 import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
 import CircularLoading from '../CircularLoading'
+import { useTranslation } from 'next-i18next'
 import SuccessIcon from '@material-ui/icons/Check'
 
 export default function Contact() {
+	const { t } = useTranslation()
 	const { sendForm, loading, error, success } = useSendContact()
 	const [data, setData] = useState({ email: '', name: '', message: '' })
 	const [errors, setErrors] = useState({ email: null, name: null, message: null })
@@ -21,10 +23,10 @@ export default function Contact() {
 		let _errors = errors
 		// All fields are required
 		Object.keys(data).forEach(e => {
-			if (data[e] === '') _errors = { ..._errors, [e]: `${capitalize(e)} cannot be empty` }
+			if (data[e] === '') _errors = { ..._errors, [e]: `${capitalize(t(e))} ${t('contact.cannot-be-empty')}` }
 		})
 		// Verify that email seems like an email
-		if (data.email !== '' && !validEmail(data.email)) _errors = { ..._errors, email: 'This email is not valid' }
+		if (data.email !== '' && !validEmail(data.email)) _errors = { ..._errors, email: t('contact.email-not-valid') }
 
 		// Set errors state and return boolean
 		setErrors(_errors)
@@ -47,7 +49,7 @@ export default function Contact() {
 				<>
 					<CircularLoading className={styles.loading} />
 					<Button className={styles.submit} variant='contained' color='primary' type='submit' disabled>
-						Sending...
+						{t('contact.sending')}...
 					</Button>
 				</>
 			)
@@ -55,14 +57,14 @@ export default function Contact() {
 			return (
 				<div className={styles.success}>
 					<SuccessIcon color='primary' />
-					<p>Message sent!</p>
+					<p>{t('contact.message-sent')}!</p>
 				</div>
 			)
-		else if (error) return <h3 className={styles.error}>An unexpected error has occured, please try again later.</h3>
+		else if (error) return <h3 className={styles.error}>{t('contact.unexpectged-error')}.</h3>
 		else
 			return (
 				<Button className={styles.submit} variant='contained' color='primary' type='submit'>
-					Send
+					{t('send')}
 				</Button>
 			)
 	}
@@ -73,7 +75,7 @@ export default function Contact() {
 				<TextField
 					className={styles.field}
 					id='Email'
-					label='Email'
+					label={t('email')}
 					variant='outlined'
 					name='email'
 					value={data.email}
@@ -84,7 +86,7 @@ export default function Contact() {
 				<TextField
 					className={styles.field}
 					id='Name'
-					label='Full name'
+					label={t('full-name')}
 					variant='outlined'
 					name='name'
 					value={data.name}
@@ -95,7 +97,7 @@ export default function Contact() {
 				<TextField
 					className={styles.field}
 					id='Message'
-					label='Message'
+					label={t('message')}
 					multiline
 					rows={4}
 					variant='outlined'

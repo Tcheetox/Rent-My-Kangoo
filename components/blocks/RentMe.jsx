@@ -6,8 +6,15 @@ import styles from '../../styles/blocks/rent.module.scss'
 import Layout from '../Layout'
 import { format } from 'date-fns'
 import ReactGA from 'react-ga'
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
+
+import { enGB, frCH } from 'date-fns/locale'
 
 export default function RentMe({ availabilityDates }) {
+	const { t } = useTranslation()
+	const { locale } = useRouter()
+
 	const [dateRange, setDateRange] = useState({
 		startDate: new Date(),
 		endDate: new Date(),
@@ -15,23 +22,27 @@ export default function RentMe({ availabilityDates }) {
 	})
 
 	const BookingInfo = () => {
-		const formattedDate = date => format(date, 'MMMM dd')
+		const formattedDate = date => format(date, 's MMMM', { locale: locale === 'en' ? enGB : frCH })
 		const range =
 			dateRange.startDate.toString() === dateRange.endDate.toString() ? (
 				<span>
-					on <strong>{formattedDate(dateRange.startDate)}</strong>
+					{t('on')} <strong>{formattedDate(dateRange.startDate)}</strong>
 				</span>
 			) : (
 				<span>
-					from <strong>{formattedDate(dateRange.startDate)}</strong> to <strong>{formattedDate(dateRange.endDate)}</strong>
+					{t('from')} <strong>{formattedDate(dateRange.startDate)}</strong> {t('to')} <strong>{formattedDate(dateRange.endDate)}</strong>
 				</span>
 			)
-		return <h3>Rent the Kangoo {range}</h3>
+		return (
+			<h3>
+				{t('rent.h3-rent')} {range}
+			</h3>
+		)
 	}
 
 	return (
 		<Layout className={styles.rent}>
-			<h2 id='availability'>Availability</h2>
+			<h2 id='availability'>{t('availability')}</h2>
 			<div className={styles.wrapper}>
 				<Calendar availabilityDates={availabilityDates} dateRange={dateRange} setDateRange={setDateRange} />
 				<div className={styles.booking}>
@@ -54,10 +65,10 @@ export default function RentMe({ availabilityDates }) {
 								action: 'Rent through 2EM',
 							})
 						}}>
-						Rent me
+						{t('rent-me')}
 					</Button>
 					<p>
-						The reservation and payment will be made on{' '}
+						{t('rent.p-reservation')}
 						<a href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 							2EM
 						</a>

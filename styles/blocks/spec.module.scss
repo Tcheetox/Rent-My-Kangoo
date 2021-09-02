@@ -1,6 +1,13 @@
 .wrapper {
 	position: relative;
 }
+@include xs {
+	.spec {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
 .bgWrapper {
 	position: absolute;
 	background-image: url('/pictures/spec-bg.png');

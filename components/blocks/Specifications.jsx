@@ -4,6 +4,7 @@ import Layout from '../Layout'
 import { Paper } from '@material-ui/core'
 import styles from '../../styles/blocks/spec.module.scss'
 import cx from 'classnames'
+import { useTranslation } from 'next-i18next'
 
 import FuelIcon from '@material-ui/icons/LocalGasStation'
 import PeopleIcon from '@material-ui/icons/People'
@@ -12,40 +13,42 @@ import BluetoothIcon from '@material-ui/icons/Bluetooth'
 import SnowIcon from '@material-ui/icons/AcUnit'
 
 export default function Specifications() {
+	const { t } = useTranslation()
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.bgWrapper} />
 			<Layout className={styles.spec}>
-				<h2 id='caracteristics'>Caracteristics</h2>
+				<h2 id='caracteristics'>{t('caracteristics')}</h2>
 				<div className={styles.wrapper}>
 					<Paper className={cx(styles.paper, styles.techspecWrapper)}>
-						<h3>Technical specifications</h3>
+						<h3>{t('spec.h3-tech')}</h3>
 						<div className={styles.techspec}>
 							<div className={styles.group}>
-								<label>Engine</label>
+								<label>{t('engine')}</label>
 								<span>
 									<FuelIcon />
-									Diesel
+									{t('diesel')}
 								</span>
 							</div>
 							<div className={styles.group}>
-								<label>Gearbox</label>
-								<span>Manual</span>
+								<label>{t('gearbox')}</label>
+								<span>{t('manual')}</span>
 							</div>
 							<div className={styles.group}>
-								<label>Counter</label>
+								<label>{t('mileage')}</label>
 								<span>0 - 150,000 km</span>
 							</div>
 							<div className={styles.group}>
-								<label>Seating capacity</label>
+								<label>{t('spec.h3-seating')}</label>
 								<span>
-									<PeopleIcon /> 2 persons
+									<PeopleIcon /> 2 {t('persons')}
 								</span>
 							</div>
 						</div>
 					</Paper>
 					<Paper className={cx(styles.paper, styles.accessoriesWrapper)}>
-						<h3>Accessories</h3>
+						<h3>{t('accessories')}</h3>
 						<ul>
 							<li>
 								<UsbIcon className={styles.option} />
@@ -57,29 +60,32 @@ export default function Specifications() {
 							</li>
 							<li>
 								<SnowIcon className={styles.option} />
-								Snow chains
+								{t('spec.li-chains')}
 							</li>
 						</ul>
 					</Paper>
 					<Paper className={cx(styles.paper, styles.advantagesWrapper)}>
-						<h3>Advantages</h3>
+						<h3>{t('advantages')}</h3>
 						<ul>
-							<li>The vehicle can be driven in neighboring countries</li>
-							<li>2EM-Bâloise insurance: civil liability, collision and breakdown </li>
-							<li>Second drivers can be insured free of charge</li>
+							<li>{t('spec.li-neighboring')}</li>
+							<li>{t('spec.li-baloise')}</li>
+							<li>{t('spec.li-drivers')}</li>
 						</ul>
 					</Paper>
 					<Paper className={cx(styles.paper, styles.detailsWrapper)}>
-						<h3>Power & Dimensions</h3>
+						<h3>{t('spec.h3-power')}</h3>
 						<ul>
 							<li>
-								Power <strong>55</strong>kW - <strong>1461</strong>cm³
+								{t('power')} <strong>55</strong>kW - <strong>1461</strong>cm³
 							</li>
 							<li>
-								Useful load <strong>524</strong>kg
+								{t('useful-load')} <strong>524</strong>kg
 							</li>
 							<li>
-								Dimensions L<strong>165</strong> W<strong>110</strong> H<strong>85</strong>
+								{t('dimensions')} {t('length-acr')}
+								<strong>165</strong> {t('width-acr')}
+								<strong>110</strong> {t('height-acr')}
+								<strong>85</strong>
 							</li>
 						</ul>
 					</Paper>

@@ -14,22 +14,22 @@ export default function Jumbo() {
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
 				<h2>
-					Renault Kangoo —<PickUpIcon /> <a href='#map'>Geneva</a>
+					Renault Kangoo —<PickUpIcon /> <a href='#map'>{t('geneva')}</a>
 				</h2>
 				<p>
-					Planning a move? Or do you simply need a utility vehicle? <br />
-					We easily rent you our vehicle via{' '}
+					{t('jumbo.h2-intro')} <br />
+					{t('jumbo.h2-cta')}{' '}
 					<a className={styles.link} href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 						<strong>2EM</strong>
 					</a>{' '}
-					platform.
+					{t('platform')}.
 				</p>
 				<div className={styles.ctas}>
 					<Button variant='contained' color='primary' onClick={() => (window.location.href = '#availability')}>
-						Rent me
+						{t('rent-me')}
 					</Button>
 					<Button variant='contained' color='secondary' onClick={() => (window.location.href = '#how')}>
-						Learn more
+						{t('learn-more')}
 					</Button>
 				</div>
 			</div>
