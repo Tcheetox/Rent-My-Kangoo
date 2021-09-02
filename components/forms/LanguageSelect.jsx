@@ -11,14 +11,21 @@ export default function LanguageSelect() {
 	const [open, setOpen] = useState(false)
 	const router = useRouter()
 
-	// TODO: scroll top when changing language
+	const setCookie = locale => {
+		document.cookie = `NEXT_LOCALE=${locale}; expires=Fri, 31 Dec 9999 23:59:59 GMT`
+	}
+
 	return (
 		<FormControl id='language-form' className={styles.language}>
 			<Select
 				className={styles.select}
 				id='language-select'
 				value={router.locale}
-				onChange={e => router.push('/', '/', { locale: e.target.value })}
+				onChange={e => {
+					if (window) window.scrollTo(0, 0)
+					setCookie(e.target.value)
+					router.push('/', '/', { locale: e.target.value })
+				}}
 				IconComponent={() => null}
 				MenuProps={{
 					disableScrollLock: true,

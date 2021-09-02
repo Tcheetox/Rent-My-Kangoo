@@ -6,10 +6,7 @@ import { Jumbo, HowItWorks, Carousel, Contact, Map, RentMe, Specifications, Revi
 import { getCarAvailability } from '../lib/availability'
 
 // TODO: lazy loading of: calendar (react-date-calendar + date-fns), google map
-
 // TODO: clear !important flags in scss...
-// TODO: limit API key map $$$
-// TODO: try in production the change of languages if its being remembered
 // TODO: README
 
 export const getStaticProps = async ({ locale }) => ({

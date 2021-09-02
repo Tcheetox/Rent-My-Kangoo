@@ -23,7 +23,7 @@ const MyApp = props => {
 			jssStyles.parentElement.removeChild(jssStyles)
 		}
 		// Initialize GA
-		ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false })
+		ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false, gaOptions: { cookieFlags: 'SameSite=None;Secure' } })
 		if (location) ReactGA.pageview(location.pathname)
 	}, [])
 
