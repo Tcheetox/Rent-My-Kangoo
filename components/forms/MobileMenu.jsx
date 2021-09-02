@@ -1,9 +1,12 @@
 import React, { useState, useRef } from 'react'
 
+import { useTranslation } from 'next-i18next'
 import { Button, Popper, Grow, Paper, MenuList, MenuItem, ClickAwayListener } from '@material-ui/core'
 import styles from '../../styles/atoms/mobileMenu.module.scss'
 
 export default function MobileMenu() {
+	const { t } = useTranslation()
+
 	const [open, setOpen] = useState(false)
 	const [clicked, setClicked] = useState(false)
 	const anchorRef = useRef(null)
@@ -56,10 +59,10 @@ export default function MobileMenu() {
 						<Paper>
 							<ClickAwayListener onClickAway={handleClick}>
 								<MenuList autoFocusItem={open} id='mobile-menu-list' onKeyDown={handleListKeyDown}>
-									<MenuItem onClick={e => handleClick(e, '#how')}>How it works?</MenuItem>
-									<MenuItem onClick={e => handleClick(e, '#caracteristics')}>Caracteristics</MenuItem>
-									<MenuItem onClick={e => handleClick(e, '#availability')}>Availability</MenuItem>
-									<MenuItem onClick={e => handleClick(e, '#contact')}>Contact</MenuItem>
+									<MenuItem onClick={e => handleClick(e, '#how')}>{t('how-it-works')}</MenuItem>
+									<MenuItem onClick={e => handleClick(e, '#caracteristics')}>{t('caracteristics')}</MenuItem>
+									<MenuItem onClick={e => handleClick(e, '#availability')}>{t('availability')}</MenuItem>
+									<MenuItem onClick={e => handleClick(e, '#contact')}>{t('contact')}</MenuItem>
 								</MenuList>
 							</ClickAwayListener>
 						</Paper>

@@ -22,7 +22,7 @@ export default function RentMe({ availabilityDates }) {
 	})
 
 	const BookingInfo = () => {
-		const formattedDate = date => format(date, 's MMMM', { locale: locale === 'en' ? enGB : frCH })
+		const formattedDate = date => format(date, 'd MMMM', { locale: locale === 'en' ? enGB : frCH })
 		const range =
 			dateRange.startDate.toString() === dateRange.endDate.toString() ? (
 				<span>

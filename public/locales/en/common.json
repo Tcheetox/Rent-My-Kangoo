@@ -36,6 +36,11 @@
     "process.step3.p-kangoo": "of the Kangoo",
     "process.step3.p-enjoy": " Enjoy your trip",
 
+    "process.span-bring":"Bring with you",
+    "process.li-driving-license":"Driving license",
+    "process.li-id":"ID card",
+    "process.li-proof":"Proof of address",
+
     "spec.h3-tech": "Technical specifications",
     "engine": "Engine",
     "diesel": "Gazoline",

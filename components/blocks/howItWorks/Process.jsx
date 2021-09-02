@@ -27,11 +27,11 @@ export default function Process() {
 
 	const Documents = () => (
 		<div className={styles.documents}>
-			<span>Bring with you:</span>
+			<span>{t('process.span-bring')}:</span>
 			<ul>
-				<li>Driving license</li>
-				<li>ID card</li>
-				<li>Proof of address</li>
+				<li>{t('process.li-driving-license')}</li>
+				<li>{t('process.li-id')}</li>
+				<li>{t('process.li-proof')}</li>
 			</ul>
 		</div>
 	)
