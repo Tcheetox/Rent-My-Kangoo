@@ -1,13 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import dynamic from 'next/dynamic'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Jumbo, HowItWorks, Carousel, Contact, Map, RentMe, Specifications, Reviews } from '../components/blocks'
+import { Jumbo, HowItWorks, Carousel, Contact, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
-// TODO: lazy loading of: calendar (react-date-calendar + date-fns), google map
-// TODO: clear !important flags in scss...
-// TODO: README
+const LazyMap = dynamic(() => import('../components/blocks/Map'))
+const LazyRental = dynamic(() => import('../components/blocks/RentMe'))
 
 export const getStaticProps = async ({ locale }) => ({
 	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() },
@@ -22,11 +22,11 @@ export default function Home({ availabilityDates }) {
 				<Jumbo />
 				<HowItWorks />
 				<Specifications />
-				<RentMe availabilityDates={availabilityDates} />
+				<LazyRental availabilityDates={availabilityDates} />
 				<Carousel />
 				<Contact />
 				<Reviews />
-				<Map />
+				<LazyMap />
 			</main>
 			<Footer />
 		</>

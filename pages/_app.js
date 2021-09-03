@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
+
 import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -12,6 +13,9 @@ import '../styles/index.scss'
 // Manual import of translations to <Head/>
 import fr from '../public/locales/fr/common.json'
 import en from '../public/locales/en/common.json'
+
+// TODO: clear !important flags in scss...
+// TODO: README
 
 const MyApp = props => {
 	const { Component, pageProps } = props
