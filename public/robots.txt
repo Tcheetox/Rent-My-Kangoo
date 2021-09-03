@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: louemakangoo.ch
+Host: https://louemakangoo.ch
 
 # Sitemaps
-Sitemap: louemakangoo.ch/sitemap.xml
+Sitemap: https://louemakangoo.ch/sitemap.xml
