@@ -36,6 +36,7 @@ const MyApp = props => {
 				<title>{t.site_title}</title>
 				<meta name='description' content={t.site_description} />
 				<meta name='keywords' content={t.site_keywords} />
+				<meta name='author' content='Kévin Renier' />
 				<meta name='robots' content='index, follow' />
 				<meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
 				<link rel='icon' href='/favicon.ico' />
