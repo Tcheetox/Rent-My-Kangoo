@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import GoogleMapReact from 'google-map-react'
 import { useTranslation } from 'next-i18next'
@@ -31,6 +31,20 @@ const MapMaker = () => {
 }
 
 export default function Map() {
+
+	// Avoid GoogleMap to download Roboto
+	useEffect(() => {
+		if (document) {
+			const head = document.getElementsByTagName('head')[0];
+			// Save the original method then replace it
+			const insertBefore = head.insertBefore;
+			head.insertBefore = function (newElement, referenceElement) {
+				if (newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto') > -1) return
+				insertBefore.call(head, newElement, referenceElement)
+			}
+		}
+	}, [])
+
 	const mapOptions = {
 		fullscreenControl: false,
 		zoomControl: false,
