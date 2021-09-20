@@ -5,12 +5,13 @@ import styles from '../../styles/blocks/jumbo.module.scss'
 import Layout from '../Layout'
 import { Button } from '@material-ui/core'
 import PickUpIcon from '@material-ui/icons/Room'
+import { getImageUrl } from '../../lib/utils'
 
 export default function Jumbo() {
 	const { t } = useTranslation()
 	return (
 		<Layout className={styles.jumbo}>
-			<div className={styles.bg} />
+			<div className={styles.bg} style={{ backgroundImage: `url('${getImageUrl('/pictures/jumbo-bg.jpg')}')` }} />
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
 				<h2>
