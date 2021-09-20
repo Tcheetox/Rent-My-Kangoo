@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core'
 import styles from '../../styles/blocks/rent.module.scss'
 import Layout from '../Layout'
 import { format } from 'date-fns'
-import ReactGA from 'react-ga'
+//import ReactGA from 'react-ga'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
@@ -59,11 +59,11 @@ export default function RentMe({ availabilityDates }) {
 								'_blank'
 							)
 							// GA tracking
-							ReactGA.event({
-								category: 'Button click',
-								label: '2EM',
-								action: 'Rent through 2EM',
-							})
+							// ReactGA.event({
+							// 	category: 'Button click',
+							// 	label: '2EM',
+							// 	action: 'Rent through 2EM',
+							// })
 						}}>
 						{t('rent-me')}
 					</Button>

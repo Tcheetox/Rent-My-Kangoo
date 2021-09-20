@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import { Jumbo, HowItWorks, Carousel, Contact, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
-//const LazyMap = dynamic(() => import('../components/blocks/Map'))
+const LazyMap = dynamic(() => import('../components/blocks/Map'))
 const LazyRental = dynamic(() => import('../components/blocks/RentMe'))
 
 export const getStaticProps = async ({ locale }) => ({
@@ -26,7 +26,7 @@ export default function Home({ availabilityDates }) {
 				<Carousel />
 				<Contact />
 				<Reviews />
-				{/* <LazyMap /> */}
+				<LazyMap />
 			</main>
 			<Footer />
 		</>

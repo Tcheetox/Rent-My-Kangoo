@@ -6,7 +6,7 @@ import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../styles/theme'
-import ReactGA from 'react-ga'
+//import ReactGA from 'react-ga'
 import 'react-date-range/dist/styles.css' // Calendar
 import 'react-date-range/dist/theme/default.css' // Theme css file
 import '../styles/index.scss'
@@ -27,8 +27,8 @@ const MyApp = props => {
 			jssStyles.parentElement.removeChild(jssStyles)
 		}
 		// Initialize GA
-		ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false, gaOptions: { cookieFlags: 'SameSite=None;Secure' } })
-		if (location) ReactGA.pageview(location.pathname)
+		//	ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false, gaOptions: { cookieFlags: 'SameSite=None;Secure' } })
+		//	if (location) ReactGA.pageview(location.pathname)
 	}, [])
 
 	// Pick adequate translation file
