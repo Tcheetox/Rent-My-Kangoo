@@ -9,10 +9,14 @@ export default class MyDocument extends Document {
 			<Html>
 				<Head>
 					<meta name='theme-color' content={theme.palette.primary.main} />
-					<link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap' rel='stylesheet' />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/fr`} hrefLang='fr' />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/en`} hrefLang='en' />
 					<link rel='alternate' href={process.env.NEXT_PUBLIC_SITE_URL} hrefLang='x-default' />
+					<link rel='dns-prefetch preconnect' href='https://www.google-analytics.com' />
+					<link rel='dns-prefetch preconnect' href='https://maps.gstatic.com' />
+					<link rel='dns-prefetch preconnect' href='https://maps.googleapis.com' />
+					<link rel='dns-prefetch preconnect' href='https://fonts.googleapis.com' />
+					<link href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap' rel='stylesheet' />
 				</Head>
 				<body>
 					<Main />
