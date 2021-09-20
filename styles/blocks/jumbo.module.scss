@@ -68,13 +68,17 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	// background-image: url('/pictures/jumbo-bg.jpg');
+	background-image: url('/pictures/jumbo-bg.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
 }
+.bgw {
+	background-image: url('/pictures/jumbo-bg.webp');
+}
+
 @include maxWidth($centeringWidthTreshold) {
 	.presentation {
 		text-align: center;

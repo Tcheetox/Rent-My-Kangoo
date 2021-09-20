@@ -5,6 +5,7 @@ import { Paper } from '@material-ui/core'
 import styles from '../../styles/blocks/spec.module.scss'
 import cx from 'classnames'
 import { useTranslation } from 'next-i18next'
+import dynamic from 'next/dynamic'
 
 import FuelIcon from '@material-ui/icons/LocalGasStation'
 import PeopleIcon from '@material-ui/icons/People'
@@ -12,12 +13,14 @@ import UsbIcon from '@material-ui/icons/Usb'
 import BluetoothIcon from '@material-ui/icons/Bluetooth'
 import SnowIcon from '@material-ui/icons/AcUnit'
 
+const isWebpSupported = dynamic(() => import('../../lib/webp.js'))
+
 export default function Specifications() {
 	const { t } = useTranslation()
 
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.bgWrapper} />
+			<div className={cx(styles.bgWrapper, isWebpSupported ? styles.bgWrapperWebp : null)} />
 			<Layout className={styles.spec}>
 				<h2 id='caracteristics'>{t('caracteristics')}</h2>
 				<div className={styles.wrapper}>
