@@ -2,9 +2,6 @@ import React from 'react'
 
 import styles from '../../styles/blocks/carousel.module.scss'
 import MuiCarousel from 'react-material-ui-carousel'
-import dynamic from 'next/dynamic'
-
-const isWebpSupported = dynamic(() => import('../../lib/webp.js'))
 
 export default function Carousel() {
 	const pictures = ['front', 'frontL', 'left', 'rear', 'rearR', 'right', 'rightO']
@@ -40,11 +37,7 @@ export default function Carousel() {
 				},
 			}}>
 			{pictures.map((picture, k) => (
-				<div
-					key={k}
-					className={styles.parallax}
-					style={{ backgroundImage: isWebpSupported ? `url('/pictures/${picture}.webp')` : `url('/pictures/${picture}.jpg')` }}
-				/>
+				<div key={k} className={styles.parallax} style={{ backgroundImage: `url('/pictures/${picture}.jpg')` }} />
 			))}
 		</MuiCarousel>
 	)
