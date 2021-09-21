@@ -75,6 +75,9 @@
 	height: 100%;
 	width: 100%;
 }
+.bgw {
+	background-image: url('/pictures/jumbo-bg.webp');
+}
 
 @include maxWidth($centeringWidthTreshold) {
 	.presentation {
