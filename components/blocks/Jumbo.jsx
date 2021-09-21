@@ -5,16 +5,12 @@ import styles from '../../styles/blocks/jumbo.module.scss'
 import Layout from '../Layout'
 import { Button } from '@material-ui/core'
 import PickUpIcon from '@material-ui/icons/Room'
-import cx from 'classnames'
-import dynamic from 'next/dynamic'
-
-const isWebpSupported = dynamic(() => import('../../lib/webp.js'))
 
 export default function Jumbo() {
 	const { t } = useTranslation()
 	return (
 		<Layout className={styles.jumbo}>
-			<div className={cx(styles.bg, isWebpSupported ? styles.bgw : null)} />
+			<div className={styles.bg} />
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
 				<h2>
