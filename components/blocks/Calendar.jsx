@@ -10,8 +10,6 @@ import { useRouter } from 'next/router'
 import useWindowWidth from '../hooks/useWindowWidth'
 import styles from '../../styles/blocks/rent.module.scss'
 
-// TODO: prevent calendar to swap month when starting in month+1 (awaiting for GitHub response)
-
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
 	const { locale } = useRouter()
 	const { smaller } = useWindowWidth(710)
@@ -36,6 +34,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
 				showSelectionPreview={false}
 				locale={locale.includes('en') ? enGB : frCH}
 				weekdayDisplayFormat='EEEEEE'
+				preventSnapRefocus
 			/>
 		</Paper>
 	)
