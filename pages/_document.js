@@ -59,6 +59,8 @@ MyDocument.getInitialProps = async ctx => {
 		Object.entries(headers).forEach(([key, value]) => {
 			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) ctx.res.setHeader(key, value)
 		})
+		console.log('DEBUG HEADERS not being set properly in production...')
+		console.log(ctx.res)
 	}
 
 	// Render app and page and get the context of the page with collected side effects.
