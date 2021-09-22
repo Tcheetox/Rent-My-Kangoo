@@ -7,6 +7,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // Analyze bundle with ANALYZE=true npm run build
 module.exports = withBundleAnalyzer({
+	async headers() {
+		return [
+			{
+				// Apply these headers to all routes in your application.
+				source: '/',
+				headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }],
+			},
+		]
+	},
 	reactStrictMode: false,
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles', 'globals')],
