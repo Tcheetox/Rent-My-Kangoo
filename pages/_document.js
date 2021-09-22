@@ -63,11 +63,15 @@ MyDocument.getInitialProps = async ctx => {
 			console.log('WITHIN THE LOOP')
 			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) {
 				console.log(`SETTING HEADER: ${key}`)
-				//ctx.res.setHeader(key, value)
+				try {
+					ctx.res.setHeader(key, value)
+					console.log('HEADER SET WITHOUT eRROR')
+				} catch (err) {
+					console.log('ERROR SETTING HEADER')
+					console.log(err)
+				}
 			}
 		})
-		console.log('DEBUG HEADERS not being set properly in production...')
-		console.log(ctx.res)
 	}
 
 	// Render app and page and get the context of the page with collected side effects.
