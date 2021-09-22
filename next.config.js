@@ -12,7 +12,10 @@ module.exports = withBundleAnalyzer({
 			{
 				// Apply these headers to all routes in your application.
 				source: '/',
-				headers: [{ key: 'X-Content-Type-Options', value: 'nosniff' }],
+				headers: [
+					{ key: 'X-Content-Type-Options', value: 'nosniff' },
+					{ key: 'X-DNS-Prefetch-Control', value: 'on' },
+				],
 			},
 		]
 	},

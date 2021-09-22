@@ -56,14 +56,13 @@ MyDocument.getInitialProps = async ctx => {
 	// Set default application headers
 	const headers = getHeaders()
 	if (ctx?.res?._headers) {
-		const customHeaders = { ...ctx.res.getHeaders(), 'X-DNS-Prefetch-Control': 'on' }
+		const customHeaders = { ...ctx.res.getHeaders(), 'X-DNS-Prefetch-Control': 'off' }
 		ctx.res._headers = customHeaders
 		// let newHeaders = ctx.res._headers
 		// console.log(newHeaders)
 		// newHeaders = { ...newHeaders, 'X-DNS-Prefetch-Control': 'on' }
 		// console.log(newHeaders)
 		// ctx.res._headers = newHeaders
-
 		//console.log(ctx.res.flush)
 		//console.log(ctx.res)
 		//'X-DNS-Prefetch-Control': 'on'
