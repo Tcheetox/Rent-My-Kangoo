@@ -63,7 +63,7 @@ MyDocument.getInitialProps = async ctx => {
 			console.log('WITHIN THE LOOP')
 			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) {
 				console.log(`SETTING HEADER: ${key}`)
-				ctx.res.setHeader(key, value)
+				//ctx.res.setHeader(key, value)
 			}
 		})
 		console.log('DEBUG HEADERS not being set properly in production...')
