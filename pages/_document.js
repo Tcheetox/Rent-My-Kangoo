@@ -55,6 +55,9 @@ MyDocument.getInitialProps = async ctx => {
 
 	// Set default application headers
 	const headers = getHeaders()
+	console.log('DEBUG ME')
+	console.log(ctx)
+	console.log(ctx?.res)
 	if (ctx?.res) {
 		Object.entries(headers).forEach(([key, value]) => {
 			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) ctx.res.setHeader(key, value)
