@@ -30,6 +30,7 @@ export default class MyDocument extends Document {
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // It's compatible with server-side generation (SSG).
 MyDocument.getInitialProps = async ctx => {
+	console.log(`Application started in ${process.env.NODE_ENV} mode`)
 	// Resolution order
 	// ---------------
 	// On the server:

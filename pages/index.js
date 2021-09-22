@@ -3,11 +3,13 @@ import dynamic from 'next/dynamic'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Jumbo, HowItWorks, Carousel, Contact, Specifications, Reviews } from '../components/blocks'
+import { Jumbo, HowItWorks, Specifications, Reviews } from '../components/blocks'
 import { getCarAvailability } from '../lib/availability'
 
 const LazyMap = dynamic(() => import('../components/blocks/Map'))
 const LazyRental = dynamic(() => import('../components/blocks/RentMe'))
+const LazyCarousel = dynamic(() => import('../components/blocks/Carousel'))
+const LazyContact = dynamic(() => import('../components/blocks/Contact'))
 
 export const getStaticProps = async ({ locale }) => ({
 	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() },
@@ -23,8 +25,8 @@ export default function Home({ availabilityDates }) {
 				<HowItWorks />
 				<Specifications />
 				<LazyRental availabilityDates={availabilityDates} />
-				<Carousel />
-				<Contact />
+				<LazyCarousel />
+				<LazyContact />
 				<Reviews />
 				<LazyMap />
 			</main>
