@@ -55,23 +55,39 @@ MyDocument.getInitialProps = async ctx => {
 
 	// Set default application headers
 	const headers = getHeaders()
-	if (ctx?.res) {
-		console.log('WE ARE HERE TO SET THE HEADER STUFF')
-		Object.entries(headers).forEach(([key, value]) => {
-			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) {
-				console.log(`SETTING HEADER: ${key}`)
-				try {
-					//ctx.res.writeHead(ctx.res.statusCode, { key: value })
-					//ctx.res.end()
-					ctx.res.setHeader(key, value)
-					console.log('HEADER SET WITHOUT eRROR')
-				} catch (err) {
-					console.log('ERROR SETTING HEADER')
-					console.log(err)
-				}
-				console.log(`STATUS CODE: ${ctx.res.statusCode}`)
-			}
-		})
+	if (ctx?.res?._headers) {
+		const customHeaders = { ...ctx.res.getHeaders(), 'X-DNS-Prefetch-Control': 'on' }
+		ctx.res._headers = customHeaders
+		// let newHeaders = ctx.res._headers
+		// console.log(newHeaders)
+		// newHeaders = { ...newHeaders, 'X-DNS-Prefetch-Control': 'on' }
+		// console.log(newHeaders)
+		// ctx.res._headers = newHeaders
+
+		//console.log(ctx.res.flush)
+		//console.log(ctx.res)
+		//'X-DNS-Prefetch-Control': 'on'
+		//	ctx.res.writeHead(200, { 'X-DNS-Prefetch-Control': 'on' })
+		//console.log(ctx.res)
+		//ctx.res.write('fiacre')
+		//ctx.res.writeHead(200)
+		//console.log(ctx.res.writeHead())
+		//ctx.res.end(body)
+		// Object.entries(headers).forEach(([key, value]) => {
+		// 	if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) {
+		// 		console.log(`SETTING HEADER: ${key}`)
+		// 		try {
+		// 			//ctx.res.writeHead(ctx.res.statusCode, { key: value })
+		// 			//ctx.res.end()
+		// 			ctx.res.setHeader(key, value)
+		// 			console.log('HEADER SET WITHOUT eRROR')
+		// 		} catch (err) {
+		// 			console.log('ERROR SETTING HEADER')
+		// 			console.log(err)
+		// 		}
+		// 		console.log(`STATUS CODE: ${ctx.res.statusCode}`)
+		// 	}
+		// })
 	}
 
 	// Render app and page and get the context of the page with collected side effects.
