@@ -10,6 +10,7 @@ import ReactGA from 'react-ga'
 import 'react-date-range/dist/styles.css' // Calendar
 import 'react-date-range/dist/theme/default.css' // Theme css file
 import '../styles/index.scss'
+import Script from 'next/script'
 // Manual import of translations to <Head/>
 import fr from '../public/locales/fr/common.json'
 import en from '../public/locales/en/common.json'
@@ -17,25 +18,40 @@ import en from '../public/locales/en/common.json'
 // TODO: clear !important flags in scss...
 // TODO: README
 
-const MyApp = props => {
-	const { Component, pageProps } = props
-
+const MyApp = ({ Component, pageProps }) => {
 	React.useEffect(() => {
-		// Remove the server-side injected CSS.
+		// Remove the server-side injected CSS
 		const jssStyles = document.querySelector('#jss-server-side')
 		if (jssStyles) jssStyles.parentElement.removeChild(jssStyles)
-		// Initialize GA
-		ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, { titleCase: false, gaOptions: { cookieFlags: 'SameSite=None;Secure' } })
-		if (location) ReactGA.pageview(location.pathname)
 	}, [])
 
 	// Pick adequate translation file
-	const t = !props.pageProps._nextI18Next || props.pageProps._nextI18Next.initialLocale === 'en' ? en : fr
-
+	const t = !('_nextI18Next' in pageProps) || pageProps._nextI18Next.initialLocale === 'en' ? en : fr
 	return (
-		<React.Fragment>
+		<>
+			<Script
+				id='ga'
+				src='https://www.google-analytics.com/analytics.js'
+				onLoad={() => {
+					// Loading GA the standard way
+					window.ga = window.ga || (() => (ga.q = ga.q || []).push(arguments))
+					ga.l = +new Date()
+					ga('create', { trackingId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, cookieDomain: 'auto', cookieFlags: 'SameSite=None;Secure' })
+					ga('send', 'pageview')
+					// Initialize GA
+					ReactGA.initialize(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+						titleCase: false,
+						gaOptions: { cookieFlags: 'SameSite=None;Secure' },
+						standardImplementation: true,
+					})
+					if (location) ReactGA.pageview(location.pathname)
+				}}
+				strategy='lazyOnload'
+				async
+			/>
 			<Head>
 				<title>{t.site_title}</title>
+				<meta charSet='utf-8' />
 				<meta name='description' content={t.site_description} />
 				<meta name='keywords' content={t.site_keywords} />
 				<meta name='author' content='Kévin Renier' />
@@ -47,7 +63,7 @@ const MyApp = props => {
 				<CssBaseline />
 				<Component {...pageProps} />
 			</ThemeProvider>
-		</React.Fragment>
+		</>
 	)
 }
 

@@ -13,3 +13,19 @@
 		@content;
 	}
 }
+@mixin useWebp($originalUrl) {
+	// https://dev.to/janhohner/webp-support-detection-with-supports-and-media-1fm
+	background-image: url($originalUrl);
+	$webpImageUrl: str-insert(str-slice($originalUrl, 0, $end-at: str-index($originalUrl, '.')), 'webp', 100);
+
+	/* Chrome 66+, Edge 79+, Opera 53+, Android Brower 80+ */
+	@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+		@supports (background-image: -webkit-image-set(url($webpImageUrl) 1x)) {
+			background-image: url($webpImageUrl);
+		}
+	}
+	/* FF 66+ */
+	@supports (flex-basis: max-content) and (-moz-appearance: meterbar) {
+		background-image: url($webpImageUrl);
+	}
+}

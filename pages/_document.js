@@ -2,12 +2,14 @@ import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import theme from '../styles/theme'
+import { getHeaders } from '../lib/headersGenerator'
 
 export default class MyDocument extends Document {
 	render() {
+		const { nonce } = this.props
 		return (
 			<Html>
-				<Head>
+				<Head nonce={nonce}>
 					<meta name='theme-color' content={theme.palette.primary.main} />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/fr`} hrefLang='fr' />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/en`} hrefLang='en' />
@@ -50,6 +52,14 @@ MyDocument.getInitialProps = async ctx => {
 	// 3. app.render
 	// 4. page.render
 
+	// Set default application headers
+	const headers = getHeaders()
+	if (ctx?.res) {
+		Object.entries(headers).forEach(([key, value]) => {
+			if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) ctx.res.setHeader(key, value)
+		})
+	}
+
 	// Render app and page and get the context of the page with collected side effects.
 	const sheets = new ServerStyleSheets()
 	const originalRenderPage = ctx.renderPage
@@ -60,9 +70,11 @@ MyDocument.getInitialProps = async ctx => {
 		})
 
 	const initialProps = await Document.getInitialProps(ctx)
+	const nonce = headers.nonce
 
 	return {
 		...initialProps,
+		nonce,
 		// Styles fragment is rendered after the app and page rendering finish.
 		styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
 	}
