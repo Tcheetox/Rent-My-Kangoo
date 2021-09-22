@@ -18,3 +18,28 @@
 	height: 100%;
 	background-color: rgba(255, 255, 255, 0.3);
 }
+
+.p1 {
+	@include useWebp('/pictures/front.jpg');
+}
+.p2 {
+	@include useWebp('/pictures/frontL.jpg');
+}
+.p3 {
+	@include useWebp('/pictures/inside.jpg');
+}
+.p4 {
+	@include useWebp('/pictures/left.jpg');
+}
+.p5 {
+	@include useWebp('/pictures/rear.jpg');
+}
+.p6 {
+	@include useWebp('/pictures/rearR.jpg');
+}
+.p7 {
+	@include useWebp('/pictures/right.jpg');
+}
+.p8 {
+	@include useWebp('/pictures/rightO.jpg');
+}

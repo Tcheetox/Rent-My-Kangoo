@@ -2,10 +2,9 @@ import React from 'react'
 
 import styles from '../../styles/blocks/carousel.module.scss'
 import MuiCarousel from 'react-material-ui-carousel'
+import cx from 'classnames'
 
 export default function Carousel() {
-	const pictures = ['front', 'frontL', 'left', 'rear', 'rearR', 'right', 'rightO']
-
 	return (
 		<MuiCarousel
 			className={styles.carousel}
@@ -36,8 +35,8 @@ export default function Carousel() {
 					margin: 'auto 3rem',
 				},
 			}}>
-			{pictures.map((picture, k) => (
-				<div key={k} className={styles.parallax} style={{ backgroundImage: `url('/pictures/${picture}.jpg')` }} />
+			{[...Array(8)].map((p, k) => (
+				<div key={k} className={cx(styles.parallax, styles[`p${k + 1}`])} />
 			))}
 		</MuiCarousel>
 	)

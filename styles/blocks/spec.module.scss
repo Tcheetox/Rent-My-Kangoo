@@ -10,12 +10,13 @@
 
 .bgWrapper {
 	position: absolute;
-	background-image: url('/pictures/spec-bg.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
+
+	@include useWebp('/pictures/spec-bg.jpg');
 }
 .bgWrapper::after {
 	content: '';
