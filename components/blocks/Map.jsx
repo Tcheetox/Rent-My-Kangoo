@@ -8,11 +8,14 @@ import { Tooltip } from '@material-ui/core'
 import Script from 'next/script'
 import header from '../../lib/nonce.json'
 
+let _gmapScriptLoaded = false
+
 export default function Map() {
-	const [loadMapComponent, setLoadMapComponent] = useState(false)
+	const [gmapScriptLoaded, setGmapScriptLoaded] = useState(_gmapScriptLoaded)
+
 	// Avoid GoogleMap to download Roboto
 	useEffect(() => {
-		if (loadMapComponent) {
+		if (gmapScriptLoaded) {
 			// Save the original method then replace it
 			const head = document.getElementsByTagName('head')[0]
 			if (head) {
@@ -23,7 +26,7 @@ export default function Map() {
 				}
 			}
 		}
-	}, [loadMapComponent])
+	}, [gmapScriptLoaded])
 
 	const MapMaker = () => {
 		const { t } = useTranslation()
@@ -54,12 +57,15 @@ export default function Map() {
 		<div id='map' className={styles.map} style={{ height: '500px', width: '100%' }}>
 			<Script
 				nonce={header.nonce}
-				id='gmap'
+				id='gmapScript'
 				src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GMAP_KEY}`}
-				onLoad={() => setLoadMapComponent(true)}
+				onLoad={() => {
+					setGmapScriptLoaded(true)
+					_gmapScriptLoaded = true
+				}}
 				async
 			/>
-			{!loadMapComponent ? null : (
+			{!gmapScriptLoaded ? null : (
 				<GoogleMapReact
 					googleMapLoader={async () => window.google.maps}
 					defaultCenter={center}
