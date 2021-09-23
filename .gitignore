@@ -38,3 +38,6 @@ yarn-error.log*
 
 # sitemap
 /public/sitemap.xml
+
+# nonce
+/lib/nonce.json

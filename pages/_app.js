@@ -11,6 +11,7 @@ import 'react-date-range/dist/styles.css' // Calendar
 import 'react-date-range/dist/theme/default.css' // Theme css file
 import '../styles/index.scss'
 import Script from 'next/script'
+import header from '../lib/nonce.json'
 // Manual import of translations to <Head/>
 import fr from '../public/locales/fr/common.json'
 import en from '../public/locales/en/common.json'
@@ -18,7 +19,7 @@ import en from '../public/locales/en/common.json'
 // TODO: clear !important flags in scss...
 // TODO: README
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ pageProps, Component }) => {
 	React.useEffect(() => {
 		// Remove the server-side injected CSS
 		const jssStyles = document.querySelector('#jss-server-side')
@@ -27,11 +28,13 @@ const MyApp = ({ Component, pageProps }) => {
 
 	// Pick adequate translation file
 	const t = !('_nextI18Next' in pageProps) || pageProps._nextI18Next.initialLocale === 'en' ? en : fr
+
 	return (
 		<>
 			<Script
 				id='ga'
 				src='https://www.google-analytics.com/analytics.js'
+				nonce={header.nonce}
 				onLoad={() => {
 					// Loading GA the standard way
 					window.ga = window.ga || (() => (ga.q = ga.q || []).push(arguments))
@@ -46,7 +49,6 @@ const MyApp = ({ Component, pageProps }) => {
 					})
 					if (location) ReactGA.pageview(location.pathname)
 				}}
-				strategy='lazyOnload'
 				async
 			/>
 			<Head>

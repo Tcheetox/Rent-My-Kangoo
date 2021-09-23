@@ -1,5 +1,6 @@
 const { i18n } = require('./next-i18next.config')
 const path = require('path')
+const headersGenerator = require('./lib/headersGenerator')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 	enabled: process.env.ANALYZE === 'true',
@@ -8,16 +9,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // Analyze bundle with ANALYZE=true npm run build
 module.exports = withBundleAnalyzer({
 	async headers() {
-		return [
-			{
-				// Apply these headers to all routes in your application.
-				source: '/',
-				headers: [
-					{ key: 'X-Content-Type-Options', value: 'nosniff' },
-					{ key: 'X-DNS-Prefetch-Control', value: 'on' },
-				],
-			},
-		]
+		return process.env.NODE_ENV !== 'production'
+			? []
+			: [
+					{
+						// Apply these headers to all routes in your application.
+						source: '/:path*',
+						headers: headersGenerator.getHeaders(),
+					},
+			  ]
 	},
 	reactStrictMode: false,
 	sassOptions: {

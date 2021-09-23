@@ -2,14 +2,12 @@ import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import theme from '../styles/theme'
-import { getHeaders } from '../lib/headersGenerator'
 
 export default class MyDocument extends Document {
 	render() {
-		const { nonce } = this.props
 		return (
 			<Html>
-				<Head nonce={nonce}>
+				<Head>
 					<meta name='theme-color' content={theme.palette.primary.main} />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/fr`} hrefLang='fr' />
 					<link rel='alternate' href={`${process.env.NEXT_PUBLIC_SITE_URL}/en`} hrefLang='en' />
@@ -30,7 +28,8 @@ export default class MyDocument extends Document {
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // It's compatible with server-side generation (SSG).
 MyDocument.getInitialProps = async ctx => {
-	console.log(`Application started in ${process.env.NODE_ENV} mode`)
+	console.log(`Application working in ${process.env.NODE_ENV} mode`)
+
 	// Resolution order
 	// ---------------
 	// On the server:
@@ -53,42 +52,6 @@ MyDocument.getInitialProps = async ctx => {
 	// 3. app.render
 	// 4. page.render
 
-	// Set default application headers
-	const headers = getHeaders()
-	if (ctx?.res?._headers) {
-		const customHeaders = { ...ctx.res.getHeaders(), 'X-DNS-Prefetch-Control': 'off' }
-		ctx.res._headers = customHeaders
-		// let newHeaders = ctx.res._headers
-		// console.log(newHeaders)
-		// newHeaders = { ...newHeaders, 'X-DNS-Prefetch-Control': 'on' }
-		// console.log(newHeaders)
-		// ctx.res._headers = newHeaders
-		//console.log(ctx.res.flush)
-		//console.log(ctx.res)
-		//'X-DNS-Prefetch-Control': 'on'
-		//	ctx.res.writeHead(200, { 'X-DNS-Prefetch-Control': 'on' })
-		//console.log(ctx.res)
-		//ctx.res.write('fiacre')
-		//ctx.res.writeHead(200)
-		//console.log(ctx.res.writeHead())
-		//ctx.res.end(body)
-		// Object.entries(headers).forEach(([key, value]) => {
-		// 	if (key !== 'nonce' && (key !== 'Content-Security-Policy' || process.env.NODE_ENV === 'production')) {
-		// 		console.log(`SETTING HEADER: ${key}`)
-		// 		try {
-		// 			//ctx.res.writeHead(ctx.res.statusCode, { key: value })
-		// 			//ctx.res.end()
-		// 			ctx.res.setHeader(key, value)
-		// 			console.log('HEADER SET WITHOUT eRROR')
-		// 		} catch (err) {
-		// 			console.log('ERROR SETTING HEADER')
-		// 			console.log(err)
-		// 		}
-		// 		console.log(`STATUS CODE: ${ctx.res.statusCode}`)
-		// 	}
-		// })
-	}
-
 	// Render app and page and get the context of the page with collected side effects.
 	const sheets = new ServerStyleSheets()
 	const originalRenderPage = ctx.renderPage
@@ -99,12 +62,10 @@ MyDocument.getInitialProps = async ctx => {
 		})
 
 	const initialProps = await Document.getInitialProps(ctx)
-	const nonce = headers.nonce
 
 	return {
 		...initialProps,
-		nonce,
-		// Styles fragment is rendered after the app and page rendering finish.
+		// Styles fragment is rendered after the app and page rendering finish. , sheets.getStyleElement()
 		styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
 	}
 }
