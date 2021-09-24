@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { FormControl, Select, MenuItem } from '@material-ui/core'
 import { useRouter } from 'next/router'
-import styles from '../../styles/atoms/language.module.scss'
+import styles from './styles/Language.module.scss'
 import Image from 'next/image'
 import chSVG from '../../media/flags/ch.png'
 import gbSVG from '../../media/flags/gb.png'

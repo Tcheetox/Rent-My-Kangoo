@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../Layout'
 import { Paper } from '@material-ui/core'
-import styles from '../../styles/blocks/spec.module.scss'
+import styles from './Specifications.module.scss'
 import cx from 'classnames'
 import { useTranslation } from 'next-i18next'
 

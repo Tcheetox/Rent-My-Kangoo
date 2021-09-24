@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import { TextField, Button } from '@material-ui/core/'
-import styles from '../../styles/blocks/contact.module.scss'
+import styles from './Contact.module.scss'
 import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
-import CircularLoading from '../CircularLoading'
+import Loading from '../loading/Loading'
 import { useTranslation } from 'next-i18next'
 import SuccessIcon from '@material-ui/icons/Check'
 
@@ -47,7 +47,7 @@ export default function Contact() {
 		if (loading)
 			return (
 				<>
-					<CircularLoading className={styles.loading} />
+					<Loading className={styles.loading} />
 					<Button className={styles.submit} variant='contained' color='primary' type='submit' disabled>
 						{t('contact.sending')}...
 					</Button>

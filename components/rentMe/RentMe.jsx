@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Calendar from './Calendar'
 import { Button } from '@material-ui/core'
-import styles from '../../styles/blocks/rent.module.scss'
+import styles from './RentMe.module.scss'
 import Layout from '../Layout'
 import { format } from 'date-fns'
 import ReactGA from 'react-ga'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Feedback from './Feedback'
-import styles from '../../../styles/blocks/reviews.module.scss'
+import styles from './Reviews.module.scss'
 import reviewsInput from './reviews.json'
 
 export default function Reviews() {

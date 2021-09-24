@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Layout from '../Layout'
-import ContactForm from '../forms/ContactForm'
-import styles from '../../styles/blocks/contact.module.scss'
+import ContactForm from './ContactForm'
+import styles from './Contact.module.scss'
 import TimerIcon from '@material-ui/icons/Timer'
 import { useTranslation } from 'next-i18next'
 

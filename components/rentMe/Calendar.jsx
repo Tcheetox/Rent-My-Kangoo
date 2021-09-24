@@ -8,7 +8,7 @@ import { add, endOfMonth } from 'date-fns'
 import theme from '../../styles/theme'
 import { useRouter } from 'next/router'
 import useWindowWidth from '../hooks/useWindowWidth'
-import styles from '../../styles/blocks/rent.module.scss'
+import styles from './RentMe.module.scss'
 
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
 	const { locale } = useRouter()

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../../Layout'
-import styles from '../../../styles/blocks/how.module.scss'
+import Layout from '../Layout'
+import styles from './HowItWorks.module.scss'
 import Process from './Process'
 import { useTranslation } from 'next-i18next'
 

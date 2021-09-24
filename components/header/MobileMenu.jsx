@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 
 import { useTranslation } from 'next-i18next'
 import { Button, Popper, Grow, Paper, MenuList, MenuItem, ClickAwayListener } from '@material-ui/core'
-import styles from '../../styles/atoms/mobileMenu.module.scss'
+import styles from './styles/MobileMenu.module.scss'
 
 export default function MobileMenu() {
 	const { t } = useTranslation()

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import styles from '../styles/partials/header.module.scss'
-import Logo from '../media/Logo'
-import LanguageSelect from './forms/LanguageSelect'
-import MobileMenu from './forms/MobileMenu'
+import styles from './styles/Header.module.scss'
+import Logo from '../logo/Logo'
+import LanguageSelect from './LanguageSelect'
+import MobileMenu from './MobileMenu'
 import { useTranslation } from 'next-i18next'
 import { AppBar, Toolbar, Container } from '@material-ui/core'
 

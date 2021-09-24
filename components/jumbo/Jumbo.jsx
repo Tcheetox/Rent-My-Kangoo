@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import styles from '../../styles/blocks/jumbo.module.scss'
+import styles from './Jumbo.module.scss'
 import Layout from '../Layout'
 import { Button } from '@material-ui/core'
 import PickUpIcon from '@material-ui/icons/Room'

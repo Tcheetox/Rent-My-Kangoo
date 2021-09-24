@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import styles from '../styles/partials/footer.module.scss'
-import invertedLogo from '../media/logo-nobginv-200x144.png'
+import styles from './Footer.module.scss'
+import invertedLogo from '../../media/logo-nobginv-200x144.png'
 import Image from 'next/image'
 import { Container, Grid } from '@material-ui/core'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
@@ -16,7 +16,7 @@ export default function Footer() {
 					<Grid item md={3} sm={6} xs={12} className={styles.block}>
 						<div className={styles.logoContainer}>
 							<a href='#'>
-								<Image alt='Logo' src={invertedLogo} layout="fixed" width={100} height={72} />
+								<Image alt='Logo' src={invertedLogo} layout='fixed' width={100} height={72} />
 							</a>
 							{t('site_title')}
 						</div>

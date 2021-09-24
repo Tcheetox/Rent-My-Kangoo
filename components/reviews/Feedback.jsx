@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Paper } from '@material-ui/core'
-import styles from '../../../styles/blocks/reviews.module.scss'
+import styles from './Reviews.module.scss'
 import Image from 'next/image'
 import StarRateIcon from '@material-ui/icons/StarRate'
 

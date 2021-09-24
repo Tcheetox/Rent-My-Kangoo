@@ -1,15 +1,15 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import { Jumbo, HowItWorks, Specifications } from '../components/blocks'
+import Header from '../components/header/Header'
+import Footer from '../components/footer/Footer'
+import { Jumbo, HowItWorks, Specifications } from '../components/'
 import { getCarAvailability } from '../lib/availability'
 
-const LazyMap = dynamic(() => import('../components/blocks/Map'))
-const LazyRental = dynamic(() => import('../components/blocks/RentMe'))
-// CCR component is a wrapper around Carousel, Contact and Reviews
-const LazyCCRWrapper = dynamic(() => import('../components/CCRWrapper'))
+const LazyMap = dynamic(() => import('../components/map/Map'))
+const LazyRental = dynamic(() => import('../components/rentMe/RentMe'))
+// ExtraInfo component is a wrapper around Carousel, Contact and Reviews
+const LazyExtraInfo = dynamic(() => import('../components/ExtraInfo'))
 
 export const getStaticProps = async ({ locale }) => ({
 	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
@@ -25,7 +25,7 @@ export default function Home({ availabilityDates }) {
 				<HowItWorks />
 				<Specifications />
 				<LazyRental availabilityDates={availabilityDates} />
-				<LazyCCRWrapper />
+				<LazyExtraInfo />
 				<LazyMap />
 			</main>
 			<Footer />

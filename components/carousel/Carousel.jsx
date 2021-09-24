@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../styles/blocks/carousel.module.scss'
+import styles from './Carousel.module.scss'
 import MuiCarousel from 'react-material-ui-carousel'
 import cx from 'classnames'
 
