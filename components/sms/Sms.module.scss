@@ -1,0 +1,17 @@
+.sms {
+	height: 60px;
+	width: 60px;
+	border-radius: 100% !important;
+
+	svg {
+		height: auto;
+		width: 2rem;
+	}
+}
+
+.wrapper {
+	position: fixed;
+	top: 88%;
+	right: 3%;
+	z-index: 1;
+}
