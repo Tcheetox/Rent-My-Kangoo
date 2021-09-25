@@ -19,7 +19,7 @@ export default function Sms() {
 	else if (isMobile)
 		return (
 			<div className={styles.wrapper}>
-				<a href='sms:+32472701886'>
+				<a href='sms:+41787729118'>
 					<Button className={styles.sms} variant='contained' color='primary'>
 						<SmsIcon />
 					</Button>
