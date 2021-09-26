@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Calendar from './Calendar'
+import Estimation from './Estimation'
 import { Button } from '@material-ui/core'
 import styles from './RentMe.module.scss'
 import Layout from '../Layout'
@@ -74,6 +75,7 @@ export default function RentMe({ availabilityDates }) {
 						</a>
 						.
 					</p>
+					<Estimation dateRange={dateRange} />
 				</div>
 			</div>
 		</Layout>
