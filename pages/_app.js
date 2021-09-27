@@ -16,9 +16,7 @@ import header from '../lib/nonce.json'
 import fr from '../public/locales/fr/common.json'
 import en from '../public/locales/en/common.json'
 
-// TODO: spacing
-// TODO: clear !important flags in scss...
-// TODO: README
+// TODO: Replace !important flags in css
 
 const MyApp = ({ pageProps, Component }) => {
 	React.useEffect(() => {
