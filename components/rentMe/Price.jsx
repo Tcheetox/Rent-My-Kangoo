@@ -35,7 +35,7 @@ export default function Price({ locationDetails, dateRange }) {
 		return (
 			<div className={styles.price}>
 				Estimation <strong>{data.price}</strong>
-				<span>CHF</span>
+				<span> CHF</span>
 			</div>
 		)
 	else return null

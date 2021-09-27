@@ -6,10 +6,27 @@
 	}
 }
 
+.link {
+	padding-bottom: 1px;
+	position: relative;
+}
+.link::after {
+	@include underline-after;
+	height: 1px;
+	width: 60%;
+	transition: all $defaultTransitionDuration;
+}
+.link:hover::after {
+	width: 80%;
+	background-color: $zomp;
+}
+
 .bar {
 	margin: 0.5rem 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding: 0 !important;
+	max-height: 84px;
 }
 
 .right {

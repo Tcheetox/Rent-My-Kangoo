@@ -16,13 +16,15 @@ export default function Jumbo() {
 				<h2>
 					Renault Kangoo —<PickUpIcon /> <a href='#map'>{t('geneva')}</a>
 				</h2>
-				<p>
+				<p className={styles.info}>
 					{t('jumbo.h2-intro')} <br />
 					{t('jumbo.h2-cta')}{' '}
 					<a className={styles.link} href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 						<strong>2EM</strong>
 					</a>{' '}
-					{t('platform')}.
+					{t('platform')}. <br />
+					{t('jumbo.h2-cta2')}
+					<strong> 14</strong> CHF!
 				</p>
 				<div className={styles.ctas}>
 					<Button variant='contained' color='primary' onClick={() => (window.location.href = '#availability')}>

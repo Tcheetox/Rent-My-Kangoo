@@ -11,16 +11,24 @@ export default function Header() {
 	const { t } = useTranslation()
 	return (
 		<AppBar position='relative' className={styles.header} color='transparent'>
-			<Container maxWidth='lg'>
+			<Container maxWidth='lg' style={{ padding: '0 1rem' }}>
 				<Toolbar className={styles.bar}>
-					<a href='#how'>{t('how-it-works')}</a>
-					<a href='#caracteristics'>{t('caracteristics')}</a>
+					<a className={styles.link} href='#how'>
+						{t('how-it-works')}
+					</a>
+					<a className={styles.link} href='#caracteristics'>
+						{t('caracteristics')}
+					</a>
 					<a className={styles.logo} href='#'>
 						<Logo />
 					</a>
-					<a href='#availability'>{t('availability')}</a>
+					<a className={styles.link} href='#availability'>
+						{t('availability')}
+					</a>
 					<div className={styles.right}>
-						<a href='#contact'>{t('contact')}</a>
+						<a className={styles.link} href='#contact'>
+							{t('contact')}
+						</a>
 						<MobileMenu />
 						<LanguageSelect />
 					</div>
