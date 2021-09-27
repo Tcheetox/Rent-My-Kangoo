@@ -30,7 +30,12 @@ export default function Price({ locationDetails, dateRange }) {
 			.finally(() => setData(d => ({ ...d, loading: false })))
 	}, [locationDetails, dateRange])
 
-	if (data.loading) return <Loading className={styles.loading} absolute={false} />
+	if (data.loading)
+		return (
+			<div className={styles.price}>
+				<Loading className={styles.loading} />
+			</div>
+		)
 	else if (data.price)
 		return (
 			<div className={styles.price}>
