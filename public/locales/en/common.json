@@ -1,5 +1,5 @@
 {
-    "site_description": "Ultimate Kangoo van rental through car sharing in the Geneva area. Discover how to rent our utility vehicle to suit your needs!",
+    "site_description": "Ultimate Kangoo van rental through car sharing in the Geneva area. Discover how to rent our utility vehicle to suit your needs! Starting at 14 CHF.",
     "site_keywords":"Rental; Renault Kangoo; Geneva Switzerland; Utility vehicle; 2EM car sharing; Van; Moving; Availability; Car booking",
     "site_title":"Rent my Kangoo",
 
@@ -11,13 +11,16 @@
     "geneva": "Geneva",
     "jumbo.h2-intro": "Planning a move? Or do you simply need a utility vehicle?",
     "jumbo.h2-cta": "We rent you our van via",
-    "jumbo.h2-cta2": "Book in only a few clicks, from",
-    "platform": "platform",
+    "jumbo.h2-cta2": "Book in only a few clicks, starting at",
+    "platform": " platform",
     "rent-me": "Rent me",
     "learn-more": "Learn more",
 
     "how-it-works.h3-intro":"We rent our car through",
     "how-it-works.h3-definition":"a platform that promotes car sharing between individuals in Switzerland",
+    "how-it-works.h3-account":"Don't have an account yet? No worries, use our", 
+    "link":"link", 
+    "how-it-works.h3-referral":"to save an additional", 
 
     "process.step1.p-prio":"Prior to booking the car, we suggest you to check the",
     "process.step1.p-or": "or to go directly on ",
@@ -59,7 +62,7 @@
     "spec.h3-power": "Power & Dimensions",
     "power": "Power",
     "useful-load": "Useful load",
-    "dimensions": "Dimensions",
+    "trunk-dimensions": "Trunk dimensions",
     "length-acr":"L",
     "width-acr": "W",
     "height-acr": "H",

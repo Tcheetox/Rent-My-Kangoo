@@ -76,16 +76,14 @@ export default function Specifications() {
 						<h3>{t('spec.h3-power')}</h3>
 						<ul>
 							<li>
-								{t('power')} <strong>55</strong>kW - <strong>1461</strong>cm³
+								{t('power')} <strong>55</strong> kW - <strong>1461</strong> cm³
 							</li>
 							<li>
-								{t('useful-load')} <strong>524</strong>kg
+								{t('useful-load')} <strong>524</strong> kg
 							</li>
 							<li>
-								{t('dimensions')} {t('length-acr')}
-								<strong>165</strong> {t('width-acr')}
-								<strong>110</strong> {t('height-acr')}
-								<strong>85</strong>
+								{t('trunk-dimensions')} <strong>145</strong> {t('length-acr')} <strong>130</strong> {t('width-acr')} <strong>110</strong>{' '}
+								{t('height-acr')}{' '}
 							</li>
 						</ul>
 					</Paper>

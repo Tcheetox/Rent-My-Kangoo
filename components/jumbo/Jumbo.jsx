@@ -21,7 +21,7 @@ export default function Jumbo() {
 					{t('jumbo.h2-cta')}{' '}
 					<a className={styles.link} href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428' target='_blank' rel='noreferrer'>
 						<strong>2EM</strong>
-					</a>{' '}
+					</a>
 					{t('platform')}. <br />
 					{t('jumbo.h2-cta2')}
 					<strong> 14</strong> CHF!

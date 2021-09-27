@@ -11,7 +11,7 @@ export default function Marker() {
 		<div className={styles.mapMarker}>
 			<Tooltip
 				title={
-					<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
+					<a href={process.env.NEXT_PUBLIC_LOCATION} target='_blank' rel='noreferrer'>
 						Quai des Arénières, 1205 {t('geneva')} - {t('switzerland')}
 					</a>
 				}

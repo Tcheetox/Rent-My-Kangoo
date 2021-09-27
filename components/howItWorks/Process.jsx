@@ -102,7 +102,7 @@ export default function Process() {
 							<strong className={styles.hoverable}>{t('process.step3.p-documents')}</strong>
 						</Tooltip>{' '}
 						{t('process.step3.p-meet')}
-						<a href='https://www.google.com/maps/dir//Quai+des+Arénières,+1205+Genève' target='_blank' rel='noreferrer'>
+						<a href={process.env.NEXT_PUBLIC_LOCATION} target='_blank' rel='noreferrer'>
 							Quai des Arénières, 1205 {t('geneva')}
 						</a>{' '}
 						{t('process.step3.p-time')} <KeyIcon className={cx(styles.miniIcon, styles.key)} /> {t('process.step3.p-kangoo')}.

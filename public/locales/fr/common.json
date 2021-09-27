@@ -1,9 +1,9 @@
 {
-    "site_description": "Location d'un utilitaire Kangoo en autopartage dans la région de Genève. Découvrez comment louer notre camionette pour répondre à vos besoins!",
+    "site_description": "Location d'un utilitaire Kangoo en autopartage dans la région de Genève. Découvrez comment louer notre camionette pour répondre à vos besoins! Dès 14 CHF.",
     "site_keywords":"Location; Renault Kangoo; Genève Suisse; Véhicule utilitaire; 2EM Autopartage; Camionette; Déménagement; Disponibilité; Réservation voiture;",
     "site_title":"Loue ma Kangoo",
 
-    "how-it-works": "Quésaco?",
+    "how-it-works": "Comment louer?",
     "caracteristics": "Caractéristiques",
     "availability": "Disponibilité",
     "contact": "Contact",
@@ -18,6 +18,9 @@
 
     "how-it-works.h3-intro":"Nous louons notre voiture via",
     "how-it-works.h3-definition":"une plateforme qui encourage le partage de véhicules entre particuliers en Suisse",
+    "how-it-works.h3-account":"Vous n'avez pas encore de compte client? Pas de problèmes, utilisez notre", 
+    "link":"lien", 
+    "how-it-works.h3-referral":"pour économiser encore", 
 
     "process.step1.p-prio":"Avant de faire ta réservation, vérifie les",
     "process.step1.p-or": "ou va directement sur la plateforme ",
@@ -59,10 +62,10 @@
     "spec.h3-power": "Puissance & Dimensions",
     "power": "Puissance",
     "useful-load": "Charge utile",
-    "dimensions": "Dimensions",
-    "length-acr":"Long. ",
-    "width-acr": "Larg. ",
-    "height-acr": "Haut. ",
+    "trunk-dimensions": "Coffre",
+    "length-acr":"long. ",
+    "width-acr": "larg. ",
+    "height-acr": "haut. ",
 
     "on": "le",
     "from": "du",
