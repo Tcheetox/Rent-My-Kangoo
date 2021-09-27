@@ -14,6 +14,7 @@
 	p {
 		margin-top: 0;
 	}
+	margin-bottom: -1rem;
 }
 .background {
 	box-shadow: inset 0px 0px 0 2000px rgba(255, 255, 255, 0);
@@ -92,6 +93,6 @@
 }
 @include xs {
 	.presentation {
-		margin-top: -2.5rem;
+		margin-top: -4rem;
 	}
 }

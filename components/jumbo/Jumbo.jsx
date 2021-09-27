@@ -9,7 +9,7 @@ import PickUpIcon from '@material-ui/icons/Room'
 export default function Jumbo() {
 	const { t } = useTranslation()
 	return (
-		<Layout className={styles.jumbo}>
+		<Layout className={styles.jumbo} styles={{ padding: '1rem' }}>
 			<div className={styles.bg} />
 			<div className={styles.presentation}>
 				<h1>{t('site_title')}</h1>
