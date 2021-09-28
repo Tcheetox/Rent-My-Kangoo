@@ -52,6 +52,12 @@
 	}
 }
 
+.title {
+	max-width: 180px;
+	text-align: center;
+	font-size: 1rem;
+}
+
 .logoContainer {
 	img {
 		width: 120px;
@@ -62,6 +68,9 @@
 	flex-direction: column;
 	align-items: center;
 	font-size: 1.2rem;
+	a {
+		margin-bottom: 0.5rem;
+	}
 }
 
 @include sm {

@@ -18,7 +18,7 @@ export default function Footer() {
 							<a href='#'>
 								<Image alt='Logo' src={invertedLogo} layout='fixed' width={100} height={72} />
 							</a>
-							{t('site_title')}
+							<span className={styles.title}>{t('site_title')}</span>
 						</div>
 					</Grid>
 					<Grid item md={3} sm={6} xs={12} className={styles.block}>
