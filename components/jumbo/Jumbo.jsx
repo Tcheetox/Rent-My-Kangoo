@@ -12,7 +12,7 @@ export default function Jumbo() {
 		<Layout className={styles.jumbo} styles={{ padding: '1rem' }}>
 			<div className={styles.bg} />
 			<div className={styles.presentation}>
-				<h1>{t('site_title')}</h1>
+				<h1>{t('jumbo.h1')}</h1>
 				<h2>
 					Renault Kangoo —<PickUpIcon /> <a href='#map'>{t('geneva')}</a>
 				</h2>
