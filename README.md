@@ -1,6 +1,6 @@
 # Loue ma kangoo!
 
-This personal project is a first attempt at using Next.JS and is intended to promote the rental of my personal car in Geneva.
+This project is a first attempt at using Next.JS for SSR with React and is intended to promote the rental of my personal car in Geneva.
 Feel free to browse the [final result](https://louemakangoo.ch)!
 
 ## Tech
@@ -12,5 +12,5 @@ Mobile friendly website built using:
 - Next.JS
 - i18
 - Sass
-- Google map API
+- Google Map API
 - Google Analytics
