@@ -9,10 +9,9 @@ export default function Carousel() {
 		<MuiCarousel
 			className={styles.carousel}
 			interval={5000}
-			animation='fade'
 			navButtonsAlwaysVisible={true}
 			stopAutoPlayOnHover={false}
-			timeout={100}
+			timeout={300}
 			indicatorContainerProps={{
 				style: {
 					position: 'absolute',
