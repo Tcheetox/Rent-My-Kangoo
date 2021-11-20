@@ -11,7 +11,7 @@ export default function Dialog() {
 	const cookieName = 'dismissDialog'
 	const [cookies, setCookie] = useCookies()
 	const [hideDialog, setHideDialog] = useState(true)
-	useEffect(() => setHideDialog(cookies && cookies[cookieName] == 'true' ? true : false), [])
+	useEffect(() => setHideDialog(cookies && cookies[cookieName] == 'true' ? true : false), [cookies])
 
 	if (hideDialog) return null
 	else
