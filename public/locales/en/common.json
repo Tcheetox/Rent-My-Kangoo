@@ -98,5 +98,11 @@
     "footer.a-tenant-insurance":"Tenant insurance",
     "footer.a-roadside-assistance":"Roadside assistance",
     "footer.a-rental-agreement":"Rental agreement",
-    "footer.p-copyright":"All rights reserved"
+    "footer.p-copyright":"All rights reserved",
+
+    "dialog.h1": "Hey you! Yes you!",
+    "dialog.p-1": "Do you know that you can save",
+    "dialog.p-2": "by using our",
+    "dialog.referral-link": "referral link",
+    "dialog.cookie": "Pssst, by the way we use little cookies"
 }

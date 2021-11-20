@@ -98,5 +98,11 @@
     "footer.a-tenant-insurance":"Assurance locataire",
     "footer.a-roadside-assistance":"Assistance dépannage",
     "footer.a-rental-agreement":"Contrat de location",
-    "footer.p-copyright":"Tous droits réservés"
+    "footer.p-copyright":"Tous droits réservés",
+
+    "dialog.h1": "Hé, toi! Oui toi!",
+    "dialog.p-1": "Sais-tu que tu peux épargner",
+    "dialog.p-2": "en utilisant notre",
+    "dialog.referral-link": "lien de parrainage",
+    "dialog.cookie": "Pssst, on utilise quelques cookies"
 }

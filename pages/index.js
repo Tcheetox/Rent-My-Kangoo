@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
-import { Jumbo, HowItWorks, Specifications, Sms } from '../components/'
+import { Jumbo, Dialog, HowItWorks, Specifications, Sms } from '../components/'
 import { getCarAvailability } from '../lib/availability'
 
 const LazyMap = dynamic(() => import('../components/map/Map'))
@@ -21,6 +21,7 @@ export default function Home({ availabilityDates }) {
 		<>
 			<Header />
 			<main>
+				<Dialog />
 				<Jumbo />
 				<Sms />
 				<HowItWorks />
