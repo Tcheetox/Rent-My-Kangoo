@@ -38,7 +38,7 @@ export default function Dialog() {
 							setCookie(cookieName, true, {
 								path: '/',
 								httpOnly: false,
-								sameSite: 'none',
+								sameSite: 'Strict',
 								expires: new Date(date.setMonth(date.getMonth() + 1)),
 							})
 						}}
