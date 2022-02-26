@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Container } from '@material-ui/core'
+import { Container } from '@mui/material'
 
 export default function Layout({ className, children }) {
 	return (
-		<Container maxWidth='lg' className={className} style={{ padding: '5rem 1rem' }}>
+		<Container maxWidth='lgg' className={className} style={{ padding: '5rem 1rem' }}>
 			{children}
 		</Container>
 	)

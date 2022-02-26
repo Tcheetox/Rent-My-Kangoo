@@ -1,16 +1,16 @@
 import React from 'react'
 
 import Layout from '../Layout'
-import { Paper } from '@material-ui/core'
+import { Paper } from '@mui/material'
 import styles from './Specifications.module.scss'
 import cx from 'classnames'
 import { useTranslation } from 'next-i18next'
 
-import FuelIcon from '@material-ui/icons/LocalGasStation'
-import PeopleIcon from '@material-ui/icons/People'
-import UsbIcon from '@material-ui/icons/Usb'
-import BluetoothIcon from '@material-ui/icons/Bluetooth'
-import SnowIcon from '@material-ui/icons/AcUnit'
+import FuelIcon from '@mui/icons-material/LocalGasStation'
+import PeopleIcon from '@mui/icons-material/People'
+import UsbIcon from '@mui/icons-material/Usb'
+import BluetoothIcon from '@mui/icons-material/Bluetooth'
+import SnowIcon from '@mui/icons-material/AcUnit'
 
 export default function Specifications() {
 	const { t } = useTranslation()

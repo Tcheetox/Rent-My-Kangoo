@@ -1,7 +1,7 @@
 import React from 'react'
 
 // https://www.npmjs.com/package/react-date-range
-import { Paper } from '@material-ui/core'
+import { Paper } from '@mui/material'
 import { DateRangePicker } from 'react-date-range'
 import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'

@@ -5,13 +5,13 @@ import Logo from '../logo/Logo'
 import LanguageSelect from './LanguageSelect'
 import MobileMenu from './MobileMenu'
 import { useTranslation } from 'next-i18next'
-import { AppBar, Toolbar, Container } from '@material-ui/core'
+import { AppBar, Toolbar, Container } from '@mui/material'
 
 export default function Header() {
 	const { t } = useTranslation()
 	return (
 		<AppBar position='relative' className={styles.header} color='transparent'>
-			<Container maxWidth='lg' style={{ padding: '0 1rem' }}>
+			<Container maxWidth={"lgg"} style={{ padding: '0 1rem' }}>
 				<Toolbar className={styles.bar}>
 					<a className={styles.link} href='#how'>
 						{t('how-it-works')}

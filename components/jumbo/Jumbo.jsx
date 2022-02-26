@@ -3,8 +3,8 @@ import React from 'react'
 import { useTranslation } from 'next-i18next'
 import styles from './Jumbo.module.scss'
 import Layout from '../Layout'
-import { Button } from '@material-ui/core'
-import PickUpIcon from '@material-ui/icons/Room'
+import { Button } from '@mui/material'
+import PickUpIcon from '@mui/icons-material/Room'
 
 export default function Jumbo() {
 	const { t } = useTranslation()

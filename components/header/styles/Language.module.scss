@@ -1,44 +1,45 @@
 .language {
-	right: -1.5rem;
-	padding-left: 1rem !important;
-	border-left: 1px solid lightgray !important;
-	height: 32px;
+    right: -1.5rem;
+    padding-left: 1rem !important;
+    border-left: 1px solid lightgray !important;
+    height: 32px;
 }
 .language::after {
-	display: none;
+    display: none;
 }
 .select {
-	margin: auto;
-	label {
-		display: none;
-	}
-	span {
-		margin-left: 0.5rem;
-	}
+    margin: auto;
+    label {
+        display: none;
+    }
+    span {
+        margin-left: 0.5rem;
+    }
 }
 .select::before {
-	display: none;
+    display: none;
 }
 .item {
-	label {
-		margin-left: 0.5rem;
-		cursor: pointer;
-	}
-	span {
-		display: none;
-	}
+    label {
+        margin-left: 0.5rem;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    span {
+        display: none;
+    }
 }
 
 @include maxWidth($centeringWidthTreshold) {
-	.language {
-		position: relative !important;
-		right: unset !important;
-		margin-left: 1rem !important;
-	}
+    .language {
+        position: relative !important;
+        right: unset !important;
+        margin-left: 1rem !important;
+    }
 }
 
 @include maxWidth($mobileHeaderTreshold) {
-	.language {
-		margin-left: unset !important;
-	}
+    .language {
+        margin-left: unset !important;
+    }
 }

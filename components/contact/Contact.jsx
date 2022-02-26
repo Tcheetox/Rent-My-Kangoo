@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../Layout'
 import ContactForm from './ContactForm'
 import styles from './Contact.module.scss'
-import TimerIcon from '@material-ui/icons/Timer'
+import TimerIcon from '@mui/icons-material/Timer'
 import { useTranslation } from 'next-i18next'
 
 export default function Contact() {

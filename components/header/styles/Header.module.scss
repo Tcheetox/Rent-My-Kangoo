@@ -1,45 +1,46 @@
 .header {
-	box-shadow: 0px -1px 15px -5px rgba(0, 0, 0, 0.1) !important;
-	a {
-		font-size: 1.3rem;
-		font-weight: 600;
-	}
+    box-shadow: 0px -1px 15px -5px rgba(0, 0, 0, 0.1) !important;
+    z-index: 1;
+    a {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
 }
 
 .link {
-	padding-bottom: 1px;
-	position: relative;
+    padding-bottom: 1px;
+    position: relative;
 }
 .link::after {
-	@include underline-after;
-	height: 1px;
-	width: 60%;
-	transition: all $defaultTransitionDuration;
+    @include underline-after;
+    height: 1px;
+    width: 60%;
+    transition: all $defaultTransitionDuration;
 }
 .link:hover::after {
-	width: 80%;
-	background-color: $zomp;
+    width: 80%;
+    background-color: $zomp;
 }
 
 .bar {
-	margin: 0.5rem 0;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 !important;
-	max-height: 84px;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 !important;
+    max-height: 84px;
 }
 
 .right {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 // Mobile adjustments: this treshold triggers the header mobile mode
 @include maxWidth($mobileHeaderTreshold) {
-	.header a:not(.logo) {
-		display: none;
-	}
-	.bar {
-		justify-content: space-between;
-	}
+    .header a:not(.logo) {
+        display: none;
+    }
+    .bar {
+        justify-content: space-between;
+    }
 }

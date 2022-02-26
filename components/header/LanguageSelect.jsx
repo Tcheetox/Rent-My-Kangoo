@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { FormControl, Select, MenuItem } from '@material-ui/core'
+import { FormControl, Select, MenuItem } from '@mui/material'
 import { useRouter } from 'next/router'
 import styles from './styles/Language.module.scss'
 import Image from 'next/image'
@@ -18,6 +18,7 @@ export default function LanguageSelect() {
 	return (
 		<FormControl id='language-form' className={styles.language}>
 			<Select
+				variant="standard"
 				className={styles.select}
 				id='language-select'
 				value={router.locale}

@@ -1,8 +1,19 @@
 .absoluteLoading {
-	@include absolute-center;
+    @include absolute-center;
 }
 .relativeLoading {
-	position: relative;
-	margin: auto;
-	width: max-content;
+    position: relative;
+    margin: auto;
+    width: max-content;
+}
+.relativeLoading,
+.absoluteLoading {
+    svg {
+        color: $meadow;
+        margin: auto;
+    }
+    span {
+        display: flex;
+        margin: auto;
+    }
 }

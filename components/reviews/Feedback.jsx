@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Paper } from '@material-ui/core'
+import { Paper } from '@mui/material'
 import styles from './Reviews.module.scss'
 import Image from 'next/image'
-import StarRateIcon from '@material-ui/icons/StarRate'
+import StarRateIcon from '@mui/icons-material/StarRate'
 
 export default function Feedback({ review: { name, message, profile, picture } }) {
 	return (

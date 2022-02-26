@@ -4,14 +4,14 @@ import { useTranslation } from 'next-i18next'
 import styles from './Footer.module.scss'
 import invertedLogo from '../../media/logo-nobginv-200x144.png'
 import Image from 'next/image'
-import { Container, Grid } from '@material-ui/core'
-import MailOutlineIcon from '@material-ui/icons/MailOutline'
+import { Container, Grid } from '@mui/material'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
 
 export default function Footer() {
 	const { t } = useTranslation()
 	return (
 		<footer className={styles.footer}>
-			<Container maxWidth='lg' className={styles.footerContainer}>
+			<Container maxWidth='lgg' className={styles.footerContainer}>
 				<Grid container spacing={2} className={styles.linksContainer}>
 					<Grid item md={3} sm={6} xs={12} className={styles.block}>
 						<div className={styles.logoContainer}>

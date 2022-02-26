@@ -12,25 +12,25 @@ const LazyRental = dynamic(() => import('../components/rentMe/RentMe'))
 const LazyExtraInfo = dynamic(() => import('../components/ExtraInfo'))
 
 export const getStaticProps = async ({ locale }) => ({
-	props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
-	revalidate: 10, // Next.js will attempt to re-generate the page when a request comes in - and at most once every 10 seconds
+    props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
+    revalidate: 10, // Next.js will attempt to re-generate the page when a request comes in - and at most once every 10 seconds
 })
 
 export default function Home({ availabilityDates }) {
-	return (
-		<>
-			<Header />
-			<main>
-				<Dialog />
-				<Jumbo />
-				<Sms />
-				<HowItWorks />
-				<Specifications />
-				<LazyRental availabilityDates={availabilityDates} />
-				<LazyExtraInfo />
-				<LazyMap />
-			</main>
-			<Footer />
-		</>
-	)
+    return (
+        <>
+            <Header />
+            <main>
+                <Dialog />
+                <Jumbo />
+                <Sms />
+                <HowItWorks />
+                <Specifications />
+                <LazyRental availabilityDates={availabilityDates} />
+                <LazyExtraInfo />
+                <LazyMap />
+            </main>
+            <Footer />
+        </>
+    )
 }

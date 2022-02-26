@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Paper, Button } from '@material-ui/core'
+import { Paper, Button } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import { useCookies } from 'react-cookie'
 import styles from './Dialog.module.scss'

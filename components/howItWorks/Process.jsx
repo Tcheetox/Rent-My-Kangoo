@@ -1,20 +1,20 @@
 import React from 'react'
 
-import { Grid, Tooltip } from '@material-ui/core'
+import { Grid, Tooltip } from '@mui/material'
 import useArrow from '../hooks/useArrow'
 import styles from './HowItWorks.module.scss'
 import cx from 'classnames'
 import useWindowWidth from '../hooks/useWindowWidth'
 import { useTranslation } from 'next-i18next'
 
-import ConnectIcon from '@material-ui/icons/HowToReg'
-import LockIcon from '@material-ui/icons/EnhancedEncryption'
-import CarIcon from '@material-ui/icons/DriveEta'
-import KeyIcon from '@material-ui/icons/VpnKey'
-import CalendarIcon from '@material-ui/icons/EventAvailable'
-import PayIcon from '@material-ui/icons/Payment'
-import ApproveIcon from '@material-ui/icons/ThumbUpAlt'
-import VanIcon from '@material-ui/icons/AirportShuttle'
+import ConnectIcon from '@mui/icons-material/HowToReg'
+import LockIcon from '@mui/icons-material/EnhancedEncryption'
+import CarIcon from '@mui/icons-material/DriveEta'
+import KeyIcon from '@mui/icons-material/VpnKey'
+import CalendarIcon from '@mui/icons-material/EventAvailable'
+import PayIcon from '@mui/icons-material/Payment'
+import ApproveIcon from '@mui/icons-material/ThumbUpAlt'
+import VanIcon from '@mui/icons-material/AirportShuttle'
 
 export default function Process() {
 	const { t } = useTranslation()

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Slider, Paper } from '@material-ui/core'
+import { Slider, Paper } from '@mui/material'
 import styles from './RentMe.module.scss'
 import Price from './Price'
 

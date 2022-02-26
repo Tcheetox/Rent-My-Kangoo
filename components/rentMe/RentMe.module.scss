@@ -1,69 +1,70 @@
 .rent {
-	margin-top: 2rem;
-	margin-bottom: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
 }
 .wrapper {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .booking {
-	width: max-content;
-	height: max-content;
-	text-align: center;
-	width: 390px;
-	h3 {
-		line-height: 2.2rem;
-		font-size: 22px;
-		font-weight: 400;
-	}
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    width: 390px;
+    h3 {
+        line-height: 2.2rem;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
 }
 .calendar {
-	margin: 0.5rem;
+    margin: 0.5rem;
 }
 
 @include maxWidth($centeringWidthTreshold) {
-	.wrapper {
-		justify-content: center;
-	}
-	.rent {
-		margin-bottom: 5rem;
-		h2 {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
+    .wrapper {
+        justify-content: center;
+    }
+    .rent {
+        margin-bottom: 5rem;
+        h2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
 .estimation {
-	padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
 
-	h1 {
-		margin: -0.5rem 0 0.5rem 0;
-	}
+    h1 {
+        margin: -0.5rem 0 0.5rem 0;
+    }
 }
 .slider {
-	margin-top: 0.3rem;
-	margin-bottom: 24px !important;
+    margin-top: 0.3rem;
+    margin-bottom: 24px !important;
 }
 
 .price {
-	margin-top: -0.8rem;
-	margin-bottom: 0.3rem;
-	position: relative;
-	font-size: 1.5rem;
-	height: 35px;
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-size: 1.5rem;
+    height: 35px;
 
-	span {
-		font-size: 1rem;
-		color: gray;
-	}
+    span {
+        font-size: 1rem;
+        color: gray;
+    }
 }
 
 .loading {
-	div,
-	svg {
-		height: 30px !important;
-		width: 30px !important;
-	}
+    div,
+    svg {
+        height: 30px !important;
+        width: 30px !important;
+    }
 }

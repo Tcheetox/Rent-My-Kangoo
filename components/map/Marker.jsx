@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { useTranslation } from 'next-i18next'
-import MapMarker from '@material-ui/icons/Room'
+import MapMarker from '@mui/icons-material/Room'
 import styles from './Map.module.scss'
-import { Tooltip } from '@material-ui/core'
+import { Tooltip } from '@mui/material'
 
 export default function Marker() {
 	const { t } = useTranslation()
@@ -16,8 +16,7 @@ export default function Marker() {
 					</a>
 				}
 				placement='top'
-				arrow
-				interactive>
+				arrow>
 				<MapMarker />
 			</Tooltip>
 		</div>

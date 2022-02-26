@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-import { TextField, Button } from '@material-ui/core/'
+import { TextField, Button } from '@mui/material/'
 import styles from './Contact.module.scss'
 import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
 import Loading from '../loading/Loading'
 import { useTranslation } from 'next-i18next'
-import SuccessIcon from '@material-ui/icons/Check'
+import SuccessIcon from '@mui/icons-material/Check'
 
 export default function Contact() {
 	const { t } = useTranslation()
