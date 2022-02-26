@@ -51,7 +51,7 @@ export default function MobileMenu() {
 				open={open}
 				anchorEl={anchorRef.current}
 				role={undefined}
-				placement='bottom-start'
+				placement='bottom'
 				transition
 				disablePortal>
 				{({ TransitionProps }) => (
