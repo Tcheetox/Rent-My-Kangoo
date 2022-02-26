@@ -31,7 +31,7 @@
     "react-date-range": "^1.4.0",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
-    "react-material-ui-carousel": "^2.3.11",
+    "react-material-ui-carousel": "^3.2.0",
     "replace-in-file": "^6.3.2",
     "sass": "^1.49.9"
   },

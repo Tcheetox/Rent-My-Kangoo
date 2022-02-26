@@ -16,10 +16,12 @@ export default function useSendContact() {
 			body: JSON.stringify(data),
 		})
 			.then(res => {
-				if (res.status === 201) setSuccess(true)
+				if (res.status === 201) 
+					setSuccess(true)
+				else
+					setError(true)
 			})
 			.catch(err => {
-				console.error(err)
 				setError(true)
 			})
 			.finally(() => setLoading(false))

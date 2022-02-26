@@ -60,7 +60,7 @@ export default function Contact() {
 					<p>{t('contact.message-sent')}!</p>
 				</div>
 			)
-		else if (error) return <h3 className={styles.error}>{t('contact.unexpectged-error')}.</h3>
+		else if (error) return <h3 className={styles.error}>{t('contact.unexpected-error')}.</h3>
 		else
 			return (
 				<Button className={styles.submit} variant='contained' color='primary' type='submit'>
