@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
-import { TextField, Button } from '@mui/material/'
+import { TextField } from '@mui/material/'
 import styles from './Contact.module.scss'
 import { capitalize } from '../../lib/utils'
 import useSendContact from '../hooks/useSendContact'
-import Loading from '../loading/Loading'
+import ContactFormState from './ContactFormState'
 import { useTranslation } from 'next-i18next'
-import SuccessIcon from '@mui/icons-material/Check'
 
 export default function Contact() {
 	const { t } = useTranslation()
@@ -41,32 +40,6 @@ export default function Contact() {
 	const handleChange = e => {
 		setData({ ...data, [e.target.name]: e.target.value })
 		setErrors({ ...errors, [e.target.name]: null })
-	}
-
-	const FormStateRepresentation = () => {
-		if (loading)
-			return (
-				<>
-					<Loading className={styles.loading} />
-					<Button className={styles.submit} variant='contained' color='primary' type='submit' disabled>
-						{t('contact.sending')}...
-					</Button>
-				</>
-			)
-		else if (success)
-			return (
-				<div className={styles.success}>
-					<SuccessIcon color='primary' />
-					<p>{t('contact.message-sent')}!</p>
-				</div>
-			)
-		else if (error) return <h3 className={styles.error}>{t('contact.unexpected-error')}.</h3>
-		else
-			return (
-				<Button className={styles.submit} variant='contained' color='primary' type='submit'>
-					{t('send')}
-				</Button>
-			)
 	}
 
 	return (
@@ -108,7 +81,7 @@ export default function Contact() {
 					helperText={errors.message}
 				/>
 			</div>
-			<FormStateRepresentation />
+			<ContactFormState loading={loading} error={error} success={success} />
 		</form>
 	)
 }

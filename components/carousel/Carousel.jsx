@@ -10,7 +10,7 @@ export default function Carousel() {
 			className={styles.carousel}
 			interval={5000}
 			navButtonsAlwaysVisible={true}
-			//stopAutoPlayOnHover={false}
+			stopAutoPlayOnHover={false}
 			timeout={300}
 			indicatorContainerProps={{
 				style: {

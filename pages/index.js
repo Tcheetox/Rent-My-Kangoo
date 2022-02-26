@@ -8,8 +8,7 @@ import { getCarAvailability } from '../lib/availability'
 
 const LazyMap = dynamic(() => import('../components/map/Map'))
 const LazyRental = dynamic(() => import('../components/rentMe/RentMe'))
-// ExtraInfo component is a wrapper around Carousel, Contact and Reviews
-const LazyExtraInfo = dynamic(() => import('../components/ExtraInfo'))
+const LazyExtraInfo = dynamic(() => import('../components/ExtraInfo')) // i.e. Carousel, Contact and Reviews
 
 export const getStaticProps = async ({ locale }) => ({
     props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
