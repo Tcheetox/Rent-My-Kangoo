@@ -104,5 +104,11 @@
     "dialog.p-1": "Sais-tu que tu peux épargner",
     "dialog.p-2": "en utilisant notre",
     "dialog.referral-link": "lien de parrainage",
-    "dialog.cookie": "Pssst, on utilise quelques cookies"
+    "dialog.cookie": "Pssst, on utilise quelques cookies",
+
+    "previous": "Précédent",
+    "next": "Suivant",
+    "home": "Accueil",
+    "time-range": "Heures de début et de fin",
+    "distance": "Distance"
 }

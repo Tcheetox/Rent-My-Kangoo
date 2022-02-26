@@ -7,10 +7,12 @@ import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../styles/theme'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import useWindowWidth from '../hooks/useWindowWidth'
 import styles from './RentMe.module.scss'
 
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {
+    const { t } = useTranslation()
     const { locale } = useRouter()
     const { smaller } = useWindowWidth(710)
 
@@ -34,6 +36,10 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
                 showSelectionPreview={false}
                 locale={locale.includes('en') ? enGB : frCH}
                 weekdayDisplayFormat="EEEEEE"
+                ariaLabels={{
+                    prevButton: t('previous'),
+                    nextButton: t('next'),
+                }}
                 preventSnapRefocus
             />
         </Paper>

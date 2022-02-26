@@ -3,8 +3,10 @@ import React, { useState } from 'react'
 import { Slider, Paper } from '@mui/material'
 import styles from './RentMe.module.scss'
 import Price from './PriceEstimate'
+import { useTranslation } from 'next-i18next'
 
 export default function Estimation({ dateRange }) {
+    const { t } = useTranslation()
     const openingHours = { min: 8, max: 22 }
     const [sliderDetails, setSliderDetails] = useState({ km: 10, time: [10, 11] }) // Set defaults
     const [locationDetails, setLocationDetails] = useState(sliderDetails)
@@ -16,8 +18,9 @@ export default function Estimation({ dateRange }) {
                     className={styles.slider}
                     name="time-range"
                     value={sliderDetails.time}
-                    onChange={(e, rng) => setSliderDetails(details => ({ ...details, time: rng }))}
-                    onChangeCommitted={(e, rng) => setLocationDetails(details => ({ ...details, time: rng }))}
+                    getAriaLabel={() => t('time-range')}
+                    onChange={(_, rng) => setSliderDetails(details => ({ ...details, time: rng }))}
+                    onChangeCommitted={(_, rng) => setLocationDetails(details => ({ ...details, time: rng }))}
                     min={openingHours.min}
                     max={openingHours.max}
                     step={null}
@@ -34,11 +37,12 @@ export default function Estimation({ dateRange }) {
                 />
                 <Slider
                     name="distance"
+                    getAriaLabel={() => t('distance')}
                     min={10}
                     max={2000}
                     value={sliderDetails.km}
-                    onChange={(e, dist) => setSliderDetails(details => ({ ...details, km: dist }))}
-                    onChangeCommitted={(e, dist) => setLocationDetails(details => ({ ...details, km: dist }))}
+                    onChange={(_, dist) => setSliderDetails(details => ({ ...details, km: dist }))}
+                    onChangeCommitted={(_, dist) => setLocationDetails(details => ({ ...details, km: dist }))}
                     valueLabelDisplay="auto"
                     marks={[
                         { value: 10, label: '10km' },

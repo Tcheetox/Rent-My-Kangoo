@@ -25,7 +25,7 @@ export default function Sms() {
         return (
             <div className={styles.wrapper}>
                 <a href="sms:+41787729118">
-                    <Button className={styles.sms} variant="contained" color="primary">
+                    <Button className={styles.sms} variant="contained" color="primary" aria-label="Contact">
                         <SmsIcon />
                     </Button>
                 </a>
@@ -39,6 +39,7 @@ export default function Sms() {
                     variant="contained"
                     color="primary"
                     onClick={() => (window.location.href = '#contact')}
+                    aria-label="Contact"
                 >
                     <ChatIcon />
                 </Button>
