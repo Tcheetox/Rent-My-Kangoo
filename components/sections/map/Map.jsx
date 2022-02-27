@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 
 import GoogleMapReact from 'google-map-react'
+import useObserver from '../../hooks/useObserver'
 import Marker from './Marker'
 import styles from './Map.module.scss'
 import Script from 'next/script'
-import header from '../../lib/nonce.json'
+import header from '../../../lib/nonce.json'
 
 let _gmapScriptLoaded = false
 
 export default function Map() {
+    const containerRef = createRef()
     const [gmapScriptLoaded, setGmapScriptLoaded] = useState(_gmapScriptLoaded)
+    const { isVisible } = useObserver(containerRef, styles.bg)
 
     // Avoid GoogleMap to download Roboto
     useEffect(() => {
@@ -34,7 +37,7 @@ export default function Map() {
 
     return (
         // Important! Always set the container height explicitly
-        <div id="map" className={styles.map} style={{ height: '500px', width: '100%' }}>
+        <div id="map" ref={containerRef} className={styles.map} style={{ height: '500px', width: '100%' }}>
             <Script
                 nonce={header.nonce}
                 id="gmapScript"
@@ -45,7 +48,7 @@ export default function Map() {
                 }}
                 async
             />
-            {!gmapScriptLoaded ? null : (
+            {!gmapScriptLoaded || !isVisible ? null : (
                 <GoogleMapReact
                     googleMapLoader={async () => window.google.maps}
                     defaultCenter={center}

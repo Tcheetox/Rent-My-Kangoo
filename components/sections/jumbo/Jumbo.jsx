@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { createRef } from 'react'
 
 import { useTranslation } from 'next-i18next'
 import styles from './Jumbo.module.scss'
-import Layout from '../Layout'
+import Layout from '../../Layout'
 import { Button } from '@mui/material'
 import PickUpIcon from '@mui/icons-material/Room'
+import useObserver from '../../hooks/useObserver'
 
 export default function Jumbo() {
+    const containerRef = createRef()
     const { t } = useTranslation()
+    const { lazyClassName } = useObserver(containerRef, styles.bg, true)
+
     return (
-        <Layout className={styles.jumbo} styles={{ padding: '1rem' }}>
-            <div className={styles.bg} />
+        <Layout forwardRef={containerRef} className={styles.jumbo} styles={{ padding: '1rem' }}>
+            <div className={lazyClassName} />
             <div className={styles.presentation}>
                 <h1>{t('jumbo.h1')}</h1>
                 <h2>

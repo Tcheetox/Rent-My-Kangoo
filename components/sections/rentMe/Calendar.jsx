@@ -5,10 +5,10 @@ import { Paper } from '@mui/material'
 import { DateRangePicker } from 'react-date-range'
 import { enGB, frCH } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
-import theme from '../../styles/theme'
+import theme from '../../../styles/theme'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
-import useWindowWidth from '../hooks/useWindowWidth'
+import useWindowWidth from '../../hooks/useWindowWidth'
 import styles from './RentMe.module.scss'
 
 export default function Calendar({ availabilityDates: unavailable, dateRange, setDateRange }) {

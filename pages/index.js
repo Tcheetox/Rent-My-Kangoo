@@ -1,14 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import dynamic from 'next/dynamic'
 
-import Header from '../components/header/Header'
-import Footer from '../components/footer/Footer'
+import { Header, Footer } from '../components/partials/'
 import { Jumbo, Dialog, HowItWorks, Specifications, Sms } from '../components/'
 import { getCarAvailability } from '../lib/availability'
 
-const LazyMap = dynamic(() => import('../components/map/Map'))
-const LazyRental = dynamic(() => import('../components/rentMe/RentMe'))
-const LazyExtraInfo = dynamic(() => import('../components/ExtraInfo')) // i.e. Carousel, Contact and Reviews
+const LazyMap = dynamic(() => import('../components/sections/map/Map'))
+const LazyRental = dynamic(() => import('../components/sections/rentMe/RentMe'))
+const LazyCCRGroup = dynamic(() => import('../components/sections/CCRGroup')) // i.e. Carousel, Contact and Reviews
 
 export const getStaticProps = async ({ locale }) => ({
     props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
@@ -26,7 +25,7 @@ export default function Home({ availabilityDates }) {
                 <HowItWorks />
                 <Specifications />
                 <LazyRental availabilityDates={availabilityDates} />
-                <LazyExtraInfo />
+                <LazyCCRGroup />
                 <LazyMap />
             </main>
             <Footer />

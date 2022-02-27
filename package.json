@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze": "cross-env ANALYZE=true next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js && node next-sitemap-postcreation.js",
     "start": "next start",
     "lint": "next lint"
@@ -19,6 +20,7 @@
     "@next/bundle-analyzer": "^12.1.0",
     "arrows-svg": "^1.5.5",
     "classnames": "^2.3.1",
+    "cross-env": "^7.0.3",
     "date-fns": "^2.28.0",
     "google-map-react": "^2.1.10",
     "next": "^12.1.0",

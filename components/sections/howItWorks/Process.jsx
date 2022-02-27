@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { Grid, Tooltip } from '@mui/material'
-import useArrow from '../hooks/useArrow'
+import useArrow from '../../hooks/useArrow'
 import styles from './HowItWorks.module.scss'
 import cx from 'classnames'
-import useWindowWidth from '../hooks/useWindowWidth'
+import useWindowWidth from '../../hooks/useWindowWidth'
 import { useTranslation } from 'next-i18next'
 import Documents from './Documents'
 

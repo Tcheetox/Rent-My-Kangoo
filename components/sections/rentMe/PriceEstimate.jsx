@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { format } from 'date-fns'
 import styles from './RentMe.module.scss'
-import Loading from '../loading/Loading'
+import Loading from '../../atoms/loading/Loading'
 
 export default function Price({ locationDetails, dateRange }) {
     const [data, setData] = useState({ price: null, loading: false })

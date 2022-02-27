@@ -6,7 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
 })
 
-// Analyze bundle with ANALYZE=true npm run build
+// Analyze bundle with npm run analyze
 module.exports = withBundleAnalyzer({
     async headers() {
         return process.env.NODE_ENV !== 'production'

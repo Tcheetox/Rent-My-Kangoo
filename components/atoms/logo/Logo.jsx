@@ -1,6 +1,6 @@
 import React from 'react'
 
-import logo from '../../media/logo-nobg-200x144.png'
+import logo from '../../../media/logo-nobg-200x144.png'
 import Image from 'next/image'
 import styles from './Logo.module.scss'
 

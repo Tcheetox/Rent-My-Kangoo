@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './styles/Header.module.scss'
-import Logo from '../logo/Logo'
+import Logo from '../../atoms/logo/Logo'
 import LanguageSelect from './LanguageSelect'
 import MobileMenu from './MobileMenu'
 import { useTranslation } from 'next-i18next'
