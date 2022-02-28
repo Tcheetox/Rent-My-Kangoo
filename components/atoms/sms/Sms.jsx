@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
 import { Button } from '@mui/material'
-import styles from './Sms.module.scss'
-
 import ChatIcon from '@mui/icons-material/Chat'
 import SmsIcon from '@mui/icons-material/Sms'
+import styles from './Sms.module.scss'
 
 export default function Sms() {
     const [isMobile, setIsMobile] = useState(null)

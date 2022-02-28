@@ -37,12 +37,12 @@ export default function LanguageSelect() {
                 autoWidth
             >
                 <MenuItem value={'fr'} className={styles.item}>
-                    <Image alt="Swiss flag" src={chSVG} width={32} height={24} />
+                    <Image alt="Swiss flag" src={chSVG} width={32} height={24} layout="fixed" />
                     <label>Français</label>
                     <span>FR</span>
                 </MenuItem>
                 <MenuItem value={'en'} className={styles.item}>
-                    <Image alt="UK flag" src={gbSVG} width={32} height={24} />
+                    <Image alt="UK flag" src={gbSVG} width={32} height={24} layout="fixed" />
                     <label>English</label>
                     <span>EN</span>
                 </MenuItem>

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import theme from '../styles/theme'
 import createEmotionServer from '@emotion/server/create-instance'
@@ -16,6 +17,7 @@ export default class MyDocument extends Document {
                     <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" />
                     <link rel="dns-prefetch preconnect" href="https://maps.gstatic.com" />
                     <link rel="dns-prefetch preconnect" href="https://maps.googleapis.com" />
+                    {this.props.emotionStyleTags}
                 </Head>
                 <body>
                     <Main />

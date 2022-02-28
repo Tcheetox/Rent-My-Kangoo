@@ -41,8 +41,8 @@ export default function Carousel() {
                     },
                 }}
             >
-                {[...Array(8)].map((p, k) => (
-                    <div key={k} className={cx(styles.parallax, isVisible ? styles[`p${k + 1}`] : null)} />
+                {[...Array(8)].map((_, k) => (
+                    <div key={k} className={cx(styles.parallax, isVisible ? styles[`p${k + 1}`] : styles.p1)} />
                 ))}
             </MuiCarousel>
         </div>

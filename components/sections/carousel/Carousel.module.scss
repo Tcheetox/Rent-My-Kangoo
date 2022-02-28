@@ -1,46 +1,49 @@
 .carousel {
-	box-shadow: 0px 0px 15px -8px darkgray;
-	background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 15px -8px darkgray;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .parallax {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 550px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
 }
 
 .parallax::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(255, 255, 255, 0.15);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
+.p0 {
+    background-color: rgba(255, 255, 255, 0.15);
+}
 .p1 {
-	@include useWebp('/pictures/front.jpg');
+    @include useWebp('/pictures/front.jpg');
 }
 .p2 {
-	@include useWebp('/pictures/frontL.jpg');
+    @include useWebp('/pictures/frontL.jpg');
 }
 .p3 {
-	@include useWebp('/pictures/inside.jpg');
-	background-size: auto;
+    @include useWebp('/pictures/inside.jpg');
+    background-size: auto;
 }
 .p4 {
-	@include useWebp('/pictures/left.jpg');
+    @include useWebp('/pictures/left.jpg');
 }
 .p5 {
-	@include useWebp('/pictures/rear.jpg');
+    @include useWebp('/pictures/rear.jpg');
 }
 .p6 {
-	@include useWebp('/pictures/rearR.jpg');
+    @include useWebp('/pictures/rearR.jpg');
 }
 .p7 {
-	@include useWebp('/pictures/right.jpg');
+    @include useWebp('/pictures/right.jpg');
 }
 .p8 {
-	@include useWebp('/pictures/rightO.jpg');
+    @include useWebp('/pictures/rightO.jpg');
 }

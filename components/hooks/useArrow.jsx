@@ -8,7 +8,6 @@ export default function useArrow() {
             if (window) {
                 const module = await import('react-arrows')
                 setPack({
-                    isDefined: true,
                     settings: { DIRECTION: module.DIRECTION, HEAD: module.HEAD },
                     Arrow: module.default,
                 })

@@ -24,6 +24,7 @@ const clientSideEmotionCache = createEmotionCache()
 
 const MyApp = props => {
     const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+
     // Pick adequate translation file
     const t = !('_nextI18Next' in pageProps) || pageProps._nextI18Next.initialLocale === 'en' ? en : fr
 

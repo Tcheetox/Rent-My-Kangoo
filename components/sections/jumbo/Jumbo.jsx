@@ -10,7 +10,7 @@ import useObserver from '../../hooks/useObserver'
 export default function Jumbo() {
     const containerRef = createRef()
     const { t } = useTranslation()
-    const { lazyClassName } = useObserver(containerRef, styles.bg, true)
+    const { lazyClassName } = useObserver(containerRef, styles.bg)
 
     return (
         <Layout forwardRef={containerRef} className={styles.jumbo} styles={{ padding: '1rem' }}>
