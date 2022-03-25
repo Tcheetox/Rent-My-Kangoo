@@ -44,11 +44,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href="https://www.2em.ch/politique-de-confidentialite"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
+                                    <a href="https://www.2em.ch/politique-de-confidentialite" target="_blank" rel="noreferrer">
                                         {t('privacy')}
                                     </a>
                                 </li>
@@ -83,11 +79,7 @@ export default function Footer() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a
-                                        href="https://www.2em.ch/comment-ca-marche/contrat-de-location"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
+                                    <a href="https://www.2em.ch/comment-ca-marche/contrat-de-location" target="_blank" rel="noreferrer">
                                         {t('footer.a-rental-agreement')}
                                     </a>
                                 </li>
@@ -108,7 +100,7 @@ export default function Footer() {
                 <hr />
                 <p>
                     © 2021 Copyright{' '}
-                    <a href="https://thekecha.com/krenier" target="_blank" rel="noreferrer">
+                    <a href="https://thekecha.com" target="_blank" rel="noreferrer">
                         TheKecha
                     </a>
                     . {t('footer.p-copyright')}.
