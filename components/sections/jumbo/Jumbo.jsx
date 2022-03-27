@@ -1,20 +1,17 @@
-import React, { createRef } from 'react'
+import React from 'react'
 
 import { useTranslation } from 'next-i18next'
 import styles from './Jumbo.module.scss'
 import Layout from '../../Layout'
 import { Button } from '@mui/material'
 import PickUpIcon from '@mui/icons-material/Room'
-import useObserver from '../../hooks/useObserver'
 
 export default function Jumbo() {
-    const containerRef = createRef()
     const { t } = useTranslation()
-    const { lazyClassName } = useObserver(containerRef, styles.bg)
 
     return (
-        <Layout forwardRef={containerRef} className={styles.jumbo} styles={{ padding: '1rem' }}>
-            <div className={lazyClassName} />
+        <Layout className={styles.jumbo} styles={{ padding: '1rem' }}>
+            <div className={styles.bg} />
             <div className={styles.presentation}>
                 <h1>{t('jumbo.h1')}</h1>
                 <h2>
@@ -36,11 +33,7 @@ export default function Jumbo() {
                     <strong> 14</strong> CHF!
                 </p>
                 <div className={styles.ctas}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => (window.location.href = '#availability')}
-                    >
+                    <Button variant="contained" color="primary" onClick={() => (window.location.href = '#availability')}>
                         {t('rent-me')}
                     </Button>
                     <Button variant="contained" color="secondary" onClick={() => (window.location.href = '#how')}>

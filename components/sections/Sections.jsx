@@ -10,7 +10,7 @@ import Contact from './contact/Contact'
 import Reviews from './reviews/Reviews'
 import Map from './map/Map'
 
-export default function BottomSections({ availabilityDates }) {
+export default function Sections({ availabilityDates }) {
     return (
         <>
             <Dialog />

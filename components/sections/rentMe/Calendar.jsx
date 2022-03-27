@@ -20,7 +20,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
         <Paper className={styles.calendar}>
             <DateRangePicker
                 ranges={[dateRange]}
-                onChange={e => setDateRange(e.selection)}
+                onChange={e => setDateRange(previous => ({ ...previous, ...e.selection }))}
                 disabledDates={unavailable.map(d => new Date(d.year, d.month - 1, d.day, 0, 0, 0))}
                 months={smaller ? 1 : 2}
                 showMonthAndYearPickers={false}

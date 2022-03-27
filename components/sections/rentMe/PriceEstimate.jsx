@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import styles from './RentMe.module.scss'
 import Loading from '../../atoms/loading/Loading'
 
-export default function Price({ locationDetails, dateRange }) {
+export default function Price({ details }) {
     const [data, setData] = useState({ price: null, loading: false })
 
     useEffect(() => {
@@ -16,9 +16,9 @@ export default function Price({ locationDetails, dateRange }) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                ...locationDetails,
-                startDate: format(dateRange.startDate, 'dd/MM/yyyy'),
-                endDate: format(dateRange.endDate, 'dd/MM/yyyy'),
+                ...details,
+                startDate: format(details.startDate, 'dd/MM/yyyy'),
+                endDate: format(details.endDate, 'dd/MM/yyyy'),
             }),
         })
             .then(resp => resp.json())
@@ -28,7 +28,7 @@ export default function Price({ locationDetails, dateRange }) {
                 setData(d => ({ ...d, price: null }))
             })
             .finally(() => setData(d => ({ ...d, loading: false })))
-    }, [locationDetails, dateRange])
+    }, [details])
 
     if (data.loading)
         return (
