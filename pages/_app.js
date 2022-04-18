@@ -19,6 +19,7 @@ import header from '../lib/nonce.json'
 // Manual import of translations to <Head/>
 import fr from '../public/locales/fr/common.json'
 import en from '../public/locales/en/common.json'
+import de from '../public/locales/de/common.json'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -26,7 +27,13 @@ const MyApp = props => {
     const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
     // Pick adequate translation file
-    const t = !('_nextI18Next' in pageProps) || pageProps._nextI18Next.initialLocale === 'en' ? en : fr
+    const t = (() => {
+        if ('_nextI18Next' in pageProps) {
+            if (pageProps._nextI18Next.initialLocale === 'de') return de
+            else if (pageProps._nextI18Next.initialLocale === 'fr') return fr
+        }
+        return en
+    })()
 
     return (
         <>

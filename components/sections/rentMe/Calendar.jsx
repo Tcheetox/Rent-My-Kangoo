@@ -3,7 +3,7 @@ import React from 'react'
 // https://www.npmjs.com/package/react-date-range
 import { Paper } from '@mui/material'
 import { DateRangePicker } from 'react-date-range'
-import { enGB, frCH } from 'date-fns/locale'
+import { enGB, frCH, de } from 'date-fns/locale'
 import { add, endOfMonth } from 'date-fns'
 import theme from '../../../styles/theme'
 import { useRouter } from 'next/router'
@@ -15,6 +15,18 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
     const { t } = useTranslation()
     const { locale } = useRouter()
     const { smaller } = useWindowWidth(710)
+
+    const getLocale = () => {
+        switch (locale) {
+            case 'fr':
+                return frCH
+            case 'de':
+                return de
+            case 'en':
+            default:
+                return enGB
+        }
+    }
 
     return (
         <Paper className={styles.calendar}>
@@ -34,7 +46,7 @@ export default function Calendar({ availabilityDates: unavailable, dateRange, se
                 monthDisplayFormat="MMMM yyyy"
                 rangeColors={[theme.palette.primary.main]}
                 showSelectionPreview={false}
-                locale={locale.includes('en') ? enGB : frCH}
+                locale={getLocale()}
                 weekdayDisplayFormat="EEEEEE"
                 ariaLabels={{
                     prevButton: t('previous'),

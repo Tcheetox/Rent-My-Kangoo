@@ -23,15 +23,9 @@
     "link": "link",
     "how-it-works.h3-referral": "to save an additional",
 
-    "process.step1.p-prio": "Prior to booking the car, we suggest you to check the",
-    "process.step1.p-or": "or to go directly on ",
-    "process.step1.p-then": "platform. Then, you can connect to your 2EM account or create one, if necessary.",
+    "process.step1.p": "Prior to booking the car, we suggest you to check the <1>availability</1> <2/>, or to go directly on <4>2EM platform</4>. Then, you can connect to your 2EM account or create one, if necessary.",
 
-    "process.step2.p-once": "Once you proceed to the reservation through",
-    "process.step2.p-system": "2EM system",
-    "process.step2.p-notify": "we will get notified and promptly approve ",
-    "process.step2.p-request": "your request. No need for cash, the payment",
-    "process.step2.p-rental": "of your rental is done directly on the platform",
+    "process.step2.p": "Once you proceed to the reservation through <1>2EM system</1>, we will get notified and promptly approve your request <3/>. No need for cash, the payment <5/> of your rental is done directly on the platform.",
 
     "process.step3.p-ready": "You're almost ready to go",
     "process.step3.p-prepare": "Prepare the",
