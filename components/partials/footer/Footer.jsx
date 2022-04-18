@@ -9,6 +9,8 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline'
 
 export default function Footer() {
     const { t } = useTranslation()
+    const currentYear = new Date().getFullYear()
+
     return (
         <footer className={styles.footer}>
             <Container maxWidth="lgg" className={styles.footerContainer}>
@@ -99,7 +101,7 @@ export default function Footer() {
                 </Grid>
                 <hr />
                 <p>
-                    © 2021 Copyright{' '}
+                    © {currentYear} Copyright{' '}
                     <a href="https://thekecha.com" target="_blank" rel="noreferrer">
                         TheKecha
                     </a>
