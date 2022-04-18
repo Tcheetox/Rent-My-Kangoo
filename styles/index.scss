@@ -27,6 +27,12 @@ h2:after {
 	@include underline-after;
 }
 
+@include maxWidth($centeringWidthTreshold) {
+	h2 {
+		font-size: 36px;
+	}
+}
+
 p {
 	font-size: 1rem;
 	line-height: 1.8rem;
