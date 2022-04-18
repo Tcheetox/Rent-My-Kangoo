@@ -5,6 +5,9 @@ import theme from '../styles/theme'
 import createEmotionServer from '@emotion/server/create-instance'
 import createEmotionCache from '../lib/createEmotionCache'
 
+// TODO: add smarter link to 2EM to handle Deutsch redirect instead
+// TOOD: weird effect on carousel picture first load
+
 export default class MyDocument extends Document {
     render() {
         return (

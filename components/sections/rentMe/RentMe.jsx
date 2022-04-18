@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Calendar from './Calendar'
 import Sliders from './Sliders'
-import Price from './PriceEstimate'
+import Price from './Price'
 import Dates from './Dates'
 import { Button, Paper } from '@mui/material'
 import styles from './RentMe.module.scss'

@@ -22,7 +22,10 @@
 
 	hr {
 		margin-top: 1.3rem;
-		color: lighten($charcoal, 3%);
+		color: lighten($charcoal, 20%);
+		border-color: lighten($charcoal, 20%);
+		border-bottom-width: 0px;
+		border-top-width: 1px;
 	}
 
 	// Link headers

@@ -6,6 +6,7 @@ import styles from './Specifications.module.scss'
 import cx from 'classnames'
 import { useTranslation } from 'next-i18next'
 import useObserver from '../../hooks/useObserver'
+import { useRouter } from 'next/router'
 
 import FuelIcon from '@mui/icons-material/LocalGasStation'
 import PeopleIcon from '@mui/icons-material/People'
@@ -14,6 +15,7 @@ import BluetoothIcon from '@mui/icons-material/Bluetooth'
 import SnowIcon from '@mui/icons-material/AcUnit'
 
 export default function Specifications() {
+    const { locale } = useRouter()
     const containerRef = createRef()
     const { t } = useTranslation()
     const { lazyClassName } = useObserver(containerRef, styles.bgWrapper, true)
@@ -40,7 +42,7 @@ export default function Specifications() {
                             </div>
                             <div className={styles.group}>
                                 <label>{t('mileage')}</label>
-                                <span>0 - 150,000 km</span>
+                                <span>{locale !== 'en' ? '0 - 150.000 km' : '0 - 150,000 km'}</span>
                             </div>
                             <div className={styles.group}>
                                 <label>{t('spec.h3-seating')}</label>
@@ -85,8 +87,8 @@ export default function Specifications() {
                                 {t('useful-load')} <strong>524</strong> kg
                             </li>
                             <li>
-                                {t('trunk-dimensions')} <strong>145</strong> {t('length-acr')} <strong>130</strong>{' '}
-                                {t('width-acr')} <strong>110</strong> {t('height-acr')}{' '}
+                                {t('trunk-dimensions')} <strong>145</strong> {t('length-acr')} <strong>130</strong> {t('width-acr')}{' '}
+                                <strong>110</strong> {t('height-acr')}{' '}
                             </li>
                         </ul>
                     </Paper>

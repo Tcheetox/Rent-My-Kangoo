@@ -160,6 +160,9 @@ $animationStartsAfter: 1.5s;
 		margin-right: auto;
 		text-align: center;
 	}
+	.how h2 {
+		font-size: 36px
+	}
 }
 
 @include maxWidth(810px) {

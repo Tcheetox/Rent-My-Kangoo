@@ -66,13 +66,14 @@
     "from": "von",
     "to": "zu",
     "rent.h3-rent": "Mieten Sie meinen Kangoo",
-    "rent.p-reservation": "Die Reservierung und Bezahlung erfolgt am",
+    "rent.p-reservation": "Die Reservierung und Bezahlung erfolgt am ",
 
     "contact-us": "Kontaktieren Sie uns",
     "contact.p-question": "Wenn Sie Fragen haben oder einfach nur mehr über den Vermietungsprozess wissen möchten, können Sie uns gerne kontaktieren",
     "contact.p-reply": "Wir antworten in der Regel in weniger als ",
     "hours": "Stunden",
 
+    "estimation": "Schätzung",
     "name": "Name",
     "email": "E-Mail",
     "full-name": "Vollständiger Name",

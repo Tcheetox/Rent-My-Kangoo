@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { format } from 'date-fns'
 import styles from './RentMe.module.scss'
 import Loading from '../../atoms/loading/Loading'
+import { useTranslation } from 'next-i18next'
 
 export default function Price({ details }) {
+    const { t } = useTranslation()
     const [data, setData] = useState({ price: null, loading: false })
 
     useEffect(() => {
@@ -39,7 +41,7 @@ export default function Price({ details }) {
     else if (data.price)
         return (
             <div className={styles.price}>
-                Estimation <strong>{data.price}</strong>
+                {t('estimation')} <strong>{data.price}</strong>
                 <span> CHF</span>
             </div>
         )
