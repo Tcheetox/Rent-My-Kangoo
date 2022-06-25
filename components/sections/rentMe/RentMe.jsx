@@ -8,7 +8,7 @@ import { Button, Paper } from '@mui/material'
 import styles from './RentMe.module.scss'
 import Layout from '../../Layout'
 import { format } from 'date-fns'
-import ReactGA from 'react-ga'
+import use2EM from '../../hooks/use2EM'
 import { useTranslation } from 'next-i18next'
 
 export default function RentMe({ availabilityDates }) {
@@ -44,12 +44,7 @@ export default function RentMe({ availabilityDates }) {
                                 }#location`,
                                 '_blank'
                             )
-                            // GA tracking
-                            ReactGA.event({
-                                category: 'Button click',
-                                label: '2EM',
-                                action: 'Rent through 2EM',
-                            })
+                            use2EM('Price estimate link')
                         }}
                     >
                         {t('rent-me')}

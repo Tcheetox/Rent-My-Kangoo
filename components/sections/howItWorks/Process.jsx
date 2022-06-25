@@ -7,6 +7,7 @@ import cx from 'classnames'
 import useWindowWidth from '../../hooks/useWindowWidth'
 import { useTranslation, Trans } from 'next-i18next'
 import Documents from './Documents'
+import use2EM from '../../hooks/use2EM'
 
 import ConnectIcon from '@mui/icons-material/HowToReg'
 import LockIcon from '@mui/icons-material/EnhancedEncryption'
@@ -37,7 +38,12 @@ export default function Process() {
                         <Trans i18nKey="process.step1.p">
                             Prior to booking the car, we suggest you to check the <a href="#availability">availability</a>
                             <CalendarIcon className={styles.miniIcon} />, or to go directly on
-                            <a href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428" target="_blank" rel="noreferrer">
+                            <a
+                                href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428"
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={() => use2EM('Regular link')}
+                            >
                                 2EM platform
                             </a>
                             . Then, you can connect to your 2EM account or create one, if necessary.

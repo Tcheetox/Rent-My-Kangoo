@@ -5,6 +5,7 @@ import styles from './Footer.module.scss'
 import invertedLogo from '../../../media/logo-nobginv-200x144.png'
 import Image from 'next/image'
 import { Container, Grid } from '@mui/material'
+import use2EM from '../../hooks/use2EM'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 
 export default function Footer() {
@@ -32,6 +33,7 @@ export default function Footer() {
                                         href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428"
                                         target="_blank"
                                         rel="noreferrer"
+                                        onClick={() => use2EM('Regular link')}
                                     >
                                         Kangoo
                                     </a>
