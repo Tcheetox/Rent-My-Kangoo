@@ -1,6 +1,6 @@
 import React, { createRef } from 'react'
 
-import Layout from '../../Layout'
+import Layout from '../../hoc/Layout'
 import { Paper } from '@mui/material'
 import styles from './Specifications.module.scss'
 import cx from 'classnames'

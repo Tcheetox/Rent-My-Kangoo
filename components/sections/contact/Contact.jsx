@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../../Layout'
+import Layout from '../../hoc/Layout'
 import ContactForm from './ContactForm'
 import styles from './Contact.module.scss'
 import TimerIcon from '@mui/icons-material/Timer'

@@ -42,7 +42,7 @@ export default function Process() {
                                 href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428"
                                 target="_blank"
                                 rel="noreferrer"
-                                onClick={() => use2EM('Regular link')}
+                                onClick={use2EM('Regular link')}
                             >
                                 2EM platform
                             </a>

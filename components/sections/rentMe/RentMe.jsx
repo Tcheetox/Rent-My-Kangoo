@@ -6,13 +6,14 @@ import Price from './Price'
 import Dates from './Dates'
 import { Button, Paper } from '@mui/material'
 import styles from './RentMe.module.scss'
-import Layout from '../../Layout'
+import Layout from '../../hoc/Layout'
 import { format } from 'date-fns'
 import use2EM from '../../hooks/use2EM'
 import { useTranslation } from 'next-i18next'
 
 export default function RentMe({ availabilityDates }) {
     const { t } = useTranslation()
+    const ga = use2EM('Price estimate link')
 
     const [details, setDetails] = useState({
         startDate: new Date(),
@@ -44,7 +45,7 @@ export default function RentMe({ availabilityDates }) {
                                 }#location`,
                                 '_blank'
                             )
-                            use2EM('Price estimate link')
+                            ga()
                         }}
                     >
                         {t('rent-me')}

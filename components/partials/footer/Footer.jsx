@@ -33,7 +33,7 @@ export default function Footer() {
                                         href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428"
                                         target="_blank"
                                         rel="noreferrer"
-                                        onClick={() => use2EM('Regular link')}
+                                        onClick={use2EM('Regular link')}
                                     >
                                         Kangoo
                                     </a>
