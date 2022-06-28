@@ -2,11 +2,17 @@
     margin-top: 2rem;
     margin-bottom: 6rem;
 }
+
 .wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.placeholder {
+    height: 352px;
+}
+  
 .booking {
     width: max-content;
     height: max-content;
@@ -19,6 +25,7 @@
         margin-bottom: 1rem;
     }
 }
+
 .calendar {
     margin: 0.5rem;
 }
@@ -43,6 +50,7 @@
         margin: -0.5rem 0 0.5rem 0;
     }
 }
+
 .slider {
     margin-top: 0.3rem;
     margin-bottom: 24px !important;

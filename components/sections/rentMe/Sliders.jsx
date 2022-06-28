@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { Slider } from '@mui/material'
+import Slider from '@mui/material/Slider'
 import styles from './RentMe.module.scss'
 import { useTranslation } from 'next-i18next'
 
-export default function Estimation({ details, setDetails }) {
+export default function Sliders({ details, setDetails }) {
     const { t } = useTranslation()
     const openingHours = { min: 8, max: 22 }
     const [sliderDetails, setSliderDetails] = useState({ km: details.km, time: details.time })
@@ -29,7 +29,7 @@ export default function Estimation({ details, setDetails }) {
                 min={openingHours.min}
                 max={openingHours.max}
                 step={null}
-                marks={[...new Array((openingHours.max - openingHours.min) * 2 + 1)].map((e, k) => ({
+                marks={[...new Array((openingHours.max - openingHours.min) * 2 + 1)].map((_e, k) => ({
                     value: k / 2 + openingHours.min,
                     label: (() => {
                         const trunc = Math.trunc(k / 2) + openingHours.min
@@ -43,14 +43,14 @@ export default function Estimation({ details, setDetails }) {
             <Slider
                 name="distance"
                 getAriaLabel={() => t('distance')}
-                min={10}
+                min={20}
                 max={2000}
                 value={sliderDetails.km}
                 onChange={(_, dist) => setSliderDetails(previousSliderDetails => ({ ...previousSliderDetails, km: dist }))}
                 onChangeCommitted={(_, dist) => setDetails(previousDetails => ({ ...previousDetails, km: dist }))}
                 valueLabelDisplay="auto"
                 marks={[
-                    { value: 10, label: '10km' },
+                    { value: 20, label: '20km' },
                     { value: 2000, label: '2000km' },
                 ]}
                 step={10}

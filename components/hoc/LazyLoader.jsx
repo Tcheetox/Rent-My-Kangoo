@@ -1,29 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 
+import dynamic from 'next/dynamic'
 import cx from 'classnames'
 
-export default function LazyLoader({ children, onBefore, onAfter, propsLoader, className = '' }) {
-    const [childrenProps, setChildrenProps] = useState({})
+export default function LazyLoader({ childLoader, childProps = {}, className = '', placeholder = null, childLoadCondition = null }) {
+    const [LazyComponent, setLazyComponent] = useState(null)
+
+    const Loader = useMemo(() => {
+        const csx = cx(className, 'placeholder')
+        return placeholder ? () => placeholder({ className: csx }) : () => <div className={csx} />
+    }, [className, placeholder])
 
     useEffect(() => {
-        ;(async () => {
-            if (onBefore && typeof onBefore === 'function') onBefore()
-            if (propsLoader && typeof propsLoader === 'function') {
-                const importedProps = await propsLoader()
-                if (typeof importedProps !== 'object') throw new Error('!! propsLoader() must return a object')
-                setChildrenProps(importedProps)
-            }
-            if (onAfter && typeof onAfter === 'function') onAfter()
-        })()
-    }, [onBefore, onAfter, propsLoader])
+        if (!childLoader || typeof childLoader !== 'function') return
+        setLazyComponent(
+            dynamic(childLoader(), {
+                loading: Loader,
+            })
+        )
+    }, [childLoader, Loader])
 
-    return (
-        <>
-            {Object.keys(childrenProps).length === 0 ? (
-                <div className={cx(className, 'loading')}>LOADING</div>
-            ) : (
-                React.cloneElement(children, { ...childrenProps, className: cx(className, 'loaded') })
-            )}
-        </>
-    )
+    if (childLoadCondition === false) return <Loader />
+    if (LazyComponent) return <LazyComponent className={className} {...childProps} />
+    return null
 }

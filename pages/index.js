@@ -1,11 +1,19 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import dynamic from 'next/dynamic'
-
 import { Header, Footer } from '../components/partials/'
 import { getCarAvailability } from '../lib/availability'
 
+import Dialog from '../components/atoms/dialog/Dialog'
+import Sms from '../components/atoms/sms/Sms'
+
+// TODO: check if we should use an index.js instead?
 import Jumbo from '../components/sections/jumbo/Jumbo'
-const LazySections = dynamic(() => import('../components/sections/Sections'))
+import RentMeLoader from '../components/sections/rentMe/RentMeLoader'
+import HowItworks from '../components/sections/howItWorks/HowItWorks'
+import Specifications from '../components/sections/specifications/Specifications'
+import CarouselLoader from '../components/sections/carousel/CarouselLoader'
+import Contact from '../components/sections/contact/Contact'
+import Reviews from '../components/sections/reviews/Reviews'
+import MapLoader from '../components/sections/map/MapLoader'
 
 export const getStaticProps = async ({ locale }) => ({
     props: { ...(await serverSideTranslations(locale)), availabilityDates: await getCarAvailability() }, //, nonce: await getNonce()
@@ -18,7 +26,15 @@ export default function Home({ availabilityDates }) {
             <Header />
             <main>
                 <Jumbo />
-                <LazySections availabilityDates={availabilityDates} />
+                <Dialog />
+                <Sms />
+                <HowItworks />
+                <Specifications />
+                <RentMeLoader availabilityDates={availabilityDates} />
+                <CarouselLoader />
+                <Contact />
+                <Reviews />
+                <MapLoader />
             </main>
             <Footer />
         </>

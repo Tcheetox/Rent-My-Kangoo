@@ -3,12 +3,15 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+.parallax,
+.placeholder{
+    height: 550px;
+}
 .parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 550px;
 }
 
 .parallax::after {
