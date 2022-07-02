@@ -5,7 +5,6 @@ import { getCarAvailability } from '../lib/availability'
 import Dialog from '../components/atoms/dialog/Dialog'
 import Sms from '../components/atoms/sms/Sms'
 
-// TODO: check if we should use an index.js instead?
 import Jumbo from '../components/sections/jumbo/Jumbo'
 import RentMeLoader from '../components/sections/rentMe/RentMeLoader'
 import HowItworks from '../components/sections/howItWorks/HowItWorks'

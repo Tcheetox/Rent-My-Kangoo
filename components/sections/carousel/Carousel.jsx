@@ -1,50 +1,25 @@
-import React, { createRef } from 'react'
+import React, { useState, useEffect } from 'react'
 
+import BulletsNavigation from './BulletsNavigation'
+import ArrowsNavigation from './ArrowsNavigation'
 import styles from './Carousel.module.scss'
-import MuiCarousel from 'react-material-ui-carousel'
 import cx from 'classnames'
-import useObserver from '../../hooks/useObserver'
 
-export default function Carousel() {
-    const containerRef = createRef()
-    const { isVisible } = useObserver(containerRef, null, false)
+export default function Carousel({ className, interval, items = [] }) {
+    const [index, setIndex] = useState(0)
+
+    useEffect(() => {
+        if (!items || items.length === 0) return
+
+        const rotation = setInterval(() => setIndex(i => (i + 1 > items.length - 1 ? 0 : i + 1)), [interval])
+        return () => clearInterval(rotation)
+    }, [interval, items])
 
     return (
-        <div ref={containerRef}>
-            <MuiCarousel
-                className={styles.carousel}
-                interval={5000}
-                navButtonsAlwaysVisible={true}
-                stopAutoPlayOnHover={false}
-                timeout={300}
-                indicatorContainerProps={{
-                    style: {
-                        zIndex: 1,
-                        position: 'absolute',
-                        bottom: '10px',
-                    },
-                }}
-                indicatorIconButtonProps={{
-                    style: {
-                        padding: '1px',
-                        color: 'gray',
-                    },
-                }}
-                activeIndicatorIconButtonProps={{
-                    style: {
-                        color: 'white',
-                    },
-                }}
-                navButtonsWrapperProps={{
-                    style: {
-                        margin: 'auto 3rem',
-                    },
-                }}
-            >
-                {[...Array(8)].map((_, k) => (
-                    <div key={k} className={cx(styles.parallax, isVisible ? styles[`p${k + 1}`] : styles.p1)} />
-                ))}
-            </MuiCarousel>
+        <div className={cx(className)}>
+            <ArrowsNavigation length={items.length} setIndex={setIndex} />
+            <BulletsNavigation length={items.length} index={index} setIndex={setIndex} />
+            <div className={cx(styles.parallax, items[index])} />
         </div>
     )
 }

@@ -7,7 +7,7 @@ import useSendContact from '../../hooks/useSendContact'
 import ContactFormState from './ContactFormState'
 import { useTranslation } from 'next-i18next'
 
-export default function Contact() {
+export default function ContactForm() {
     const { t } = useTranslation()
     const { sendForm, loading, error, success } = useSendContact()
     const [data, setData] = useState({ email: '', name: '', message: '' })
@@ -15,7 +15,7 @@ export default function Contact() {
 
     const validEmail = email => {
         const re =
-            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         return re.test(email)
     }
 

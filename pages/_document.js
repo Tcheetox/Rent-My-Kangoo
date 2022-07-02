@@ -5,8 +5,7 @@ import theme from '../styles/theme'
 import createEmotionServer from '@emotion/server/create-instance'
 import createEmotionCache from '../lib/createEmotionCache'
 
-// TODO: add smarter link to 2EM to handle Deutsch redirect instead
-// TOOD: weird effect on carousel picture first load
+// TODO: use 2FA for thekecha.com change sender in nodemailer
 
 export default class MyDocument extends Document {
     render() {
@@ -16,6 +15,7 @@ export default class MyDocument extends Document {
                     <meta name="theme-color" content={theme.palette.primary.main} />
                     <link rel="alternate" href={`${process.env.NEXT_PUBLIC_SITE_URL}/fr`} hrefLang="fr" />
                     <link rel="alternate" href={`${process.env.NEXT_PUBLIC_SITE_URL}/en`} hrefLang="en" />
+                    <link rel="alternate" href={`${process.env.NEXT_PUBLIC_SITE_URL}/de`} hrefLang="de" />
                     <link rel="alternate" href={process.env.NEXT_PUBLIC_SITE_URL} hrefLang="x-default" />
                     <link rel="dns-prefetch preconnect" href="https://www.google-analytics.com" />
                     <link rel="dns-prefetch preconnect" href="https://maps.gstatic.com" />

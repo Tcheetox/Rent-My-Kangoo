@@ -1,6 +1,7 @@
 .carousel {
     box-shadow: 0px 0px 15px -8px darkgray;
     background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
 .parallax,
@@ -12,8 +13,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all $defaultTransitionDuration;
 }
-
 .parallax::after {
     content: '';
     position: absolute;
@@ -22,9 +23,60 @@
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.p0 {
-    background-color: rgba(255, 255, 255, 0.15);
+.arrow {
+    cursor: pointer;
+    transition: all $defaultTransitionDuration;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(55, 55, 55, 0.70);
+    border-radius: $defaultBorderRadius;
+    z-index: 1;
 }
+.arrow:hover {
+    background-color: rgba(55, 55, 55, 1);
+}
+.leftArrow {
+   left: 3rem;
+}
+.rightArrow {
+    right: 3rem;
+}
+.iconArrow {
+    width: 2.5rem;
+    margin-top: 0.25rem;
+    height: 2rem;
+    color: white;
+}
+
+.bulletsHolder {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:1;
+}
+.bullet {
+    width: 0.8rem;
+    height: 0.4rem;
+    border-radius: 20px;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    transition: all $defaultTransitionDuration;
+}
+.bullet:hover {
+    background-color: $meadow;
+}
+.inactiveBullet {
+    background-color: darkgray;
+}
+.activeBullet{
+    background-color: white;
+}
+
 .p1 {
     @include useWebp('/pictures/front.jpg');
 }

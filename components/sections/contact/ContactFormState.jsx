@@ -18,14 +18,16 @@ export default function ContactFormState({ loading, success, error }) {
                 </Button>
             </>
         )
-    else if (success)
+
+    if (success)
         return (
             <div className={styles.success}>
                 <SuccessIcon color="primary" />
                 <p>{t('contact.message-sent')}!</p>
             </div>
         )
-    else if (error) return <h3 className={styles.error}>{t('contact.unexpected-error')}.</h3>
+
+    if (error) return <h3 className={styles.error}>{t('contact.unexpected-error')}.</h3>
 
     return (
         <Button className={styles.submit} variant="contained" color="primary" type="submit">
