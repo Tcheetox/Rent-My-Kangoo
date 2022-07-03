@@ -17,7 +17,7 @@ export default function Carousel({ className, interval }) {
 
     // Minimal wait time ~ hope that the browser is mostly done download picture
     useEffect(() => {
-        const timeout = setTimeout(() => setReady(true), [500])
+        const timeout = setTimeout(() => setReady(true), [200])
         return () => clearTimeout(timeout)
     }, [])
 
