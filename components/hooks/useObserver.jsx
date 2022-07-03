@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 export default function useObserver(ref, className = null, keepAlive = true) {
     const [isVisible, setIsVisible] = useState(false)
+
     useEffect(() => {
         let refCopy = ref['current']
         const observer = new IntersectionObserver(entries => {

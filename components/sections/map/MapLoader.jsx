@@ -10,7 +10,7 @@ export default function MapLoader() {
     const { locale } = useRouter()
     const containerRef = createRef()
     const [gmapScriptLoaded, setGmapScriptLoaded] = useState(false)
-    const { isVisible } = useObserver(containerRef, styles.bg)
+    const { isVisible } = useObserver(containerRef, styles.bg, true)
 
     useEffect(() => {
         const scriptTag = document.createElement('script')

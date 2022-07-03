@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 export default function CarouselLoader() {
     const containerRef = createRef()
-    const { isVisible } = useObserver(containerRef, null, false)
+    const { isVisible } = useObserver(containerRef, null, true)
 
     return (
         <div ref={containerRef}>
