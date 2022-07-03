@@ -15,7 +15,6 @@ export default function CarouselLoader() {
                 childLoader={() => import('./Carousel')}
                 childLoadCondition={isVisible}
                 childProps={{
-                    items: [styles.p1, styles.p2, styles.p3, styles.p4, styles.p5, styles.p6, styles.p7, styles.p8],
                     interval: 5000,
                 }}
                 className={cx(styles.carousel, styles.placeholder)}

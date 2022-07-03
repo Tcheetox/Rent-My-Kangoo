@@ -5,7 +5,7 @@
 }
 
 .parallax,
-.placeholder{
+.placeholder {
     height: 550px;
 }
 .parallax {
@@ -13,7 +13,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all $defaultTransitionDuration;
 }
 .parallax::after {
     content: '';
@@ -21,6 +20,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.15);
+}
+.inactiveParallax {
+    height: 0px;
+}
+.inactiveParallax:after {
+    display: none;
 }
 
 .arrow {
