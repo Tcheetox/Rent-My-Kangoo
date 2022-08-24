@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 
 import BulletsNavigation from './BulletsNavigation'
 import ArrowsNavigation from './ArrowsNavigation'
@@ -8,7 +8,7 @@ import cx from 'classnames'
 export default function Carousel({ className, interval }) {
     const [index, setIndex] = useState(0)
     const [ready, setReady] = useState(false)
-    const items = [styles.p1, styles.p2, styles.p3, styles.p4, styles.p5, styles.p6, styles.p7, styles.p8]
+    const items = useMemo(() => [styles.p1, styles.p2, styles.p3, styles.p4, styles.p5, styles.p6, styles.p7, styles.p8], [])
 
     useEffect(() => {
         const rotation = setInterval(() => setIndex(i => (i + 1 > items.length - 1 ? 0 : i + 1)), [interval])
