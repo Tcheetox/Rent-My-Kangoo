@@ -103,7 +103,7 @@ export default function Process() {
                         </Tooltip>{' '}
                         {t('process.step3.p-meet')}
                         <a href={process.env.NEXT_PUBLIC_LOCATION} target="_blank" rel="noreferrer">
-                            Quai des Arénières, 1205 {t('geneva')}
+                            Le Greny, 1279 Bogis-Bossey
                         </a>{' '}
                         {t('process.step3.p-time')} <KeyIcon className={cx(styles.miniIcon, styles.key)} /> {t('process.step3.p-kangoo')}.
                         <strong>{t('process.step3.p-enjoy')}!</strong>

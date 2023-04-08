@@ -5,8 +5,8 @@ import Marker from './Marker'
 
 export default function Map() {
     const center = {
-        lat: 46.2002,
-        lng: 6.128,
+        lat: 46.3537,
+        lng: 6.1653,
     }
 
     return (
