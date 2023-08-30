@@ -19,7 +19,6 @@ module.exports = withBundleAnalyzer({
           },
         ]
   },
-  //basePath: '/louemakangoo',
   reactStrictMode: false,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles', 'globals')],
