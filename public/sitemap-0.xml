@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
     <url>
-        <loc>https://louemakangoo.ch</loc>
+        <loc>https://thekecha.com/louemakangoo</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-        <lastmod>2022-08-24T20:47:59.858Z</lastmod>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://louemakangoo.ch"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://louemakangoo.ch/fr"/><xhtml:link rel="alternate" hreflang="en" href="https://louemakangoo.ch/en"/><xhtml:link rel="alternate" hreflang="de" href="https://louemakangoo.ch/de"/>
+        <lastmod>2023-08-30T18:04:34.009Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://thekecha.com/louemakangoo"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://thekecha.com/louemakangoo/fr"/><xhtml:link rel="alternate" hreflang="en" href="https://thekecha.com/louemakangoo/en"/><xhtml:link rel="alternate" hreflang="de" href="https://thekecha.com/louemakangoo/de"/>
     </url>
     <url>
-        <loc>https://louemakangoo.ch/fr</loc>
+        <loc>https://thekecha.com/louemakangoo/fr</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-        <lastmod>2022-08-24T20:47:59.858Z</lastmod>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://louemakangoo.ch/fr"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://louemakangoo.ch/en"/><xhtml:link rel="alternate" hreflang="de" href="https://louemakangoo.ch/de"/>
+        <lastmod>2023-08-30T18:04:34.009Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://thekecha.com/louemakangoo/fr"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thekecha.com/louemakangoo/en"/><xhtml:link rel="alternate" hreflang="de" href="https://thekecha.com/louemakangoo/de"/>
     </url>
     <url>
-        <loc>https://louemakangoo.ch/en</loc>
+        <loc>https://thekecha.com/louemakangoo/en</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-        <lastmod>2022-08-24T20:47:59.858Z</lastmod>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://louemakangoo.ch/en"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://louemakangoo.ch/fr"/><xhtml:link rel="alternate" hreflang="de" href="https://louemakangoo.ch/de"/>
+        <lastmod>2023-08-30T18:04:34.009Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://thekecha.com/louemakangoo/en"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://thekecha.com/louemakangoo/fr"/><xhtml:link rel="alternate" hreflang="de" href="https://thekecha.com/louemakangoo/de"/>
     </url>
     <url>
-        <loc>https://louemakangoo.ch/de</loc>
+        <loc>https://thekecha.com/louemakangoo/de</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
-        <lastmod>2022-08-24T20:47:59.858Z</lastmod>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://louemakangoo.ch/de"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://louemakangoo.ch/fr"/><xhtml:link rel="alternate" hreflang="en" href="https://louemakangoo.ch/en"/>
+        <lastmod>2023-08-30T18:04:34.009Z</lastmod>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://thekecha.com/louemakangoo/de"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://thekecha.com/louemakangoo/fr"/><xhtml:link rel="alternate" hreflang="en" href="https://thekecha.com/louemakangoo/en"/>
     </url>
 </urlset>
