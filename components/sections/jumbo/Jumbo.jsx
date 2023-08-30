@@ -15,7 +15,7 @@ export default function Jumbo() {
             <div className={styles.presentation}>
                 <h1>{t('jumbo.h1')}</h1>
                 <h2>
-                    Renault Kangoo —<PickUpIcon /> <a href="#map">{t('geneva')}</a>
+                    Renault Kangoo —<PickUpIcon /> <a href="#map">Bogis-Bossey, {t('Vaud')}</a>
                 </h2>
                 <p className={styles.info}>
                     {t('jumbo.h2-intro')} <br />
