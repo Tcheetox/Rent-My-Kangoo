@@ -19,6 +19,7 @@ module.exports = withBundleAnalyzer({
           },
         ]
   },
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   reactStrictMode: false,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles', 'globals')],

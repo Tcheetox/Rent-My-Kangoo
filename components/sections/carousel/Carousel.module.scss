@@ -1,109 +1,109 @@
 .carousel {
-    box-shadow: 0px 0px 15px -8px darkgray;
-    background-color: rgba(0, 0, 0, 0.05);
-    position: relative;
+  box-shadow: 0px 0px 15px -8px darkgray;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .parallax,
 .placeholder {
-    height: 550px;
+  height: 550px;
 }
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .parallax::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.15);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .inactiveParallax {
-    height: 0px;
+  height: 0px;
 }
 .inactiveParallax:after {
-    display: none;
+  display: none;
 }
 
 .arrow {
-    cursor: pointer;
-    transition: all $defaultTransitionDuration;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 2.5rem;
-    width: 2.5rem;
-    background-color: rgba(55, 55, 55, 0.70);
-    border-radius: $defaultBorderRadius;
-    z-index: 1;
+  cursor: pointer;
+  transition: all $defaultTransitionDuration;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: rgba(55, 55, 55, 0.7);
+  border-radius: $defaultBorderRadius;
+  z-index: 1;
 }
 .arrow:hover {
-    background-color: rgba(55, 55, 55, 1);
+  background-color: rgba(55, 55, 55, 1);
 }
 .leftArrow {
-   left: 3rem;
+  left: 3rem;
 }
 .rightArrow {
-    right: 3rem;
+  right: 3rem;
 }
 .iconArrow {
-    width: 2.5rem;
-    margin-top: 0.25rem;
-    height: 2rem;
-    color: white;
+  width: 2.5rem;
+  margin-top: 0.25rem;
+  height: 2rem;
+  color: white;
 }
 
 .bulletsHolder {
-    display: flex;
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index:1;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 .bullet {
-    width: 0.8rem;
-    height: 0.4rem;
-    border-radius: 20px;
-    margin: 0 0.2rem;
-    cursor: pointer;
-    transition: all $defaultTransitionDuration;
+  width: 0.8rem;
+  height: 0.4rem;
+  border-radius: 20px;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  transition: all $defaultTransitionDuration;
 }
 .bullet:hover {
-    background-color: $meadow;
+  background-color: $meadow;
 }
 .inactiveBullet {
-    background-color: darkgray;
+  background-color: darkgray;
 }
-.activeBullet{
-    background-color: white;
+.activeBullet {
+  background-color: white;
 }
 
 .p1 {
-    @include useWebp('/pictures/front.jpg');
+  @include useWebp('/pictures/front.jpg');
 }
 .p2 {
-    @include useWebp('/pictures/frontL.jpg');
+  @include useWebp('/pictures/frontL.jpg');
 }
 .p3 {
-    @include useWebp('/pictures/inside.jpg');
-    background-size: auto;
+  @include useWebp('/pictures/inside.jpg');
+  background-size: auto;
 }
 .p4 {
-    @include useWebp('/pictures/left.jpg');
+  @include useWebp('/pictures/left.jpg');
 }
 .p5 {
-    @include useWebp('/pictures/rear.jpg');
+  @include useWebp('/pictures/rear.jpg');
 }
 .p6 {
-    @include useWebp('/pictures/rearR.jpg');
+  @include useWebp('/pictures/rearR.jpg');
 }
 .p7 {
-    @include useWebp('/pictures/right.jpg');
+  @include useWebp('/pictures/right.jpg');
 }
 .p8 {
-    @include useWebp('/pictures/rightO.jpg');
+  @include useWebp('/pictures/rightO.jpg');
 }
