@@ -4,7 +4,7 @@ services:
     nextjs-app:
         build:
             context: ../
-            dockerfile: Dockerfile
+            dockerfile: /rent-my-kangoo/Dockerfile
         container_name: nextjs-app
         ports:
             - '3000:3000'
