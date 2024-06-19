@@ -15,16 +15,16 @@ export default function Jumbo() {
             <div className={styles.presentation}>
                 <h1>{t('jumbo.h1')}</h1>
                 <h2>
-                    Renault Kangoo —<PickUpIcon /> <a href="#map">Bogis-Bossey, {t('Vaud')}</a>
+                    Renault Kangooooo —<PickUpIcon /> <a href='#map'>Bogis-Bossey, {t('Vaud')}</a>
                 </h2>
                 <p className={styles.info}>
                     {t('jumbo.h2-intro')} <br />
                     {t('jumbo.h2-cta')}{' '}
                     <a
                         className={styles.link}
-                        href="https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428"
-                        target="_blank"
-                        rel="noreferrer"
+                        href='https://www.2em.ch/location-voiture/geneve/renault-kangoo-4428'
+                        target='_blank'
+                        rel='noreferrer'
                     >
                         <strong>2EM</strong>
                     </a>
@@ -33,10 +33,10 @@ export default function Jumbo() {
                     <strong> 14</strong> CHF!
                 </p>
                 <div className={styles.ctas}>
-                    <Button variant="contained" color="primary" onClick={() => (window.location.href = '#availability')}>
+                    <Button variant='contained' color='primary' onClick={() => (window.location.href = '#availability')}>
                         {t('rent-me')}
                     </Button>
-                    <Button variant="contained" color="secondary" onClick={() => (window.location.href = '#how')}>
+                    <Button variant='contained' color='secondary' onClick={() => (window.location.href = '#how')}>
                         {t('learn-more')}
                     </Button>
                 </div>
