@@ -13,6 +13,10 @@ RUN npm install
 
 # Copy the rest of the application code
 COPY . .
+
+# Echo the current directory
+RUN echo "Current directory: $(pwd)"
+
 COPY /var/www/rent-my-kangoo/.env.local .env.local
 
 # Build the Next.js application
