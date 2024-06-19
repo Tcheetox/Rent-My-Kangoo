@@ -3,7 +3,7 @@ version: '3'
 services:
     nextjs-app:
         build:
-            context: /var/www/rent-my-kangoo
+            context: .
             dockerfile: Dockerfile
         container_name: rent-my-kangoo
         ports:
