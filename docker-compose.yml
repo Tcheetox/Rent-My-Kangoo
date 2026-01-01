@@ -1,5 +1,3 @@
-version: '3'
-
 services:
     nextjs-app:
         restart: always
@@ -12,5 +10,5 @@ services:
         environment:
             NODE_ENV: production
         volumes:
-            - .:/var/docker/rent-my-kangoo/data
+            - /var/www/rent-my-kangoo/data:/data
         command: npm start
