@@ -1,7 +1,7 @@
 # Loue ma kangoo!
 
 This project is a first attempt at using Next.JS for SSR with React and is intended to promote the rental of my personal car in Bogis-Bossey.
-Feel free to browse the [final result](https://thekecha.com/louemakangoo)!
+Feel free to browse the [final result](https://louemakangoo.thekecha.com)!
 
 ## Tech
 

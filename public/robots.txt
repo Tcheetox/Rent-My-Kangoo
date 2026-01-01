@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://louemakangoo.ch
+Host: https://louemakangoo.thekecha.com
 
 # Sitemaps
-Sitemap: https://louemakangoo.ch/sitemap.xml
+Sitemap: https://louemakangoo.thekecha.com/sitemap.xml
