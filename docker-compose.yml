@@ -6,7 +6,7 @@ services:
             dockerfile: Dockerfile
         container_name: rent-my-kangoo
         ports:
-            - '3000:3000'
+            - '5006:3000'
         environment:
             NODE_ENV: production
         volumes:
